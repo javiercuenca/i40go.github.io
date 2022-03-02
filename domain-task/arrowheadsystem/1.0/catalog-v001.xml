@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.purl.org/i40go/variant-domain/software" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/software/1.0/software.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1621846259577" name="http://www.purl.org/i40go/domain-task/arrowheadsystem" uri="arrowheadsystem.owl"/>
+    </group>
+</catalog>

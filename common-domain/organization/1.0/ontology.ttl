@@ -1,0 +1,354 @@
+@prefix :        <http://www.purl.org/i40go/common-domain/organization#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<https://w3id.org/i40/sto#TechnicalReport>
+      a       owl:Class ;
+      rdfs:comment "Technical Reports contain collected data of a kind different from that normally published as an International Standard, for example data obtained from a survey carried out among national committees, data of work in other international organizations or data on \"the state of the art\" in relation to standards of national committees on a particular subject.Technical Reports are entirely informative in nature and shall not contain matter implying that they are normative"@en ;
+      rdfs:label "Technical report"@en ;
+      rdfs:subClassOf <https://w3id.org/i40/sto#Publication> .
+
+<https://w3id.org/i40/sto#orgName>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Name of the Organization"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:label "Organization name"@en ;
+      rdfs:range rdf:PlainLiteral ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+
+<https://w3id.org/i40/sto#TechnicalCommittee>
+      a       owl:Class ;
+      rdfs:comment "Specifies the representitive code name of the Technical Committee that covers a Standard for e.g, TC 1, SC 3C. Many thousand experts carry out standardization work in the IEC in TCs (technical committees) and SCs (subcommittees), in hundreds of working groups, project and maintenance teams. They represent the national electrotechnical needs of IEC Member countries and of many Affiliates at the global level in the IEC. These technical experts are sent by industry, governments, test and research laboratories, academia and even consumer groups to work on the global, neutral and independent platform of the IEC. That's where they develop globally relevant, voluntary, consensus based IEC International Standards."@en ;
+      rdfs:label "Technical committe"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+
+<https://w3id.org/i40/sto#hasStabilityDate>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Stability date of a publication. Publications are valid for a certain period, i.e., the Stability Period. This property defines the end of the stability period."@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has stability date"@en ;
+      rdfs:range xsd:date ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#ISA>
+      a       owl:Class ;
+      rdfs:comment "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en ;
+      rdfs:label "ISA"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://xmlns.com/foaf/0.1/Document>
+      a       owl:Class ;
+      rdfs:comment "The document class represents those things which are, broadly conceived, 'documents'."@en ;
+      rdfs:label "Document"@en .
+
+<https://w3id.org/i40/sto#Publication>
+      a       owl:Class ;
+      rdfs:comment "Specifies a Publication. E.g., International Standards,Technical Specifications,Publicly Available Specifications, Amendments Technical Corrigenda,Interpretation Sheets,Technical Reports,Guides."@en ;
+      rdfs:label "Publication"@en ;
+      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Document> .
+
+<https://w3id.org/i40/sto#hasDeveloper>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Links the Standard Organization that developed the Publication with the specific type of publication, e.g., Standard, Technical Report"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has developer"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://dbpedia.org/ontology/Place>
+      a       owl:Class ;
+      rdfs:label "Place"@en .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine>
+      a       owl:Class ;
+      rdfs:comment "A business line is an organizational unit that can be assigned to a division and can have one or more product lines."@en ;
+      rdfs:label "Business line"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<https://w3id.org/i40/sto#hasOpenResource>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Points to the URLs of the resources(documents) openly available for the standard"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has open resource"@en ;
+      rdfs:range xsd:anyURI ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<https://w3id.org/i40/sto#Technology>
+      a       owl:Class ;
+      rdfs:comment "A technology develiped by an organization."@en ;
+      rdfs:label "Technology"@en ;
+      rdfs:subClassOf <https://w3id.org/i40/sto#Publication> .
+
+<http://www.purl.org/i4go/common-domain/organization>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Organization' ontology module data about organizations, their internal structure (i.e., departments and divisions that compound the organization) and the roles that their departments/units and individuals have."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Organization ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-14"@en ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#OASIS>
+      a       owl:Class ;
+      rdfs:comment "The Organization for the Advancement of Structured Information Standards is a global nonprofit consortium that works on the development, convergence, and adoption of open standards for cybersecurity, blockchain, Internet of Things (IoT), emergency management, cloud computing, legal data exchange, energy, content technologies, and other areas."@en ;
+      rdfs:label "OASIS"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<https://w3id.org/i40/sto#hasPages>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Indicates the number of pages in the document."@en ;
+      rdfs:domain <http://xmlns.com/foaf/0.1/Document> ;
+      rdfs:label "has pages"@en ;
+      rdfs:range xsd:integer ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#Division>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+<https://w3id.org/i40/sto#hasHeadquaterIn>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Denotes the countries in which the Headquarter of the organization who publishes the Standart"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> ;
+      rdfs:label "has headquarter in"@en ;
+      rdfs:range <http://dbpedia.org/ontology/Place> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#MESA>
+      a       owl:Class ;
+      rdfs:comment "Manufacturing Enterprise Solutions Association International (MESA, also known as MESA International) is a worldwide not-for-profit community of manufacturing companies, information technology hardware and software suppliers, system integrators, consulting service providers, analysts, editors, academics, and students. MESA’s goal is to help member companies improve business results and production operations through application and implementation of information technology and best management practices."@en ;
+      rdfs:label "MESA"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember>
+      a       owl:Class ;
+      rdfs:label "Project team member"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+
+<https://w3id.org/i40/sto#hasPublicationDate>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Publication date of the Publication"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has publication"@en ;
+      rdfs:range xsd:date ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3.org/ns/org#OrganizationalUnit>
+      a       owl:Class ;
+      rdfs:comment "An Organization such as a department or support unit which is part of some larger Organization and only has full recognition within the context of that Organization. In particular the unit would not be regarded as a legal entity in its own right."@en ;
+      rdfs:label "Organizational unit"@en .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner>
+      a       owl:Class ;
+      rdfs:label "Porject owner"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+
+<https://w3id.org/i40/sto#Standard>
+      a       owl:Class ;
+      rdfs:comment "A document, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
+      rdfs:label "Standard"@en ;
+      rdfs:subClassOf <https://w3id.org/i40/sto#Publication> .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#Role>
+      a       owl:Class ;
+      rdfs:comment "This class is used to specify the role of people in an organization"@en ;
+      rdfs:label "Role"@en .
+
+<https://w3id.org/i40/sto#hasClassification>
+      a       owl:ObjectProperty ;
+      rdfs:comment "An Standard is isCategorizedBy a given Categorization Area which is connected to a specific Standarization Initiative"@en ;
+      rdfs:label "has classification"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/sto#hasPublisher>
+      a       owl:ObjectProperty ;
+      rdfs:comment "The organization that published this Standard"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has publisher"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/sto#IIoTConsortium>
+      a       owl:Class ;
+      rdfs:comment "The Internet of Things Consortium (IoTC) is the premier business development association for the Internet of Things (IoT) ecosystem."@en , "IoT consortium"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+
+<http://www.w3id.org/ecsel-dr-AT#ISO>
+      a       owl:Class ;
+      rdfs:comment "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en ;
+      rdfs:label "ISO"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://www.w3id.org/ecsel-dr-AT#IEC>
+      a       owl:Class ;
+      rdfs:comment "The International Electrotechnical Commission (IEC; in French: Commission électrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies – collectively known as \"electrotechnology\". IEC standards cover a vast range of technologies from power generation, transmission and distribution to home appliances and office equipment, semiconductors, fibre optics, batteries, solar energy, nanotechnology and marine energy as well as many others. The IEC also manages four global conformity assessment systems that certify whether equipment, system or components conform to its international standards."@en ;
+      rdfs:label "IEC"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager>
+      a       owl:Class ;
+      rdfs:label "Project manager"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+
+<http://www.w3id.org/ecsel-dr-AT#W3C>
+      a       owl:Class ;
+      rdfs:comment "W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs."@en ;
+      rdfs:label "W3C"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://www.w3id.org/ecsel-dr-PROD#Organization>
+      a       owl:Class ;
+      rdfs:comment "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposed into hierarchical structures."@en ;
+      rdfs:label "Organization"@en .
+
+owl:topDataProperty
+      rdfs:comment "Point to the URL of a recognized Ontology representation of the Standard"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has ontology"@en ;
+      rdfs:range xsd:anyURI .
+
+<https://w3id.org/i40/sto#hasStatus>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Publication status of the Standard, e.g., Valid, Revised, Published, under preparation, Released"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has status"@en ;
+      rdfs:range rdfs:Literal ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#IETF>
+      a       owl:Class ;
+      rdfs:comment "The Internet Engineering Task Force (IETF) is an open standards organization, which develops and promotes voluntary Internet standards, in particular the standards that comprise the Internet protocol suite (TCP/IP). It has no formal membership roster or membership requirements. All participants and managers are volunteers, though their work is usually funded by their employers or sponsors."@en ;
+      rdfs:label "IETF"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<https://w3id.org/i40/sto#formationDate>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Formation date of the Organization" ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:label "Formation date" ;
+      rdfs:range xsd:date ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3.org/ns/org#unitOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "unit of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/sto#TechnicalSpecification>
+      a       owl:Class ;
+      rdfs:comment "Technical Specifications are often published when the subject under question is still under development or when insufficient consensus for approval of an International Standard is available.Technical Specifications approach International Standards in terms of detail and completeness, but have not yet passed through all approval stages either because consensus has not been reached or because standardization is seen to be premature."@en ;
+      rdfs:label "Technical specification"@en ;
+      rdfs:subClassOf <https://w3id.org/i40/sto#Publication> .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.w3.org/ns/org#hasUnit>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate organizations with their organizational units."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:label "has unit"@en ;
+      rdfs:range <http://www.w3.org/ns/org#OrganizationalUnit> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3.org/ns/org#unitOf> .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#ProductLine>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+<https://w3id.org/i40/sto#hasImplementationFormat>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Describes the name of the implementation or serialization format of the Publication, e.g., XML, Document, binary, batch"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has implementation format"@en ;
+      rdfs:range rdfs:Literal ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#OMG>
+      a       owl:Class ;
+      rdfs:comment "The Object Management Group (OMG) is a computer industry standards consortium. OMG Task Forces develop enterprise integration standards for a range of technologies."@en ;
+      rdfs:label "OMG"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<https://w3id.org/i40/sto#hasEdition>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Indicates the current Edition/Version number of the document."@en ;
+      rdfs:domain <http://xmlns.com/foaf/0.1/Document> ;
+      rdfs:label "has edition"@en ;
+      rdfs:range xsd:float ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<https://w3id.org/i40/sto#belongsTo>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A Standard Organization that belongs to the country"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:label "belongs to"@en ;
+      rdfs:range <http://dbpedia.org/ontology/Country> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/sto#StandardClassification>
+      a       owl:Class ;
+      rdfs:comment "Describes categorization areas that the different Standardizations Initiatives use to category Standards."@en ;
+      rdfs:label "Standard classification"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#ANSI>
+      a       owl:Class ;
+      rdfs:comment "The American National Standards Institute is a private non-profit organization that oversees the development of voluntary consensus standards for products, services, processes, systems, and personnel in the United States. The organization also coordinates U.S. standards with international standards so that American products can be used worldwide."@en ;
+      rdfs:label "ANSI"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<http://dbpedia.org/ontology/Country>
+      a       owl:Class ;
+      rdfs:label "Country"@en .
+
+xsd:date
+      a       rdfs:Datatype .
+
+<https://w3id.org/i40/sto#hasMotivation>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has motivation"@en ;
+      rdfs:range rdfs:Literal ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#IEEE>
+      a       owl:Class ;
+      rdfs:comment "The Institute of Electrical and Electronics Engineers (IEEE) is a professional association for electronic engineering and electrical engineering (and associated disciplines)."@en ;
+      rdfs:label "IEEE"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+
+<https://w3id.org/i40/sto#hasOfficialResource>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Points to the URL of the official website from which published the document"@en ;
+      rdfs:domain <https://w3id.org/i40/sto#Publication> ;
+      rdfs:label "has official resource"@en ;
+      rdfs:range xsd:anyURI ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<https://w3id.org/i40/sto#StandardPart>
+      a       owl:Class ;
+      rdfs:comment "Typically Standards are divided into parts. E.g., ISA 95 has part Part 1: Models and Terminology, Part 2: Object Model Attributes, etc."@en ;
+      rdfs:label "Standard part"@en ;
+      rdfs:subClassOf <https://w3id.org/i40/sto#Publication> .

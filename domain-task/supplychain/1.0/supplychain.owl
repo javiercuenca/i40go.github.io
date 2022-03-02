@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/domain-task/supplychain#"
+     xml:base="http://www.purl.org/i4go/domain-task/supplychain"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/domain-task/supplychain">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/variant-domain/productionplant"/>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <dc:title xml:lang="en">Supply Chain ontology</dc:title>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <rdfs:comment xml:lang="en">The &apos;Supply Chain&apos; ontology module</rdfs:comment>
+        <terms:issued xml:lang="en">2021-05-25</terms:issued>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasPlant -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasPlant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/domain-task/supplychain/SupplyChain"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Plant"/>
+        <rdfs:comment xml:lang="en">This property is used to relate the supply chain with the production plant.</rdfs:comment>
+        <rdfs:label xml:lang="en">has plant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#fromFabID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#fromFabID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/domain-task/supplychain/SupplyChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Source ID of supply chain edge</rdfs:comment>
+        <rdfs:label xml:lang="en">from fab id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">Name of the supply chain</rdfs:comment>
+        <rdfs:label xml:lang="en">has supply chain name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasTravelTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTravelTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/domain-task/supplychain/SupplyChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="en">has travel time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#toFabID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#toFabID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/domain-task/supplychain/SupplyChain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Sink ID of supply chain edge</rdfs:comment>
+        <rdfs:label xml:lang="en">to fab ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/supplychain/SupplyChain -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/supplychain/SupplyChain">
+        <rdfs:comment xml:lang="en">The entity “Supply Chain” describes the supply chain from the topmost level with all possible material flow edges.</rdfs:comment>
+        <rdfs:label xml:lang="en">Supply chain</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

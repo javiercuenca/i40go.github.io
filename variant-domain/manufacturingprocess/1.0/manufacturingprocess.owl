@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/common-domain/processcontrol#"
+     xml:base="http://www.purl.org/i4go/common-domain/processcontrol"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/manufacture"/>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <rdfs:comment xml:lang="en">The &apos;Manufacturing Process&apos; ontology module represents data related to business processes and the sub processes/activities they encompass. Includes the steps through which raw materials are transformed into a final product. Also called manufacturing engineering.</rdfs:comment>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <terms:issued xml:lang="en">2021-05-03</terms:issued>
+        <dc:title xml:lang="en">Manufacturing Process ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:comment xml:lang="en">Relation between a Procedure and an Input to it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <rdfs:comment xml:lang="en">Relation between a Procedure and an Output of it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implementedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implementedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/implements"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</rdfs:comment>
+        <rdfs:label xml:lang="en">implemented by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</rdfs:comment>
+        <rdfs:label xml:lang="en">implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:comment xml:lang="en">Denotes the connection between a &quot;Function&quot; and another &quot;Process&quot; as this process may deliver an output used in this function.</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#connectedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:label xml:lang="en">connected to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#diagramedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#diagramedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:label xml:lang="en">diagramed on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#flow -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#flow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:comment xml:lang="en">Enables the modelling of the process flow by logically connecting the different process elements. Therefore, the domain and the range are set to a &quot;Process Element&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">flow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#hasSubModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#hasSubModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Denotes to which instance of &quot;Process&quot; an instance of a &quot;Process Element&quot; belongs.</rdfs:comment>
+        <rdfs:label xml:lang="en">has submodel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isControlledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isControlledBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:comment xml:lang="en">The result of a function in a process flow is controlled by a goal.</rdfs:comment>
+        <rdfs:label xml:lang="en">is controlled by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#transforms -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#transforms">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData"/>
+        <rdfs:comment xml:lang="en">A function in a process flow transforms environmental data like work schedules.</rdfs:comment>
+        <rdfs:label xml:lang="en">transforms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Process"/>
+        <rdfs:comment xml:lang="en">This property is used to relate a process with the technolgies used in it.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses one or more technology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#hasRequirements -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#hasRequirements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">Description of all requirements for the certain input or output.</rdfs:comment>
+        <rdfs:label xml:lang="en">has requirements</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject">
+        <rdfs:label xml:lang="en">Information object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal">
+        <rdfs:label xml:lang="en">Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">Place to group all the various Processes related to Deployment. For example, as well as Deployment, installation, maintenance, deployment of the further devices and the like would all be classified under DeploymentRelatedProcess.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deployment-related Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess">
+        <rdfs:comment xml:lang="en">Sequence of interdependent and linked procedures which, at every stage, consume one or more resources (employee time, energy, machines, money) to convert inputs (data, material, parts, etc.) into outputs. These outputs then serve as inputs for the next stage until a known goal or end result is reached.</rdfs:comment>
+        <rdfs:label xml:lang="en">Furnace process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">A Process Class is the second hierarchy level in the Technology Catalogue and is a subset of top hierarchy level &quot;Technology Class&quot;. A Process Class is defined by the device category and its generation or wafer diameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">A wafer technology is defined as a manufacturing process flow on wafer level including wafer test and pre-assembly which creates one device (discrete technology) or a set of different devices (IC technology) to be used in a product.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">A Process Group is the third hierarchy level in the Technology Catalogue and a subset of the Process Class. A Process Group is defined by the device type and its generation (eventually voltage class) or wafer diameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">A Process Line is the forth hierarchy level in the Technology Catalogue and is a subset of Process Group. A Process Line is defined by WHAT is produced in detail.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:comment xml:lang="en">It is a process that results in the estimation, or calculation, of the value of a device output. 
+Usually it derived from the name of the device for example:
+Sensor process: sensing: Sensing is a process that results in the estimation, or calculation, of the value of a phenomenon.
+Boost Converter process: boosting: is a process that results in the estimation, or calculation, of the value of a amplified voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">The Process used in the Device Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Procedure -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implementedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.</rdfs:comment>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Input -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Input">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any information that is provided to a procedure for its use.</rdfs:comment>
+        <rdfs:label xml:lang="en">Input</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Output -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Output">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any information that is reported from a Procedure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#BPActivity -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#BPActivity">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:comment xml:lang="en">A Business Process Activity is a part of a Business Process containing one or more sub Business Processes or a Process Flow.</rdfs:comment>
+        <rdfs:label xml:lang="en">Business Process Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Function -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Function">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#FunctionObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:comment xml:lang="en">The function type represents several action elements as task, process interfaces or business process activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#FunctionObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#FunctionObject">
+        <rdfs:comment xml:lang="en">In IndustryPrint 5, function objects are used to model the decomposition of a process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Function object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Model">
+        <rdfs:comment xml:lang="en">One striking commonality between EPC meta models is the Process. One process may contain an unlimited number of elements, but a process element is always linked to a specific process. If a process contains an interface, it is always linked to one specific process and represents a refinement of a normal function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ModelElement -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ModelElement">
+        <rdfs:comment xml:lang="en">An EPC model element is part of the EPC meta model and can be represented by a Function, an Event, an Operator, a Process Interface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#FunctionObject"/>
+        <rdfs:comment xml:lang="en">Function objects are used to model the decomposition of the process flow.</rdfs:comment>
+        <rdfs:label xml:lang="en">Modelling Function Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Process">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject"/>
+        <rdfs:comment xml:lang="en">A collection of subprocesses that meet a specific business objective. E.g. Perform Sourcing or Purchase Materials and Services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:comment xml:lang="en">The first level of process decomposition that is comprised of subprocesses that depict a business objective.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process diagram</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessGroup -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessGroup">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject"/>
+        <rdfs:comment xml:lang="en">A set of a processes covering a single business area. Usually under the ownership of one business process owner and correlates to one module. E.g. Procurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:comment xml:lang="en">A set of a processes covering a single business area. Usually under the ownership of one business process owner and aligning with a function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process group map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessInterface -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessInterface">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"/>
+        <rdfs:comment xml:lang="en">Process interfaces connect several process models on the same process hierarchical level by linking the EPCs according to their shared events (also known as &quot;horizontal navigation&quot;). They thus facilitate process structuring and navigation by keeping models concise and easy-to-read.
+Functionality: Jump function to next process (e.g. EPC, VAC), typically at the end of process branches. In the EPC flow there is an Event directly before.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process Interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessType -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessType">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject"/>
+        <rdfs:comment xml:lang="en">A set of core and enabler processes of Infineon on Level 0 (highest level). This level helps helps organizing project work/ development and represents a single track in the oneSAP project. It is based on a Deloitte standard which was adapted to Infineon&apos;s needs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:comment xml:lang="en">A set of process types and related process groups that define the enterprise for a particular industry/sector.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process type map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#FunctionObject"/>
+        <rdfs:comment xml:lang="en">Function objects are used to model the decomposition of the structure of a process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural Function Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Subprocess -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Subprocess">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject"/>
+        <rdfs:comment xml:lang="en">A grouping of related tasks that create an output within the larger objective of the subprocess. E.g. Create and Maintain Purchase Orders.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subprocess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Model"/>
+        <rdfs:comment xml:lang="en">The second and lowest level of process decomposition that is comprised of tasks that depict the role-based activities of the subprocess.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subprocess Diagram</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Deployment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A process has an output and possibly inputs, and for a compositive process, describes the temporal and dataflow dependencies and relationships amongst its parts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Tempering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Tempering">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess"/>
+        <rdfs:comment xml:lang="en">The tempering process is a type of heat treatment applied by the furnace. The process has the effect of toughening by lessing brittleness and reducing internal stresses.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tempering</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

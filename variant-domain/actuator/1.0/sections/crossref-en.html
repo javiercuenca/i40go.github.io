@@ -1,0 +1,722 @@
+<h2  id="crossreference" class="list">Cross reference for Actuator ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Actuator ontology.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature of interest</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Procedure" title="http://www.w3.org/ns/sosa/Procedure">Procedure</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PWR#Property" title="http://www.w3id.org/ecsel-dr-PWR#Property">Property</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/ns/sosa/ActuatableProperty">
+      <h3>Actuatable property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/ActuatableProperty</p>
+      <div class="comment">
+         <span class="markdown">An actuatable quality (property, characteristic) of a FeatureOfInterest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PWR#Property" title="http://www.w3id.org/ecsel-dr-PWR#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Actuation">
+      <h3>Actuation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuation</p>
+      <div class="comment">
+         <span class="markdown">An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-SCP#hasResult" title="http://www.w3id.org/ecsel-dr-SCP#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-SCP#hasResult" title="http://www.w3id.org/ecsel-dr-SCP#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/ns/sosa/Result">result</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Actuator">
+      <h3>Actuator<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuator</p>
+      <div class="comment">
+         <span class="markdown">A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3id.org/ecsel-dr-AT#Device">device</span>
+         </dd>
+         <dd>
+            <a href="#http://cpsagila.cs.uni-kl.de/GENIALOnt#implements" title="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements">implements</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/FeatureOfInterest">
+      <h3>Feature of interest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Procedure">
+      <h3>Procedure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Procedure</p>
+      <div class="comment">
+         <span class="markdown">A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PWR#Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PWR#Property</p>
+      <div class="comment">
+         <span class="markdown">This class is used to represent operation properties about devices, such as thereshold voltage.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Sample">
+      <h3>Sample<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sample</p>
+      <div class="comment">
+         <span class="markdown">Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/hasProperty">has property</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/hasSample">has sample</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/hasProperty">has property</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3id.org/ecsel-dr-PWR#Property" title="http://www.w3id.org/ecsel-dr-PWR#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/sosa/isResultOf">is result of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Sampling">
+      <h3>Sampling<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampling</p>
+      <div class="comment">
+         <span class="markdown">An act of Sampling carries out a sampling Procedure to create or transform one or more samples.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-SCP#hasResult" title="http://www.w3id.org/ecsel-dr-SCP#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-SCP#hasResult" title="http://www.w3id.org/ecsel-dr-SCP#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/ns/sosa/Procedure" title="http://www.w3.org/ns/sosa/Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeBySampler" title="http://www.w3.org/ns/sosa/madeBySampler">made by sampler</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/actsOnProperty" title="http://www.w3.org/ns/sosa/actsOnProperty">acts on property</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/ssn/forProperty" title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-SCP#hasResult" title="http://www.w3id.org/ecsel-dr-SCP#hasResult">has result</a>
+      </li>
+      <li>
+         <a href="#http://cpsagila.cs.uni-kl.de/GENIALOnt#implements" title="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements">implements</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/isActedOnBy" title="http://www.w3.org/ns/sosa/isActedOnBy">is acted on by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/isFeatureOfInterestOf" title="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">is feature of interest</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeBySampler" title="http://www.w3.org/ns/sosa/madeBySampler">made by sampler</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/madeSampling" title="http://www.w3.org/ns/sosa/madeSampling">made sampling</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/usedProcedure" title="http://www.w3.org/ns/sosa/usedProcedure">used procedure</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/ns/sosa/actsOnProperty">
+      <h3>acts on property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/actsOnProperty</p>
+      <div class="comment">
+         <span class="markdown">Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/ssn/forProperty">
+      <h3>for property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/ssn/forProperty</p>
+      <div class="comment">
+         <span class="markdown">A relation between some aspect of an entity and a Property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PWR#Property" title="http://www.w3id.org/ecsel-dr-PWR#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasFeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Sample" title="http://www.w3.org/ns/sosa/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/isFeatureOfInterestOf" title="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">is feature of interest</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-SCP#hasResult">
+      <h3>has result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-SCP#hasResult</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements">
+      <h3>implements<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://cpsagila.cs.uni-kl.de/GENIALOnt#implements</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/isActedOnBy">
+      <h3>is acted on by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/isActedOnBy</p>
+      <div class="comment">
+         <span class="markdown">Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/ActuatableProperty" title="http://www.w3.org/ns/sosa/ActuatableProperty">Actuatable property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+      <h3>is feature of interest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/isFeatureOfInterestOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeActuation">
+      <h3>made actuation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeActuation</p>
+      <div class="comment">
+         <span class="markdown">Relation between an Actuator and the Actuation it has made.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeByActuator">
+      <h3>made by actuator<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeByActuator</p>
+      <div class="comment">
+         <span class="markdown">Relation linking an Actuation to the Actuator that made that Actuation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/madeActuation" title="http://www.w3.org/ns/sosa/madeActuation">made actuation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeBySampler">
+      <h3>made by sampler<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySampler</p>
+      <div class="comment">
+         <span class="markdown">Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/sosa/Sampler">sampler</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/madeSampling" title="http://www.w3.org/ns/sosa/madeSampling">made sampling</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/madeSampling">
+      <h3>made sampling<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeSampling</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/madeBySampler" title="http://www.w3.org/ns/sosa/madeBySampler">made by sampler</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/usedProcedure">
+      <h3>used procedure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/usedProcedure</p>
+      <div class="comment">
+         <span class="markdown">A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/sosa/Observation">observation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3.org/ns/sosa/Sampling" title="http://www.w3.org/ns/sosa/Sampling">Sampling</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/ns/sosa/resultTime">
+      <h3>result time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/resultTime</p>
+      <div class="comment">
+         <span class="markdown">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

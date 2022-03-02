@@ -1,0 +1,75 @@
+@prefix :        <http://www.purl.org/i4go/common-domain/equipment#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-AH#DeviceID>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "This property is used to provide an unique identifier for a device."@en ;
+      rdfs:label "device id"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup>
+      a       owl:Class ;
+      rdfs:comment "This class is used to identify the different kinds of equipment."@en ;
+      rdfs:label "Equipment group"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+<http://www.w3id.org/ecsel-dr-AT#Device>
+      a       owl:Class ;
+      rdfs:comment "A device is a material element or assembly of such elements intended to perform a required function."@en ;
+      rdfs:label "Device"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/common-domain/equipment/ipAddress>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The IP address of the device."@en ;
+      rdfs:label "ip address"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#Equipment>
+      a       owl:Class ;
+      rdfs:comment "An equipment is any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task."@en ;
+      rdfs:label "Equipment"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+<http://www.purl.org/i4go/common-domain/equipment/DeviceElements>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent the elements that compound a device."@en ;
+      rdfs:label "Device elements"@en .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/common-domain/equipment>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Equipment, devices and apparatus' ontology module represents data about any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Equipment, devices and apparatus ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-03"@en ;
+      owl:imports <http://www.purl.org/i4go/common-domain/system> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-AH#DeviceName>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The name of the device."@en ;
+      rdfs:label "device name"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.purl.org/i4go/common-domain/equipment/macAddress>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "MAC address of the device."@en ;
+      rdfs:label "mac address"@en .
+
+<http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration>
+      a       owl:Class ;
+      rdfs:comment "In computers and computer networks, a configuration often refers to the specific hardware and software details in terms of devices attached, capacity or capability, and exactly what the system is made up of."@en ;
+      rdfs:label "Device configuration"@en .

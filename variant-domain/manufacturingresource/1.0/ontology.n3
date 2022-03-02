@@ -1,0 +1,53 @@
+<http://www.owl-ontologies.com/mason.owl#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
+<http://www.owl-ontologies.com/mason.owl#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Any capability that is to be scheduled, assigned or controlled by the underlying implementation to assure non-conflicting usage by processes."@en .
+<http://www.owl-ontologies.com/mason.owl#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/common-domain/manufacture/ManufacturingConcept> .
+<http://www.owl-ontologies.com/mason.owl#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/mason.owl#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> .
+<http://www.owl-ontologies.com/mason.owl#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProgrammingOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Programming operator"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProgrammingOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProgrammingOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProceduresExpert> <http://www.w3.org/2000/01/rdf-schema#label> "Procedures expert"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProceduresExpert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/ProceduresExpert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/mason.owl#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+<http://www.owl-ontologies.com/mason.owl#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "An area of ground on which a town, building, or monument is constructed."@en .
+<http://www.owl-ontologies.com/mason.owl#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> .
+<http://www.owl-ontologies.com/mason.owl#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "Material resource"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/MaterialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Material resources are materials found in the natural world that have practical use and value for humans. Material resources include wood, glass (which comes from sand), metals, edible plants, and plastics (which are made from natural chemicals)."@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Resource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/MaterialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.owl-ontologies.com/mason.owl#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator"@en .
+<http://www.owl-ontologies.com/mason.owl#Operator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> .
+<http://www.owl-ontologies.com/mason.owl#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> <http://www.w3.org/2000/01/rdf-schema#label> "Human resource"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> <http://www.w3.org/2000/01/rdf-schema#comment> "The personnel of a business or organization, regarded as a significant asset in terms of skills and abilities."@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Resource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/mason.owl#HandlingOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Handling operator"@en .
+<http://www.owl-ontologies.com/mason.owl#HandlingOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> .
+<http://www.owl-ontologies.com/mason.owl#HandlingOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> <http://www.w3.org/2000/01/rdf-schema#label> "Geographic resource"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A gepgraphic resource is any physical material constituting part of Earth that people need and value."@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Resource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/PreparationOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Preparation operator"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/PreparationOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/PreparationOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/BuildingZone> <http://www.w3.org/2000/01/rdf-schema#label> "Building zone"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/BuildingZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Each zone determines a building's shape and permitted uses. A building's shape is controlled by zonal restrictions on allowable floor area ratio and height (in absolute terms and in relation with adjacent buildings and roads)."@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/BuildingZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource/BuildingZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://purl.org/dc/terms/issued> "2021-24-05"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://purl.org/dc/elements/1.1/title> "Manufacturing Resource ontology"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Manufacturing Resource' ontology module represents data about the resources (i.e., tools, human resources) used during the manufacturing process."@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i40go/common-domain/manufacture> .
+<http://www.purl.org/i40go/variant-domain/manufacturingresource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

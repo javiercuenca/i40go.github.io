@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/domain-task/soa#"
+     xml:base="http://www.purl.org/i4go/domain-task/soa"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/domain-task/soa">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/variant-domain/service"/>
+        <rdfs:comment xml:lang="en">The &apos;Service-Oriented Architecture&apos; ontology module represents data about Service-oriented architecture (SOA). In the conext of the ontology, SOA is a style of software design where services are provided to the other components by application components, through a communication protocol over a network.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <terms:issued xml:lang="en">2021-05-06</terms:issued>
+        <dc:title xml:lang="en">Service-Oriented Architecture ontology</dc:title>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#hasServiceDescriptionLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-AT#hasServiceDescriptionLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#isServiceDescriptionLanguageOf"/>
+        <rdfs:comment xml:lang="en">This property relates the service oriented architecture with a service description language</rdfs:comment>
+        <rdfs:label xml:lang="en">has service description language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#isServiceDescriptionLanguageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-AT#isServiceDescriptionLanguageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">is service description language of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/EDIspecification -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/EDIspecification">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage"/>
+        <rdfs:comment xml:lang="en">Electronic data interchange (EDI) is the concept of businesses electronically communicating information that was traditionally communicated on paper, such as purchase orders and invoices. Technical standards for EDI exist to facilitate parties transacting such instruments without having to make special arrangements.</rdfs:comment>
+        <rdfs:label xml:lang="en">EDI specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SPARQLprotocol -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SPARQLprotocol">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">Protocol for the transmission of SPARQL queries and SPARQL updates between a client and a RDF graph store on a server.</rdfs:comment>
+        <rdfs:label xml:lang="en">SPARQL protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage">
+        <rdfs:comment xml:lang="en">The language used  to describe a service</rdfs:comment>
+        <rdfs:label xml:lang="en">Service description language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern">
+        <rdfs:label xml:lang="en">Service Oriented Architecture Function Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoAclient -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoAclient">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">&quot;Role&quot; or function of an software (application) system that consumes / uses one or several services to other systems in a client-server communication pattern / process. 
+Other names: Service Consumer</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA client</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoApublisher -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoApublisher">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">&quot;Role&quot; or function of a software (application) system that publishes data to a communication channel in a publish-subscribe communication pattern / process.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA publisher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoAserver -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoAserver">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">&quot;Role&quot; or function of an software (application) system that offers one or several services to other systems. 
+Other names: Service Producer,</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA server</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoAserviceBroker -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoAserviceBroker">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">The service broker, also known as service registry, is responsible for making the web service interface and implementation access information available to any potential service requestor. The implementer of the broker decides the scope of the broker.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA service broker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoAserviceRepository -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoAserviceRepository">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">A service-oriented architecture repository (SOA repository) is a specific resource, often a database, that holds data and metadata for a service-oriented architecture registry.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA service repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/domain-task/soa/SoAsubscriber -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/domain-task/soa/SoAsubscriber">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceOrientedArchitectureFunctionPattern"/>
+        <rdfs:comment xml:lang="en">The entity who consumes a published service.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA subscriber</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ANSI_X12-Specification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ANSI_X12-Specification">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/EDIspecification"/>
+        <rdfs:comment xml:lang="en">The Accredited Standards Committee X12 (also known as ASC X12) is a standards organization. Chartered by the American National Standards Institute (ANSI) in 1979, it develops and maintains the X12 Electronic data interchange (EDI) and Context Inspired Component Architecture (CICA) standards along with XML schemas which drive business processes globally. The membership of ASC X12 includes technologists and business process experts, encompassing health care, insurance, transportation, finance, government, supply chain and other industries.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ansi X12 specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#AutomationML -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#AutomationML">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">AutomationML (Automation Markup Language) is a neutral data format based on XML for the storage and exchange of plant engineering information, which is provided as an open standard. The goal of AutomationML is to interconnect the heterogeneous tool landscape of modern engineering tools in their different disciplines, e.g. mechanical plant engineering, electrical design, HMI development, PLC and robot control.</rdfs:comment>
+        <rdfs:label xml:lang="en">AutomationML</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#B2MML -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#B2MML">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">B2MML is an XML implementation of the ANSI/ISA-95, Enterprise-Control System Integration, family of standards (ISA-95), known internationally as IEC/ISO 62264. B2MML consists of a set of XML schemas written using the World Wide Web Consortium&apos;s XML Schema language (XSD) that implement the data models in the ISA-95 standard. 
+Companies interested in following ISA-95 for integration projects may use B2MML to integrate business systems such as ERP and supply chain management systems with manufacturing systems such as control systems and manufacturing execution systems. B2MML is a complete implementation of ISA-95. Any company may use B2MML royalty free, provided credit is given to MESA. 
+B2MML V0600 is the latest version. Earlier versions are still available; however, we recommend new users use the latest version which contains enhancements based upon user feedback.
+New in V0600:
+Support for ISA-95 Part 4 which was released by ISA in 2012. 
+Support for the soon to be released updates to ISA-95 Parts 3 and 5. These updates were completed by the committee in March 2013 and will be released by ISA shortly. These updates are to make Parts 3 and 5 match the new Part 4. 
+All B2MML V0500 errata items have been included. 
+B2MML V0600 is up to date with the latest updates to the ISA-95 standard: 
+
+ANSI/ISA-95.00.01-2010 Models and Terminology 
+ANSI/ISA-95.00.02-2010 Object Model Attributes 
+ANSI.ISA- 95.00.03-2013 Activity Models of Manufacturing Operations Management (approved by the ISA-95 committee, soon to be released) 
+ANSI.ISA- 95.00.04-2012 Objects and attributes for manufacturing operations management integration 
+ANSI/ISA- 95.00.05-2013 Business-to-Manufacturing Transactions (approved by the ISA-95 committee, soon to be released) 
+The release notes provide more details on the changes in this release. 
+Starting with V0401, the BatchML schemas were integrated into the B2MML namespace and BatchML now uses the B2MML common and extension files. Therefore B2MML schema and documentation downloads include BatchML files.
+The MESA XML Committee maintains B2MML and BatchML. It is fully staffed by volunteers and is open to all interested parties. To join the committee or to send feedback on B2MML or BatchML, send a request to b2mml@mesa.org.
+(http://www.mesa.org/en/B2MML.asp)</rdfs:comment>
+        <rdfs:label xml:lang="en">Business to Manufacturing Markup Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#B2MML-based-Service -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#B2MML-based-Service">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">Service based on B2MML language. B2MML or Business To Manufacturing Markup Language is an XML implementation of the ANSI/ISA-95 family of standards (ISA-95), known internationally as IEC/ISO 62264. ... B2MML is published by the Manufacturing Enterprise Solutions Association (MESA).</rdfs:comment>
+        <rdfs:label xml:lang="en">B2MML-based service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#DPWS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#DPWS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">The Device Profiles for Web Services (DPWS for short) specifies a standard that should enable Web services to be deployed on embedded systems, that is, on hardware with resources that may be severely constrained. For this, DPWS combines a selection of existing WS - * specifications together with some extensions or some new specifications into a profile based on network - capable embedded systems
+
+    can communicate safely with each other,
+    discover dynamically remote devices or services,
+    can independently describe services and
+    Trigger events or subscribe to events of other services.
+
+In order to reach these goals the existing specifications WS-Addressing, WS-Policy, WS-Security and WS-Metadata Exchange respectively WS-Transfer are combined in the Devices Profiles for Web Services, especially for the dynamic discovery of services and for the event-based communication defines the new WS-Discovery and WS-Eventing specifications.
+
+Originally, the Devices Profile for Web Services specification was developed by Microsoft, and an implementation of DPWS is also integrated with Windows Vista. Open source implementations of the DPWS specification have been developed, for example as part of the Web Services for Devices Initiative.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Profile for Web Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/EDIspecification"/>
+        <rdfs:comment xml:lang="en">EDIFACT is the abbreviation for &quot;Electronic Data Interchange for Administration, Commerce and Transport&quot;. This is a global set of rules defined by the UN for the inter-company electronic data exchange between two or more business partners via EDI.
+
+The goal of EDIFACT is the optimization and standardization of the data flow between business partners. By defining uniform segments and elements that describe the information in the electronic file and which are used for a wide variety of document types (such as invoices, purchase orders, delivery notes, etc.) merely by means of a differentiated arrangement, a worldwide standard was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">EDIFACT specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT_DELFOR -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT_DELFOR">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification"/>
+        <rdfs:comment xml:lang="en">EDIFACT message for delivery advises. May contain mandatory parts (delivery advises which are seen by the customer as mandatory, i.e. &quot;fixed&quot; orders) as well as non-mandatory parts (which are forecasts to deliveries).</rdfs:comment>
+        <rdfs:label xml:lang="en">Delivery forecast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT_DELJIT -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT_DELJIT">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification"/>
+        <rdfs:label xml:lang="en">Delivery Forecast for Just in Time and Just in Sequence parts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT_DESADV -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT_DESADV">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification"/>
+        <rdfs:comment xml:lang="en">EDIFACT message for despatch advise (delivery announcement)</rdfs:comment>
+        <rdfs:label xml:lang="en">Despatch Advise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT_ORDERS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT_ORDERS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification"/>
+        <rdfs:comment xml:lang="en">EDIFACT message for purchase order(s).</rdfs:comment>
+        <rdfs:label xml:lang="en">Orders</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#EDIFACT_ORDRSP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#EDIFACT_ORDRSP">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#EDIFACT-Specification"/>
+        <rdfs:comment xml:lang="en">EDIFACT message for Order Response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Order response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#KPI-ML -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#KPI-ML">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">KPI-ML is an XML implementation of the ISO 22400 standard, Automation systems integration - Key performance indicators (KPIs) for manufacturing operations management.  KPI-ML consists of a set of XML schemas written using the World Wide Web Consortium&apos;s XML Schema language (XSD) that implement the data models in the ISO 22400 standard.
+Companies interested in following ISO 22400 for integration projects may use KPI-ML to exchange KPI definitions and values between manufacturing systems such as control systems and manufacturing execution systems and IT systems, as well as visualization systems such as dashboards. Any company may use KPI-ML royalty free, provided credit is given to MESA.
+V0100 is the first version of KPI-ML.
+The MESA XML Committee maintains KPI-ML. It is fully staffed by volunteers and is open to all MESA members. To join the committee or to send feedback on KPI-ML, send a request to KPI-ML@mesa.org.
+(http://www.mesa.org/en/KPIML.asp)</rdfs:comment>
+        <rdfs:label xml:lang="en">KPI-ML</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#MarkupLanguage -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage"/>
+        <rdfs:comment xml:lang="en">A markup language is a computer language that uses tags to define elements within a document. It is human-readable, meaning markup files contain standard words, rather than typical programming syntax. While several markup languages exist, the two most popular are HTML and XML.</rdfs:comment>
+        <rdfs:label xml:lang="en">Markup language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OPC_UA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OPC_UA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">OPC UA devices (servers) expose a “view” of their internal data. The term view is used in the same manner as a database view. It may or may not represent the underlying data structures, but defines the server’s representation of externally accessible data. The OPC UA clients that read the data must understand the defined view. This means that the clients and servers must have high data coupling. A change in the server representation often
+requires a change in the client systems. This coupling is limited when the data types are simple, such as tagged values, but can be high for complex data, such as analyzers, printers, case packers, and filling machines. 
+OPC UA is also high speed, providing a binary representation of data and relatively short message frames. This makes OPC UA suitable for real-time control and also for synchronized processes. OPC UA works best in situations
+where the devices are continuously connected and control high-speed synchronous processes.
+
+The OPC Foundation has recently released the first OPC UA 95 companion specification, which adds ISA-95 object model representations of equipment, personnel, material, and physical assets. This joint effort between the OPC Foundation, the ISA95 committee, and MESA illustrates how these standards can be used together in a federated system architecture.</rdfs:comment>
+        <rdfs:label xml:lang="en">Open Platform Communications Unified Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Ontology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Ontology">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage"/>
+        <rdfs:comment xml:lang="en">In computer science and information science, an ontology encompasses a representation, formal naming and definition of the categories, properties and relations between the concepts, data and entities that substantiate one, many, or all domains of discourse. More simply, an ontology is a way of showing the properties of a subject area and how they are related, by defining a set of concepts and categories that represent the subject.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#REST -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#REST">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">REST is not a complete Service-oriented architecture, but an architecture style that enables systems to show SoA properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Representational State Transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#RosettaNet-Specification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#RosettaNet-Specification">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/EDIspecification"/>
+        <rdfs:comment xml:lang="en">The Rosetta system-level specification language is a design language for complex, heterogeneous systems. Specific language design objectives include:
+
+Constraint representation
+Heterogeneous system representation and specification composability
+Well-defined formal semantics and support for formal analysis
+Scalability to large designs</rdfs:comment>
+        <rdfs:label xml:lang="en">Rosettanet specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#SECS_GEM -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#SECS_GEM">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">The SECS/GEM is the semiconductor&apos;s equipment interface protocol for equipment-to-host data communications. In an automated fab, the interface can start and stop equipment processing, collect measurement data, change variables and select recipes for products. The SECS (SEMI Equipment Communications Standard)/GEM (Generic Equipment Model) standards do all this in a defined way.
+
+Developed by the SEMI (Semiconductor Equipment and Materials International) organization,[1] the standards define a common set of equipment behaviour and communications capabilities.
+
+The Generic Model for Communications and Control Of Manufacturing Equipment (GEM) standard is maintained and published by the non-profit organization Semiconductor Equipment and Materials International (SEMI). Generally speaking, the SECS/GEM standard defines messages, state machines and scenarios to enable factory software to control and monitor manufacturing equipment. The GEM standard is formally designated and referred to as SEMI standard E30, but frequently simply referred to as the GEM or SECS/GEM standard. GEM intends &quot;to produce economic benefits for both device manufacturers and equipment suppliers...&quot; by defining &quot;... a common set of equipment behavior and communications capabilities that provide the functionality and flexibility to support the manufacturing automation programs of semiconductor device manufacturers&quot; [SEMI E30, 1.3]. GEM is a standard implementation of the SECS-II standard, SEMI standard E5. Many equipment in semiconductor (front end and back end), surface mount technology, electronics assembly, photovoltaic, flat panel display and other manufacturing industries worldwide provide a GEM/SECS interface on the manufacturing equipment so that the factory host software can communicate with the machine for monitoring and/or controlling purposes. Because the GEM standard was written with very few semiconductor-specific features, it can be applied to virtually any automated manufacturing equipment in any industry.
+
+All GEM compliant manufacturing equipment share a consistent interface and certain consistent behavior. GEM equipment can communicate with a GEM capable host using either TCP/IP (using the HSMS standard, SEMI E37) or RS-232 based protocol (using the SECS-I standard, SEMI E4). Often both protocols are supported. Each equipment can be monitored and controlled using a common set of SECS-II messages specified by GEM.
+
+There are many additional SEMI standards and factory specifications that reference the GEM standard its features. These additional standards are either industry-specific or equipment-type specific. Following are a few examples.</rdfs:comment>
+        <rdfs:label xml:lang="en">SEMI Equipment Communications Standard / Generic Equipment Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#SOAP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#SOAP">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture"/>
+        <rdfs:comment xml:lang="en">SOAP (originalmente las siglas de Simple Object Access Protocol) es un protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse por medio de intercambio de datos XML. Este protocolo deriva de un protocolo creado por Dave Winer en 1998, llamado XML-RPC. SOAP fue creado por Microsoft, IBM y otros. Está actualmente bajo el auspicio de la W3C. Es uno de los protocolos utilizados en los servicios Web.</rdfs:comment>
+        <rdfs:label xml:lang="en">Simple Object Access Protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#SOSA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#SOSA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Ontology"/>
+        <rdfs:comment xml:lang="en">The Sensor, Observation, Sample, and Actuator (SOSA) ontology provides a formal but lightweight general-purpose specification for modeling the interaction between the entities involved in the acts of observation, actuation, and sampling. SOSA is the result of rethinking the W3C-XG Semantic Sensor Network (SSN) ontology based on changes in scope and target audience, technical developments, and lessons learned over the past years. SOSA also acts as a replacement of SSN&apos;s Stimulus Sensor Observation (SSO) core. It has been developed by the first joint working group of the Open Geospatial Consortium (OGC) and the World Wide Web Consortium (W3C) on \emph{Spatial Data on the Web}. In this work, we motivate the need for SOSA, provide an overview of the main classes and properties, and briefly discuss its integration with the new release of the SSN ontology as well as various other alignments to specifications such as OGC&apos;s Observations and Measurements (O\&amp;M), Dolce-Ultralite (DUL), and other prominent ontologies. We will also touch upon common modeling problems and application areas related to publishing and searching observation, sampling, and actuation data on the Web.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOSA ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#SSN -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#SSN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Ontology"/>
+        <rdfs:comment xml:lang="en">The Semantic Sensor Network (SSN) ontology is an ontology for describing sensors and their observations, the involved procedures, the studied features of interest, the samples used to do so, and the observed properties, as well as actuators. SSN follows a horizontal and vertical modularization architecture by including a lightweight but self-contained core ontology called SOSA (Sensor, Observation, Sample, and Actuator) for its elementary classes and properties. With their different scope and different degrees of axiomatization, SSN and SOSA are able to support a wide range of applications and use cases, including satellite imagery, large-scale scientific monitoring, industrial and household infrastructures, social sensing, citizen science, observation-driven ontology engineering, and the Web of Things. Both ontologies are described below, and examples of their usage are given.</rdfs:comment>
+        <rdfs:label xml:lang="en">SSN ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#SenML -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#SenML">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">he primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and postmeasurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor Modelling Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ServiceDataLanguage -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ServiceDataLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/domain-task/soa/ServiceDescriptionLanguage"/>
+        <rdfs:label xml:lang="en">Service data language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitecture">
+        <rdfs:comment xml:lang="en">This class represents the SOA protocols</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Oriented Architecture Protocols</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitectureImplementation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ServiceOrientedArchitectureImplementation">
+        <rdfs:comment xml:lang="en">Implementations or Realizations of Service-oriented Architectures.
+
+This class contains existing implementations, i.e. software systems, which are designed as Service-oriented Architectures. That is, these systems realize service-oriented communication between their participants / components.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOA implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#UML -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#UML">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering that is intended to provide a standard way to visualize the design of a system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unified Modelling Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#WADL -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#WADL">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">The Web Application Description Language (WADL) is a machine-readable XML description of HTTP-based web services. WADL models the resources provided by a service and the relationships between them. WADL is intended to simplify the reuse of web services that are based on the existing HTTP architecture of the Web. It is platform and language independent and aims to promote reuse of applications beyond the basic use in a web browser.</rdfs:comment>
+        <rdfs:label xml:lang="en">Web Application Description Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#WSDL -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#WSDL">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#MarkupLanguage"/>
+        <rdfs:comment xml:lang="en">The Web Services Description Language  is an XML-based interface description language that is used for describing the functionality offered by a web service. The acronym is also used for any specific WSDL description of a web service (also referred to as a WSDL file), which provides a machine-readable description of how the service can be called, what parameters it expects, and what data structures it returns. Therefore, its purpose is roughly similar to that of a type signature in a programming language.</rdfs:comment>
+        <rdfs:label xml:lang="en">Web Services Description Language</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,53 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/project#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#Project>
+      a       owl:Class ;
+      rdfs:comment "A project (or program) is any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim. A project is a sequence of events: a \"set of interrelated tasks to be executed over a fixed period and within certain cost and other limitations\"."@en ;
+      rdfs:label "Project"@en .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/variant-domain/project>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Project' ontology module represents data about a project (or program) is any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Project ontology"@en ;
+      terms:created """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-24-05"@en ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "This property is used to specify the scope of a project"@en ;
+      rdfs:label "has project scope"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<https://w3id.org/i40/aml#hasProjectTitle>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Title of the project"@en ;
+      rdfs:label "has project title"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<https://w3id.org/i40/aml#hasProjectId>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Unique identification of a Project."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PRIMA#Project> ;
+      rdfs:label "has project ID"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .

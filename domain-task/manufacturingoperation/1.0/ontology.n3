@@ -1,0 +1,21 @@
+<http://www.owl-ontologies.com/mason.owl#Operation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept> .
+<http://www.owl-ontologies.com/mason.owl#Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.owl-ontologies.com/mason.owl#Programming> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Human_operation> .
+<http://www.owl-ontologies.com/mason.owl#Programming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/mason.owl#Scheduling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Human_operation> .
+<http://www.owl-ontologies.com/mason.owl#Scheduling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Manufacturing Operation' ontology module represents data about manufacturing operations, including machining operation as well as control or assembly."@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://purl.org/dc/elements/1.1/title> "Manufacturing Operation ontology"@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://www.w3.org/2002/07/owl#versionInfo> "2021-05-25"@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/variant-domain/manufacturingresource> .
+<http://www.purl.org/i4go/domain-task/manufacturingoperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.owl-ontologies.com/mason.owl#Human_operation> <http://www.w3.org/2000/01/rdf-schema#label> "Human operation"@en .
+<http://www.owl-ontologies.com/mason.owl#Human_operation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Operation> .
+<http://www.owl-ontologies.com/mason.owl#Human_operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

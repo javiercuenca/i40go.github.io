@@ -1,0 +1,102 @@
+<http://www.w3id.org/ecsel-dr-AH#System-of-Systems> <http://www.w3.org/2000/01/rdf-schema#label> "System of Systems"@en .
+<http://www.w3id.org/ecsel-dr-AH#System-of-Systems> <http://www.w3.org/2000/01/rdf-schema#comment> "System of systems is a collection of task-oriented or dedicated systems that pool their resources and capabilities together to create a new, more complex system which offers more functionality and performance than simply the sum of the constituent systems."@en .
+<http://www.w3id.org/ecsel-dr-AH#System-of-Systems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has subsystem"@en .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a System and its component parts."@en .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-PWR#Deployment> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment"@en .
+<http://www.w3id.org/ecsel-dr-PWR#Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "The deployment of a mechanical device, electrical system, computer program, etc., is its assembly or transformation from a packaged form to an operational working state. Deployment implies moving a product from a temporary or development state to a permanent or desired state."@en .
+<http://www.w3id.org/ecsel-dr-PWR#Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3id.org/ecsel-dr-PWR#Deployment> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i40go/common-domain/system/hasDeployment> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff5 .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#label> "deployed system"@en .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PWR#Deployment> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasSubSystem> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i40go/common-domain/system/SystemDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "System documentation"@en .
+<http://www.purl.org/i40go/common-domain/system/SystemDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "The collection of documents that describes the requirements, capabilities, limitations, design, operation, and maintenance of a system, such as a communications, computing, or information processing system"@en .
+<http://www.purl.org/i40go/common-domain/system/SystemDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "A system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function."@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff6 .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff7 .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff8 .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff9 .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffa .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Processes are all the related activities (parts) inside the system that work together to make it function."@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceComposition> <http://www.w3.org/2000/01/rdf-schema#label> "Service Composition"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceComposition> <http://www.w3.org/2000/01/rdf-schema#comment> "Service offered by a system"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceComposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/aml#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
+<https://w3id.org/i40/aml#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the name of an entity, such a system."@en .
+<https://w3id.org/i40/aml#hasName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/aml#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.purl.org/i40go/common-domain/system> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i40go/common-domain/system> <http://purl.org/dc/terms/issued> "2021-04-29"@en .
+<http://www.purl.org/i40go/common-domain/system> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'System' ontology module represents data about systems. In the context of the Indsutry 4.0 Global Ontology a system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function."@en .
+<http://www.purl.org/i40go/common-domain/system> <http://purl.org/dc/elements/1.1/title> "System ontology"@en .
+<http://www.purl.org/i40go/common-domain/system> <http://purl.org/dc/terms/created> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i40go/common-domain/system> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i40go/common-domain/system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "has deployment"@en .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "This propety is used to relate a system with its deployment."@en .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PWR#Deployment> .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.purl.org/i40go/common-domain/system/hasDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Platform> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isHostedBy> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/2000/01/rdf-schema#label> "orchestrates"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate a system with the processes/services it orchestrates."@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/2000/01/rdf-schema#label> "This class is used to represent the components of a system"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/2000/01/rdf-schema#label> "Composition"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffb .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffc .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i40go/common-domain/system/Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
+<http://www.purl.org/i40go/common-domain/system/Component> <http://www.w3.org/2000/01/rdf-schema#comment> "According to ISO26262: non-system level element (3.41) that is logically or technically separable and is comprised of more than one hardware part (3.71) or one or more software units (3.159). \n\nA component is a part of a system (3.163)."@en .
+<http://www.purl.org/i40go/common-domain/system/Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.purl.org/i40go/common-domain/system/Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> <http://www.w3.org/2000/01/rdf-schema#label> "orchestrated by"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasSubSystem> .
+_:AX2dX34d96a36X3aX17a5d101ad2X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

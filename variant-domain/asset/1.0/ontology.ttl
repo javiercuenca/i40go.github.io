@@ -1,0 +1,110 @@
+@prefix :        <http://www.purl.org/i40go/variant-domain/asset#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard>
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i40go/variant-domain/asset>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Asset' ontology module represents data about assets. An asset is a physical entity or digital entity that has value to an individual, an organization or a government. This ontology module also provides a representation about the Asset Administration Shell and associated concepts. Includes the administration of the asset concept, the functionalities of the administration shell, assets and sub models that describe an asset."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Asset ontology module"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-24-05"@en ;
+      owl:imports <http://www.purl.org/i40go/variant-domain/manufacturingresource> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#TransportInterface>
+      a       owl:Class ;
+      rdfs:label "Transport interface"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#SensorMeasurement>
+      a       owl:Class ;
+      rdfs:label "Sensor measurement"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#hasData>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Connects the AdminShell with the different types of Data for the Object/Entity"@en ;
+      rdfs:label "has data"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith>
+      a       owl:ObjectProperty ;
+      rdfs:comment "The Submodel is in accordance with a given standard specified in the STO ontology"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> ;
+      rdfs:label "in accordance with"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#Structure>
+      a       owl:Class ;
+      rdfs:label "Structure"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to specify the information about I4.0 asset"@en ;
+      rdfs:label "has submodel"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#Submodel>
+      a       owl:Class ;
+      rdfs:comment "Describe the different types of Data related to the I4.0 Asset"@en ;
+      rdfs:label "Submodel"@en .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#Asset>
+      a       owl:Class ;
+      rdfs:comment "A physical entity or digital entity that has value to an individual, an organization or a government. An item, such as design, specification, source code, documentation, test suites, manual procedures, etc., that has been designed for use in multiple contexts."@en ;
+      rdfs:label "Asset"@en ;
+      rdfs:subClassOf <http://www.owl-ontologies.com/mason.owl#Resource> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#MESConnection>
+      a       owl:Class ;
+      rdfs:comment "Connection of a manufacturing execution systems (MES). MESs are computerized systems used in manufacturing to track and document the transformation of raw materials to finished goods."@en ;
+      rdfs:label "MES connection"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#EnergyEfficiency>
+      a       owl:Class ;
+      rdfs:label "Energy efficiency"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Points to the datatypes of the Submodels"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> ;
+      rdfs:label "has datatype"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#Machine>
+      a       owl:Class ;
+      rdfs:comment "A machine is ordered, designed, commissioned, operated, serviced, converted and recycled."@en ;
+      rdfs:label "Machine"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-RAMI40#Asset> .
+
+<http://www.w3id.org/ecsel-dr-RAMI40#hasReference>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> ;
+      rdfs:label "has reference"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .

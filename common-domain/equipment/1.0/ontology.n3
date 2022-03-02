@@ -1,0 +1,42 @@
+<http://www.w3id.org/ecsel-dr-SO#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en .
+<http://www.w3id.org/ecsel-dr-SO#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "An equipment is any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task."@en .
+<http://www.w3id.org/ecsel-dr-SO#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3id.org/ecsel-dr-SO#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceElements> <http://www.w3.org/2000/01/rdf-schema#label> "Device elements"@en .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceElements> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to represent the elements that compound a device."@en .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceElements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/equipment> <http://purl.org/dc/terms/issued> "2021-05-03"@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Equipment, devices and apparatus' ontology module represents data about any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task."@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://purl.org/dc/elements/1.1/title> "Equipment, devices and apparatus ontology"@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/common-domain/equipment> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/system> .
+<http://www.purl.org/i4go/common-domain/equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.purl.org/i4go/common-domain/equipment/ipAddress> <http://www.w3.org/2000/01/rdf-schema#label> "ip address"@en .
+<http://www.purl.org/i4go/common-domain/equipment/ipAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The IP address of the device."@en .
+<http://www.purl.org/i4go/common-domain/equipment/ipAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-AT#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+<http://www.w3id.org/ecsel-dr-AT#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A device is a material element or assembly of such elements intended to perform a required function."@en .
+<http://www.w3id.org/ecsel-dr-AT#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.w3id.org/ecsel-dr-AT#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment group"@en .
+<http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to identify the different kinds of equipment."@en .
+<http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/equipment/macAddress> <http://www.w3.org/2000/01/rdf-schema#label> "mac address"@en .
+<http://www.purl.org/i4go/common-domain/equipment/macAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "MAC address of the device."@en .
+<http://www.purl.org/i4go/common-domain/equipment/macAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Device configuration"@en .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "In computers and computer networks, a configuration often refers to the specific hardware and software details in terms of devices attached, capacity or capability, and exactly what the system is made up of."@en .
+<http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AH#DeviceID> <http://www.w3.org/2000/01/rdf-schema#label> "device id"@en .
+<http://www.w3id.org/ecsel-dr-AH#DeviceID> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to provide an unique identifier for a device."@en .
+<http://www.w3id.org/ecsel-dr-AH#DeviceID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-AH#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-AH#DeviceName> <http://www.w3.org/2000/01/rdf-schema#label> "device name"@en .
+<http://www.w3id.org/ecsel-dr-AH#DeviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the device."@en .
+<http://www.w3id.org/ecsel-dr-AH#DeviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-AH#DeviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

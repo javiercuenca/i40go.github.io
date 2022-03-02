@@ -1,0 +1,166 @@
+@prefix :        <http://www.purl.org/i40go/common-domain/system#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3.org/ns/ssn/implements>
+      a       owl:ObjectProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3.org/ns/sosa/Procedure>
+      a       owl:Class .
+
+<http://www.w3.org/ns/ssn/hasSubSystem>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Relation between a System and its component parts."@en ;
+      rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+      rdfs:label "has subsystem"@en ;
+      rdfs:range <http://www.w3.org/ns/ssn/System> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3.org/ns/ssn/System>
+      a       owl:Class ;
+      rdfs:comment "A system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function."@en ;
+      rdfs:label "System"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.w3id.org/ecsel-dr-PWR#Deployment> ;
+                owl:onProperty <http://www.purl.org/i40go/common-domain/system/hasDeployment>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.w3.org/ns/ssn/System> ;
+                owl:onProperty
+                        [ owl:inverseOf <http://www.w3.org/ns/ssn/hasSubSystem>
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.w3.org/ns/ssn/System> ;
+                owl:onProperty <http://www.w3.org/ns/ssn/hasSubSystem>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.w3.org/ns/sosa/Procedure> ;
+                owl:onProperty <http://www.w3.org/ns/ssn/implements>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.w3.org/ns/sosa/Platform> ;
+                owl:onProperty <http://www.w3.org/ns/sosa/isHostedBy>
+              ] .
+
+<http://www.purl.org/i40go/common-domain/system/SystemDocumentation>
+      a       owl:Class ;
+      rdfs:comment "The collection of documents that describes the requirements, capabilities, limitations, design, operation, and maintenance of a system, such as a communications, computing, or information processing system"@en ;
+      rdfs:label "System documentation"@en .
+
+<http://www.w3.org/ns/ssn/deployedSystem>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PWR#Deployment> ;
+      rdfs:label "deployed system"@en ;
+      rdfs:range <http://www.w3.org/ns/ssn/System> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/aml#hasName>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "This property is used to specify the name of an entity, such a system."@en ;
+      rdfs:label "has name" ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.w3.org/ns/sosa/Platform>
+      a       owl:Class .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy>
+      a       owl:ObjectProperty ;
+      rdfs:label "orchestrated by"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a system with the processes/services it orchestrates."@en ;
+      rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+      rdfs:label "orchestrates"@en ;
+      rdfs:range <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceComposition>
+      a       owl:Class ;
+      rdfs:comment "Service offered by a system"@en ;
+      rdfs:label "Service Composition"@en ;
+      rdfs:subClassOf <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> .
+
+<http://www.w3.org/ns/sosa/isHostedBy>
+      a       owl:ObjectProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i40go/common-domain/system/hasDeployment>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This propety is used to relate a system with its deployment."@en ;
+      rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+      rdfs:label "has deployment"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PWR#Deployment> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PWR#Deployment>
+      a       owl:Class ;
+      rdfs:comment "The deployment of a mechanical device, electrical system, computer program, etc., is its assembly or transformation from a packaged form to an operational working state. Deployment implies moving a product from a temporary or development state to a permanent or desired state."@en ;
+      rdfs:label "Deployment"@en .
+
+<http://www.purl.org/i40go/common-domain/system>
+      a       owl:Ontology ;
+      rdfs:comment "The 'System' ontology module represents data about systems. In the context of the Indsutry 4.0 Global Ontology a system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "System ontology"@en ;
+      terms:created """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-04-29"@en ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.purl.org/i40go/common-domain/system/Component>
+      a       owl:Class ;
+      rdfs:comment """According to ISO26262: non-system level element (3.41) that is logically or technically separable and is comprised of more than one hardware part (3.71) or one or more software units (3.159). 
+
+A component is a part of a system (3.163)."""@en ;
+      rdfs:label "Component"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process>
+      a       owl:Class ;
+      rdfs:comment "Processes are all the related activities (parts) inside the system that work together to make it function."@en ;
+      rdfs:label "Process"@en ;
+      rdfs:subClassOf <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition> .
+
+<http://www.w3id.org/ecsel-dr-AH#System-of-Systems>
+      a       owl:Class ;
+      rdfs:comment "System of systems is a collection of task-oriented or dedicated systems that pool their resources and capabilities together to create a new, more complex system which offers more functionality and performance than simply the sum of the constituent systems."@en ;
+      rdfs:label "System of Systems"@en .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Composition>
+      a       owl:Class ;
+      rdfs:label "This class is used to represent the components of a system"@en , "Composition"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy>
+              ] .

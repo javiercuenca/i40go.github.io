@@ -1,0 +1,98 @@
+<http://www.w3id.org/ecsel-dr-PMV#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#EndEvent> <http://www.w3.org/2000/01/rdf-schema#label> "End event"@en .
+<http://www.w3id.org/ecsel-dr-PMV#EndEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the event element that stands at the end of a branch in the process flow and thus, ends the process flow branch or the total process."@en .
+<http://www.w3id.org/ecsel-dr-PMV#EndEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#EndEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i4go/variant-domain/event/EventCalendar> .
+<http://www.w3id.org/ecsel-dr-PMV#creates> <http://www.w3.org/2000/01/rdf-schema#label> "creates"@en .
+<http://www.w3id.org/ecsel-dr-PMV#creates> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> .
+<http://www.w3id.org/ecsel-dr-PMV#creates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is created by"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An event is created by a process step. The connector is used to represent the chronological order in an EPC."@en .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#unionOf> _:A37119d1bX3aX17a75eef119X3aXX2dX7ffb .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/2000/01/rdf-schema#label> "activates"@en .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/2000/01/rdf-schema#comment> "The connector is used to represent the chronological order in an EPC, where an Event or a Rule activate a Task or Process Interface."@en .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/2000/01/rdf-schema#domain> _:A37119d1bX3aX17a75eef119X3aXX2dX7ffc .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#activates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/2000/01/rdf-schema#comment> "is dependent on"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/2000/01/rdf-schema#comment> "An event is dependent on a rule. The connector is used to represent the chronological order in an EPC."@en .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A37119d1bX3aX17a75eef119X3aXX2dX7ffa .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#SplitRule> <http://www.w3.org/2000/01/rdf-schema#label> "Split rule"@en .
+<http://www.w3id.org/ecsel-dr-PMV#SplitRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule element that splits the control flow into several branches. Has one incoming path and several (at least two) outgoing paths."@en .
+<http://www.w3id.org/ecsel-dr-PMV#SplitRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+<http://www.w3id.org/ecsel-dr-PMV#SplitRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is evaluated by"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An event is evaluated by a rule. The connector is used to represent the chronological order in an EPC."@en .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#JoinRule> .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A37119d1bX3aX17a75eef119X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+<http://www.purl.org/i4go/variant-domain/event> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://purl.org/dc/terms/issued> "2021-24-05"@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Event' ontology module represents data about events and the elements that generate them. A noteworthy occurrence that has a location in time and space, and does not have duration."@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://purl.org/dc/elements/1.1/title> "Event ontology"@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/2000/01/rdf-schema#comment> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time#2016> .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/variant-domain/manufacturingprocess> .
+<http://www.purl.org/i4go/variant-domain/event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "responds to"@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the element that reponds to an event."@en .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/2000/01/rdf-schema#label> "leads to event"@en .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A rule leads to an event. The connector is used to represent the chronological order in an EPC."@en .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType> <http://www.w3.org/2000/01/rdf-schema#label> "Event Calendar: Type of event" .
+<http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rules allow to model alternative, exclusive alternative and parallel process flows."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Rule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2000/01/rdf-schema#label> "activates function"@en .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialization of the activates property that links the class Event with Task and Process Interface in the course of the process flow."@en .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction> .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction> <http://www.w3.org/2000/01/rdf-schema#label> "is activated by function"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/event/EventCalendar> <http://www.w3.org/2000/01/rdf-schema#label> "Event calendar"@en .
+<http://www.purl.org/i4go/variant-domain/event/EventCalendar> <http://www.w3.org/2000/01/rdf-schema#comment> "In the \u201CEvent Calendar\u201D tracing entity, certain events like planned facility shutdowns, etc. can be scheduled"@en .
+<http://www.purl.org/i4go/variant-domain/event/EventCalendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#StartEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Start event"@en .
+<http://www.w3id.org/ecsel-dr-PMV#StartEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process."@en .
+<http://www.w3id.org/ecsel-dr-PMV#StartEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Event> .
+<http://www.w3id.org/ecsel-dr-PMV#StartEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#JoinRule> <http://www.w3.org/2000/01/rdf-schema#label> "Join rule"@en .
+<http://www.w3id.org/ecsel-dr-PMV#JoinRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule element that unites the control flow after being split into several branches. Has several incoming paths (at least two) and one outgoing."@en .
+<http://www.w3id.org/ecsel-dr-PMV#JoinRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+<http://www.w3id.org/ecsel-dr-PMV#JoinRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

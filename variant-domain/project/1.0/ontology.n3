@@ -1,0 +1,28 @@
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/2000/01/rdf-schema#label> "has project ID"@en .
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identification of a Project."@en .
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PRIMA#Project> .
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/aml#hasProjectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i4go/variant-domain/project> <http://purl.org/dc/elements/1.1/title> "Project ontology"@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Project' ontology module represents data about a project (or program) is any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim."@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://purl.org/dc/terms/issued> "2021-24-05"@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://purl.org/dc/terms/created> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope> <http://www.w3.org/2000/01/rdf-schema#label> "has project scope"@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the scope of a project"@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#hasProjectScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/aml#hasProjectTitle> <http://www.w3.org/2000/01/rdf-schema#label> "has project title"@en .
+<https://w3id.org/i40/aml#hasProjectTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the project"@en .
+<https://w3id.org/i40/aml#hasProjectTitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/aml#hasProjectTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-PRIMA#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "A project (or program) is any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim. A project is a sequence of events: a \"set of interrelated tasks to be executed over a fixed period and within certain cost and other limitations\"."@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

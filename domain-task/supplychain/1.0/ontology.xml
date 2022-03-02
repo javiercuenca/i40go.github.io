@@ -1,0 +1,76 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ns="http://creativecommons.org/ns#"
+    xmlns="http://www.purl.org/i40go/domain-task/supplychain#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName">
+    <rdfs:label xml:lang="en">has supply chain name</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the supply chain</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/domain-task/supplychain">
+    <terms:issued xml:lang="en">2021-05-25</terms:issued>
+    <rdfs:comment xml:lang="en">The 'Supply Chain' ontology module</rdfs:comment>
+    <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    <dc:title xml:lang="en">Supply Chain ontology</dc:title>
+    <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.purl.org/i40go/variant-domain/productionplant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/domain-task/supplychain/SupplyChain">
+    <rdfs:label xml:lang="en">Supply chain</rdfs:label>
+    <rdfs:comment xml:lang="en">The entity “Supply Chain” describes the supply chain from the topmost level with all possible material flow edges.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#fromFabID">
+    <rdfs:label xml:lang="en">from fab id</rdfs:label>
+    <rdfs:comment xml:lang="en">Source ID of supply chain edge</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i40go/domain-task/supplychain/SupplyChain"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTravelTime">
+    <rdfs:label xml:lang="en">has travel time</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i40go/domain-task/supplychain/SupplyChain"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasPlant">
+    <rdfs:label xml:lang="en">has plant</rdfs:label>
+    <rdfs:comment xml:lang="en">This property is used to relate the supply chain with the production plant.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Plant"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i40go/domain-task/supplychain/SupplyChain"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#toFabID">
+    <rdfs:label xml:lang="en">to fab ID</rdfs:label>
+    <rdfs:comment xml:lang="en">Sink ID of supply chain edge</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i40go/domain-task/supplychain/SupplyChain"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

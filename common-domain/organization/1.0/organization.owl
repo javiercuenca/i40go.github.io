@@ -1,0 +1,641 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i40go/common-domain/organization#"
+     xml:base="http://www.purl.org/i40go/common-domain/organization"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/common-domain/organization">
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <rdfs:comment xml:lang="en">The &apos;Organization&apos; ontology module data about organizations, their internal structure (i.e., departments and divisions that compound the organization) and the roles that their departments/units and individuals have.</rdfs:comment>
+        <terms:issued xml:lang="en">2021-05-14</terms:issued>
+        <dc:title xml:lang="en">Organization ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#unitOf"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+        <rdfs:comment xml:lang="en">This property is used to relate organizations with their organizational units.</rdfs:comment>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#unitOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">unit of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <rdfs:comment xml:lang="en">A Standard Organization that belongs to the country</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#hasClassification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">An Standard is isCategorizedBy a given Categorization Area which is connected to a specific Standarization Initiative</rdfs:comment>
+        <rdfs:label xml:lang="en">has classification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasDeveloper -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#hasDeveloper">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">Links the Standard Organization that developed the Publication with the specific type of publication, e.g., Standard, Technical Report</rdfs:comment>
+        <rdfs:label xml:lang="en">has developer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasHeadquaterIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#hasHeadquaterIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Place"/>
+        <rdfs:comment xml:lang="en">Denotes the countries in which the Headquarter of the organization who publishes the Standart</rdfs:comment>
+        <rdfs:label xml:lang="en">has headquarter in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#hasPublisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The organization that published this Standard</rdfs:comment>
+        <rdfs:label xml:lang="en">has publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Point to the URL of a recognized Ontology representation of the Standard</rdfs:comment>
+        <rdfs:label xml:lang="en">has ontology</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/i40/sto#formationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#formationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Formation date of the Organization</rdfs:comment>
+        <rdfs:label>Formation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasEdition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasEdition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Indicates the current Edition/Version number of the document.</rdfs:comment>
+        <rdfs:label xml:lang="en">has edition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasImplementationFormat -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasImplementationFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Describes the name of the implementation or serialization format of the Publication, e.g., XML, Document, binary, batch</rdfs:comment>
+        <rdfs:label xml:lang="en">has implementation format</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasMotivation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasMotivation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">has motivation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasOfficialResource -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasOfficialResource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Points to the URL of the official website from which published the document</rdfs:comment>
+        <rdfs:label xml:lang="en">has official resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasOpenResource -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasOpenResource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Points to the URLs of the resources(documents) openly available for the standard</rdfs:comment>
+        <rdfs:label xml:lang="en">has open resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasPages -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasPages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Indicates the number of pages in the document.</rdfs:comment>
+        <rdfs:label xml:lang="en">has pages</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasPublicationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasPublicationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Publication date of the Publication</rdfs:comment>
+        <rdfs:label xml:lang="en">has publication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasStabilityDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasStabilityDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Stability date of a publication. Publications are valid for a certain period, i.e., the Stability Period. This property defines the end of the stability period.</rdfs:comment>
+        <rdfs:label xml:lang="en">has stability date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#hasStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Publication status of the Standard, e.g., Valid, Revised, Published, under preparation, Released</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#orgName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/i40/sto#orgName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Name of the Organization</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Place -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Place">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+        <rdfs:comment xml:lang="en">An Organization such as a department or support unit which is part of some larger Organization and only has full recognition within the context of that Organization. In particular the unit would not be regarded as a legal entity in its own right.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organizational unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ANSI -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ANSI">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The American National Standards Institute is a private non-profit organization that oversees the development of voluntary consensus standards for products, services, processes, systems, and personnel in the United States. The organization also coordinates U.S. standards with international standards so that American products can be used worldwide.</rdfs:comment>
+        <rdfs:label xml:lang="en">ANSI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IEC -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IEC">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The International Electrotechnical Commission (IEC; in French: Commission électrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies – collectively known as &quot;electrotechnology&quot;. IEC standards cover a vast range of technologies from power generation, transmission and distribution to home appliances and office equipment, semiconductors, fibre optics, batteries, solar energy, nanotechnology and marine energy as well as many others. The IEC also manages four global conformity assessment systems that certify whether equipment, system or components conform to its international standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">IEC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IEEE -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IEEE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The Institute of Electrical and Electronics Engineers (IEEE) is a professional association for electronic engineering and electrical engineering (and associated disciplines).</rdfs:comment>
+        <rdfs:label xml:lang="en">IEEE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IETF -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IETF">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The Internet Engineering Task Force (IETF) is an open standards organization, which develops and promotes voluntary Internet standards, in particular the standards that comprise the Internet protocol suite (TCP/IP). It has no formal membership roster or membership requirements. All participants and managers are volunteers, though their work is usually funded by their employers or sponsors.</rdfs:comment>
+        <rdfs:label xml:lang="en">IETF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ISA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ISA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ISO -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ISO">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#MESA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#MESA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">Manufacturing Enterprise Solutions Association International (MESA, also known as MESA International) is a worldwide not-for-profit community of manufacturing companies, information technology hardware and software suppliers, system integrators, consulting service providers, analysts, editors, academics, and students. MESA’s goal is to help member companies improve business results and production operations through application and implementation of information technology and best management practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">MESA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OASIS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OASIS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The Organization for the Advancement of Structured Information Standards is a global nonprofit consortium that works on the development, convergence, and adoption of open standards for cybersecurity, blockchain, Internet of Things (IoT), emergency management, cloud computing, legal data exchange, energy, content technologies, and other areas.</rdfs:comment>
+        <rdfs:label xml:lang="en">OASIS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OMG -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OMG">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">The Object Management Group (OMG) is a computer industry standards consortium. OMG Task Forces develop enterprise integration standards for a range of technologies.</rdfs:comment>
+        <rdfs:label xml:lang="en">OMG</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#W3C -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#W3C">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization"/>
+        <rdfs:comment xml:lang="en">W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs.</rdfs:comment>
+        <rdfs:label xml:lang="en">W3C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+        <rdfs:comment xml:lang="en">A business line is an organizational unit that can be assigned to a division and can have one or more product lines.</rdfs:comment>
+        <rdfs:label xml:lang="en">Business line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#Division -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#Division">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#ProductLine -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#ProductLine">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PRIMA#Role"/>
+        <rdfs:label xml:lang="en">Project manager</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PRIMA#Role"/>
+        <rdfs:label xml:lang="en">Porject owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PRIMA#Role"/>
+        <rdfs:label xml:lang="en">Project team member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#Role -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#Role">
+        <rdfs:comment xml:lang="en">This class is used to specify the role of people in an organization</rdfs:comment>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PROD#Organization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PROD#Organization">
+        <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposed into hierarchical structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <rdfs:comment xml:lang="en">The document class represents those things which are, broadly conceived, &apos;documents&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#IIoTConsortium -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#IIoTConsortium">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:comment xml:lang="en">IoT consortium</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Internet of Things Consortium (IoTC) is the premier business development association for the Internet of Things (IoT) ecosystem.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#Publication -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#Publication">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">Specifies a Publication. E.g., International Standards,Technical Specifications,Publicly Available Specifications, Amendments Technical Corrigenda,Interpretation Sheets,Technical Reports,Guides.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#Standard -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#Standard">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:comment xml:lang="en">A document, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#StandardClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#StandardClassification">
+        <rdfs:comment xml:lang="en">Describes categorization areas that the different Standardizations Initiatives use to category Standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#StandardPart -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#StandardPart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:comment xml:lang="en">Typically Standards are divided into parts. E.g., ISA 95 has part Part 1: Models and Terminology, Part 2: Object Model Attributes, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#TechnicalCommittee -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#TechnicalCommittee">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+        <rdfs:comment xml:lang="en">Specifies the representitive code name of the Technical Committee that covers a Standard for e.g, TC 1, SC 3C. Many thousand experts carry out standardization work in the IEC in TCs (technical committees) and SCs (subcommittees), in hundreds of working groups, project and maintenance teams. They represent the national electrotechnical needs of IEC Member countries and of many Affiliates at the global level in the IEC. These technical experts are sent by industry, governments, test and research laboratories, academia and even consumer groups to work on the global, neutral and independent platform of the IEC. That&apos;s where they develop globally relevant, voluntary, consensus based IEC International Standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical committe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#TechnicalReport -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#TechnicalReport">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:comment xml:lang="en">Technical Reports contain collected data of a kind different from that normally published as an International Standard, for example data obtained from a survey carried out among national committees, data of work in other international organizations or data on &quot;the state of the art&quot; in relation to standards of national committees on a particular subject.Technical Reports are entirely informative in nature and shall not contain matter implying that they are normative</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#TechnicalSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#TechnicalSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:comment xml:lang="en">Technical Specifications are often published when the subject under question is still under development or when insufficient consensus for approval of an International Standard is available.Technical Specifications approach International Standards in terms of detail and completeness, but have not yet passed through all approval stages either because consensus has not been reached or because standardization is seen to be premature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/i40/sto#Technology -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#Technology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/i40/sto#Publication"/>
+        <rdfs:comment xml:lang="en">A technology develiped by an organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technology</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

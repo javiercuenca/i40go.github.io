@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/variant-domain/actuator#"
+     xml:base="http://www.purl.org/i4go/variant-domain/actuator"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/variant-domain/actuator">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/equipment"/>
+        <dc:title xml:lang="en">Actutor ontology</dc:title>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <terms:issued xml:lang="en">2021-05-04</terms:issued>
+        <rdfs:comment xml:lang="en">The &apos;Actuator&apos; ontology module represents data about sensor devices.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#implements -->
+
+    <owl:ObjectProperty rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/actsOnProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+        <rdfs:comment xml:lang="en">Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.</rdfs:comment>
+        <rdfs:label xml:lang="en">acts on property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <rdfs:comment xml:lang="en">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSample -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSample"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isActedOnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isActedOnBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:comment xml:lang="en">Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.</rdfs:comment>
+        <rdfs:label xml:lang="en">is acted on by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">is feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isResultOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOf"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeActuation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeActuation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:comment xml:lang="en">Relation between an Actuator and the Actuation it has made.</rdfs:comment>
+        <rdfs:label xml:lang="en">made actuation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeByActuator -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation linking an Actuation to the Actuator that made that Actuation.</rdfs:comment>
+        <rdfs:label xml:lang="en">made by actuator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySampler -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <rdfs:comment xml:lang="en">Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.</rdfs:comment>
+        <rdfs:label xml:lang="en">made by sampler</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeSampling -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeSampling">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">made sampling</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/usedProcedure -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <rdfs:comment xml:lang="en">A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.</rdfs:comment>
+        <rdfs:label xml:lang="en">used procedure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/forProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Property"/>
+        <rdfs:comment xml:lang="en">A relation between some aspect of an entity and a Property.</rdfs:comment>
+        <rdfs:label xml:lang="en">for property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SCP#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SCP#hasResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">has result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/resultTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/resultTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</rdfs:comment>
+        <rdfs:label>result time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ActuatableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuatableProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isActedOnBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actuatable quality (property, characteristic) of a FeatureOfInterest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuatable property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/ecsel-dr-SCP#hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/ecsel-dr-SCP#hasResult"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeActuation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:comment xml:lang="en">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Procedure -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:comment xml:lang="en">A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.</rdfs:comment>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sample -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSample"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sampler -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampler"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sampling -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampling">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/ecsel-dr-SCP#hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/ecsel-dr-SCP#hasResult"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An act of Sampling carries out a sampling Procedure to create or transform one or more samples.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sampling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Property -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Property">
+        <rdfs:comment xml:lang="en">This class is used to represent operation properties about devices, such as thereshold voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,112 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="http://www.purl.org/i40go/variant-domain/asset#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ns="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#usesStandard">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/asset">
+    <rdfs:comment xml:lang="en">The 'Asset' ontology module represents data about assets. An asset is a physical entity or digital entity that has value to an individual, an organization or a government. This ontology module also provides a representation about the Asset Administration Shell and associated concepts. Includes the administration of the asset concept, the functionalities of the administration shell, assets and sub models that describe an asset.</rdfs:comment>
+    <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    <terms:issued xml:lang="en">2021-24-05</terms:issued>
+    <dc:title xml:lang="en">Asset ontology module</dc:title>
+    <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#TransportInterface">
+    <rdfs:label xml:lang="en">Transport interface</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#SensorMeasurement">
+    <rdfs:label xml:lang="en">Sensor measurement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#hasData">
+    <rdfs:label xml:lang="en">has data</rdfs:label>
+    <rdfs:comment xml:lang="en">Connects the AdminShell with the different types of Data for the Object/Entity</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith">
+    <rdfs:label xml:lang="en">in accordance with</rdfs:label>
+    <rdfs:comment xml:lang="en">The Submodel is in accordance with a given standard specified in the STO ontology</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Structure">
+    <rdfs:label xml:lang="en">Structure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel">
+    <rdfs:label xml:lang="en">has submodel</rdfs:label>
+    <rdfs:comment xml:lang="en">This property is used to specify the information about I4.0 asset</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Submodel">
+    <rdfs:label xml:lang="en">Submodel</rdfs:label>
+    <rdfs:comment xml:lang="en">Describe the different types of Data related to the I4.0 Asset</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Asset">
+    <rdfs:label xml:lang="en">Asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A physical entity or digital entity that has value to an individual, an organization or a government. An item, such as design, specification, source code, documentation, test suites, manual procedures, etc., that has been designed for use in multiple contexts.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/mason.owl#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#MESConnection">
+    <rdfs:label xml:lang="en">MES connection</rdfs:label>
+    <rdfs:comment xml:lang="en">Connection of a manufacturing execution systems (MES). MESs are computerized systems used in manufacturing to track and document the transformation of raw materials to finished goods.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#EnergyEfficiency">
+    <rdfs:label xml:lang="en">Energy efficiency</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#hasDataType">
+    <rdfs:label xml:lang="en">has datatype</rdfs:label>
+    <rdfs:comment xml:lang="en">Points to the datatypes of the Submodels</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Machine">
+    <rdfs:label xml:lang="en">Machine</rdfs:label>
+    <rdfs:comment xml:lang="en">A machine is ordered, designed, commissioned, operated, serviced, converted and recycled.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Asset"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#hasReference">
+    <rdfs:label xml:lang="en">has reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Submodel"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

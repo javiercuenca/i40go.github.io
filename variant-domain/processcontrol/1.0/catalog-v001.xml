@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.purl.org/i40go/common-domain/manufacture" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/common-domain/manufacture/1.0/manufacture.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/cost" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/cost/1.0/cost.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/manufacturingprocess" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/manufacturingprocess/1.0/manufacturingprocess.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/actuator" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/actutor/1.0/actuator.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/service" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/service/1.0/service.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/common-domain/system" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/common-domain/system/1.0/system.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/common-domain/equipment" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/common-domain/equipment/1.0/equipment.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1621850861631" name="http://www.purl.org/i40go/common-domain/processcontrol" uri="processcontrol.owl"/>
+    </group>
+</catalog>

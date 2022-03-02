@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i40go/common-domain/operation#"
+     xml:base="http://www.purl.org/i40go/common-domain/operation"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/variant-domain/operation">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/equipment"/>
+        <dc:title xml:lang="en">Operation ontology</dc:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <rdfs:comment xml:lang="en">The &apos;Operation&apos; ontology module represents information about operations: combination of activities necessary to permit an installation to function. The represented operations include switching, controlling, monitoring and maintenance as well as any work activities.</rdfs:comment>
+        <terms:issued xml:lang="en">2021-05-03</terms:issued>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasOperatingProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasOperatingProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation from an OperatingRange of a System to an OperatingProperty describing the operating range of the System.</rdfs:comment>
+        <rdfs:label xml:lang="en">has operating property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasCurrentWIP -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasCurrentWIP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#CurrentWIP"/>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with their current WIP.</rdfs:comment>
+        <rdfs:label xml:lang="en">has current WIP</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasDemand -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasDemand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/DemandSnapshot"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/ProductionRequests"/>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with redundant demands and production requests.</rdfs:comment>
+        <rdfs:label xml:lang="en">has demand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasEquipment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#isEquipmentOf"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Equipment"/>
+        <rdfs:comment xml:lang="en">Property used to relate operations with the equipment that perform them.</rdfs:comment>
+        <rdfs:label xml:lang="en">has equipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasEquipmentGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasEquipmentGroup">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup"/>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with the equipment groups that perform them.</rdfs:comment>
+        <rdfs:label xml:lang="en">has equipment group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasEventCalendar -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasEventCalendar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with their event calendar.</rdfs:comment>
+        <rdfs:label xml:lang="en">has event calendar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasLotSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasLotSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with their lot size</rdfs:comment>
+        <rdfs:label xml:lang="en">has lot size</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasOperation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#isOperationOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup"/>
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/operation/DemandSnapshot"/>
+                    <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#CurrentWIP"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:comment xml:lang="en">This property is used to relate different entities (such as equipment) the the operations they perform.</rdfs:comment>
+        <rdfs:label xml:lang="en">has operation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/SimulationRoute"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/SimulationPart"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasRoute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/SimulationPart"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Technology"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/SimulationRoute"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Route"/>
+        <rdfs:comment xml:lang="en">This property is used to relate operations with their routes and simulation routes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has route</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasTechnology -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTechnology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Technology"/>
+        <rdfs:label xml:lang="en">This property is used to relate operations with their associated equipment and technologies.</rdfs:label>
+        <rdfs:label xml:lang="en">has technology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasTimeConstraints -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTimeConstraints">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/operation/TimeConstraints"/>
+        <rdfs:comment xml:lang="en">This class is used to relate operations with their time constraints.</rdfs:comment>
+        <rdfs:label xml:lang="en">has time constraints</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasWorkshop -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasWorkshop">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">This class is used to relate operations with their related working structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">has workshop</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#isEquipmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#isEquipmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">is equipment of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#isOperationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#isOperationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">is operation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasCapacityLoss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasCapacityLoss">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Calendar: Facility capacity loss in percent.</rdfs:comment>
+        <rdfs:label xml:lang="en">has capacity loss</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Event Calendar: Type of event</rdfs:comment>
+        <rdfs:label xml:lang="en">has event calendar type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasLotSizeQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasLotSizeQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">Lot Size: Standard (FE) or optimal (BE) lot size for respective PL3</rdfs:comment>
+        <rdfs:label xml:lang="en">has lot size quantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToFailure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToFailure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="en">has mean time to failure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToFailureDistribution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToFailureDistribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has mean time to failure distribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToRepair -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToRepair">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="en">has mean time to repair</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToRepairDistribution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasMeanTimeToRepairDistribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/operation/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has mean time to repair distribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasOperationCritical -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasOperationCritical">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Operation: Is the Operation critical in terms of SC planning (a Bottleneck) or not?</rdfs:comment>
+        <rdfs:label xml:lang="en">has operation critical</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasOperationID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasOperationID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Operation identifier</rdfs:comment>
+        <rdfs:label xml:lang="en">has operation ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasOperationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasOperationName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has operation name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasPTimePerUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasPTimePerUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="en">has P time per unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasProcessingTimeDistribution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasProcessingTimeDistribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has processing time distribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasReworkOperation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasReworkOperation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Rework Operation, if needed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has rework operation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasReworkProbabilityLots -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasReworkProbabilityLots">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Operation: Probability of rework-tested full lots to be reworked.</rdfs:comment>
+        <rdfs:label xml:lang="en">has rework probability lots</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasReworkProbabilityWafers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasReworkProbabilityWafers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Operation: Probability of rework-tested wafers to be reworked.</rdfs:comment>
+        <rdfs:label xml:lang="en">has rework probability wafers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasReworkTest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasReworkTest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Operation: Are the processed lots tested for rework?</rdfs:comment>
+        <rdfs:label xml:lang="en">has rework test</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasRouteName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasRouteName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of route (usually equals product names requiring the route).</rdfs:comment>
+        <rdfs:label xml:lang="en">has route name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSamplingRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSamplingRate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Sampling Rate: Execution rate of operation If operation is mandatory sampling rate is 1 (1- sampling rate = skipping rate of optional operation)</rdfs:comment>
+        <rdfs:label xml:lang="en">has sampling rate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasScrappingProbabilityLots -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasScrappingProbabilityLots">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Operation: Probability of scrapping-tested full lots to be scrapped.</rdfs:comment>
+        <rdfs:label xml:lang="en">has scrapping probability lots</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasScrappingProbabilityWafers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasScrappingProbabilityWafers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Operation: Probability of scrapping-tested wafers to be scrapped.</rdfs:comment>
+        <rdfs:label xml:lang="en">has scrapping probability wafers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasScrappingTest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasScrappingTest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Operation: Are the processed lots tested for scrapping?</rdfs:comment>
+        <rdfs:label xml:lang="en">has scrapping test</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSequenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSequenceNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Lot Event: FK; Sequential number of the operation lot has entered</rdfs:comment>
+        <rdfs:label xml:lang="en">has sequence number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSplitLotChips -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSplitLotChips">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Split into lots with # chips, added due to data import</rdfs:comment>
+        <rdfs:label xml:lang="en">has split lot chips</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSplitLots -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSplitLots">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Split into # lots, added due to data import</rdfs:comment>
+        <rdfs:label xml:lang="en">has split lots</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasSupplyChainID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasSupplyChainID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Technology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Assignment of technology to supply chain.</rdfs:comment>
+        <rdfs:label xml:lang="en">has supply chain id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasTechnologyID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTechnologyID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">Name of the technology</rdfs:comment>
+        <rdfs:label xml:lang="en">has technology</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Unit, added due to data import</rdfs:comment>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasVariancePTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasVariancePTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="en">has variance p time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/ChemicalPolishing -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/ChemicalPolishing">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">The chemical polishing process or chemical mechanical planarization (CMP) is a process whereby a chemical reaction increases the mechanical removal rate of a material. CMP is commonly used to polish off high spots on wafers or films deposited on wafers, flattening the film or wafer, referred to as planarization. The chemical reaction that increases the mechanical removal rate is commonly tailored to provide a higher removal rate of one material versus another material. The chemical action in CMP helps to achieve higher selectivity&apos;s of one material to another than a strictly mechanical process would provide.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chemical polishing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/DemandSnapshot -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/DemandSnapshot">
+        <rdfs:comment xml:lang="en">The “Demand” entity stores redundant demand at every product level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Demand snapshot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/DepletionMode -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/DepletionMode">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/OperationMode"/>
+        <rdfs:comment xml:lang="en">A transistor that is normally closed (on), allowing current to pass, but is triggered to open (off) and impede current. Contrast with &quot;enhancement mode&quot;, wherein the transistor is normally open (off), but is triggered to close (on).</rdfs:comment>
+        <rdfs:label xml:lang="en">Depletion mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/DryEtching -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/DryEtching">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">Dry etching is a process whereby etching is accomplished by a reactive gas as opposed to a liquid. Dry etching techniques include plasma etch, reactive ion etch, magnetically enhanced reactive ion etch, inductively coupled plasma, electron spin resonance, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dry etching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/EventCalendar -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar">
+        <rdfs:comment xml:lang="en">An event calendar is an organized way to show the upcoming events based on calendar dates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event calendar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/LotSize -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/LotSize">
+        <rdfs:comment xml:lang="en">A measure or quantity increment acceptable to or specified by the party offering to buy or sell. Used also as an alternative term for lot quantity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lot size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/Off-StateRegion -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/Off-StateRegion">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/RegionOfOperation"/>
+        <rdfs:label xml:lang="en">Off-state region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/On-StateRegion -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/On-StateRegion">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/RegionOfOperation"/>
+        <rdfs:label xml:lang="en">On-state region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/OperatingProperty -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/OperatingProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment xml:lang="en">This class is used to represent operation and configuration aspects of devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operating property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/OperationMode -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/OperationMode">
+        <rdfs:comment xml:lang="en">An operational situation/configuration of a system characterized by its active functions. Inside an operational mode the system can perform specific operational scenarios, and so activate the corresponding functions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operation mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/ProductLevel -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/ProductLevel">
+        <rdfs:comment xml:lang="en">In the &quot;product level&quot; entity, the aggregation of elements enables the grouping of products and defines the relationship between products and groups at different hierarchy levels. This supports planning, logistics, modeling, forecasting and reporting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/ProductionRequests -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/ProductionRequests">
+        <rdfs:comment xml:lang="en">Production requests definte what the facilities need to produce when and in what quantity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Production requests</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/RegionOfOperation -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/RegionOfOperation">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/OperatingProperty"/>
+        <rdfs:comment xml:lang="en">The supply of suitable external dc voltage is called as biasing. Either forward or reverse biasing is done to the emitter and collector junctions of the transistor. These biasing methods make the transistor circuit to work in four kinds of regions such as Active region, Saturation region, Cutoff region and Inverse active region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Region of operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SaturationRegion -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SaturationRegion">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/On-StateRegion"/>
+        <rdfs:comment xml:lang="en">This is the region in which transistor tends to behave as a closed switch. The transistor has the effect of its collector and Emitter being shorted. The collector and Emitter currents are maximum in this mode of operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Saturation region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SimulationPart -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SimulationPart">
+        <rdfs:comment xml:lang="en">A simulation part helps to identify the same product in different locations. They are visible in Product Structures. This is a simulation entity and not a form of production/planning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Simulation part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SimulationRoute -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SimulationRoute">
+        <rdfs:comment xml:lang="en">A simulation route (AKA workroute) represents a sequence of process steps in manufacutring (mainly at wafer fab). This is a simulation entity and not a form of production/planning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Simulation route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SwitchingFrequency -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SwitchingFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/OperatingProperty"/>
+        <rdfs:comment xml:lang="en">In electronics, switching frequency refers to the rate at which an electronic switch performs its function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Switching frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/ThresholdVoltage -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/ThresholdVoltage">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/OperatingProperty"/>
+        <rdfs:comment xml:lang="en">The threshold voltage, commonly abbreviated as Vth, of a field-effect transistor (FET) is the minimum gate-to-source voltage VGS (th) that is needed to create a conducting path between the source and drain terminals. It is an important scaling factor to maintain power efficiency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Threshold voltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/TimeConstraints -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/TimeConstraints">
+        <rdfs:comment xml:lang="en">As single operations can set the lot to a time-critical state, time constraints can ensure that the operation setting it to an uncritical state is not delayed. Also the other case where certain time has to be spent between two operations can be covered with this master entity. (workflow deswcriptive master entities).</rdfs:comment>
+        <rdfs:label xml:lang="en">Time constraints</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/WetEtching -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/WetEtching">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">Wet Etching is the process of removing material-etching, through the use of chemical activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wet etching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/Triode/ConstantResistanceRegion -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/Triode/ConstantResistanceRegion">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/On-StateRegion"/>
+        <rdfs:label xml:lang="en">Cosntant resistance region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Property -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/OperatingRange -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/OperatingRange">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <rdfs:comment xml:lang="en">Describes normal OperatingProperties of a System under some specified Conditions. For example, to the power requirement or maintenance schedule of a System under a specified temperature range.
+In the absence of OperatingProperties, it simply describes the Conditions in which a System is expected to operate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operating range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Enhancement -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Enhancement">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/i4go/variant-domain/operation/OperationMode"/>
+        <rdfs:comment xml:lang="en">A transistor that is normally open (off), but is triggered to close (on).</rdfs:comment>
+        <rdfs:label xml:lang="en">Enhancement mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#CurrentWIP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#CurrentWIP">
+        <rdfs:comment xml:lang="en">“Current WIP” entity describes the actual material distribution in the supply chain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current WIP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Deposition -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Deposition">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">The deposition process, or chemical vapor deposition (CVD) is a process whereby a fiolm is deposited by reacting chemicals together in the gaseous or vapor phase to form a film. The gases or vapors utilized for CVD are compounds that contain the element to be deposited and that may be inducted to react with a substrate or other gas(es) to deposit a film. The CVD reactoin may be thermally activated, plasma induced, plasma enhanced CVD or activated by light in photon induced CVD.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Diffusion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Diffusion">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">Diffusion is a process whereby a substance redistributes from an area of relatively high concentration to an area of relatively low concentration due to random thermal motion. The larger the concentration gradient the faster diffusion occurs for a given temperature, conversely, the higher the temperature the faster diffusion occurs for a given concentration gradient.</rdfs:comment>
+        <rdfs:label xml:lang="en">Diffusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Implantation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Implantation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">Implantation or Ion Implantation is a technique where ions are accelerated to a higher energy and speed an injected into a semiconductor. The dominant techniques for introducing dopants into a semiconductor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Lithography -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Lithography">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">The lithography process is the key process in frontend. This consists of the following steps: a photo resisting layer is spun on a wafer, then exposed through the mask, then developed, then showing the effect on the open places, and then final deletion of the photo resisting material leaves only the remaining structure on the water. after some time for deposition, these steps are repeated up to 35 times.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lithography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Operation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation">
+        <rdfs:comment xml:lang="en">The master entity “Operation” depicts the generic behavior of a single process step. Each operation has a foreign key relation to equipment and to route which means that the operation is required by the specific routes and requires a specific equipment. (workflow descriptive master entity).</rdfs:comment>
+        <rdfs:label xml:lang="en">Operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Route -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Route">
+        <rdfs:comment xml:lang="en">The master entity “Route” describes the structure of a workflow out of operations. Every product uses a specific route in its value stream, i.e. the complete sequence of operations with all mandatory and optional operations necessary to complete the product. A route makes use of the single operations. (workflow descriptive master entity).</rdfs:comment>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Sputtering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Sputtering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+        <rdfs:comment xml:lang="en">The sputtering process, or physical vapor deposition (PVD) is the most used layering process today. Here gas atoms, mostly argon, strike out atoms from the cathode I an electric field which then form a thin film on the wafer surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sputtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Technology">
+        <rdfs:comment xml:lang="en">A semiconductor technology is a set of equipment, processes, manufacturing techniques and the related methods and procedures to enable the design &amp; production of components, sub-components and modules.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Workshop -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Workshop">
+        <rdfs:comment xml:lang="en">The overall organizational working structures within the fabs is described in the entity “Workshop”.</rdfs:comment>
+        <rdfs:label xml:lang="en">Workshop</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

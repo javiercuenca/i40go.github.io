@@ -1,0 +1,768 @@
+@prefix :        <http://www.purl.org/i4go/domain-task/osimodel#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-AT#4G_LTE>
+      a       owl:Class ;
+      rdfs:comment """Fourth generation of wireless wide area data transmission networks. 
+Minimal size of radio transport block: subframe with length of 1ms"""@en ;
+      rdfs:label "4G Long-term evolution"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#MQTT_nonTCPIP_based>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent MQTT protocols which are not based on TCP/IP infrastructure"@en ;
+      rdfs:label "MQTT non TCP/IP based"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_AL4_ApplicationLayer>
+      a       owl:Class ;
+      rdfs:comment """Corresponds to ISO/OSI layers 5, 6 and 7. 
+Contains all protocols which cooperate with application programs and use the network infrastructure for exchange of application-specific data."""@en ;
+      rdfs:label "OSI Application layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> .
+
+<http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent the communication technologies used in OSI layers."@en ;
+      rdfs:label "Communiation technology"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#DDS>
+      a       owl:Class ;
+      rdfs:comment """DDS (Data-Distribution Service for Real-Time Systems)
+\"The first open international middleware standard directly addressing publish-subscribe communications for real-time and embedded systems.\" 
+DDS portal: http://portals.omg.org/dds/"""@en , """The Data Distribution Service (DDS™) is a middleware protocol and API standard for data-centric connectivity from the Object Management Group® (OMG®). It integrates the components of a system together, providing low-latency data connectivity, extreme reliability, and a scalable architecture that business and mission-critical Internet of Things (IoT) applications need.
+In a distributed system, middleware is the software layer that lies between the operating system and applications. It enables the various components of a system to more easily communicate and share data. It simplifies the development of distributed systems by letting software developers focus on the specific purpose of their applications rather than the mechanics of passing information between applications and systems.
+The DDS Middleware is a software layer that abstracts the Application from the details of the operating system, network transport, and low-level data formats. The same concepts and APIs are provided in different programming languages allowing applications to exchange information across of operating systems, languages, and processor architectures. Low-level details like data wire format, discovery, connections, reliability, protocols, Qos management, etc. are managed by the middleware."""@en ;
+      rdfs:label "Data-Distribution Service for Real-Time Systems"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L6_PresentationLayer>
+      a       owl:Class ;
+      rdfs:comment """Allows session establishment between processes running on different stations (hosts). 
+Provides Sync and Send-to ports (logical ports). 
+Topics: Session establishment, maintenance and termination; Session support; perform security, name recognition, logging etc. 
+Central elements: logical ports
+Example protocols: RPC (Remote Procedure Call), SQL, NFS, NetBIOS names,"""@en ;
+      rdfs:label "OSI - Layer 6 - Presentation Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#IndustrialEthernet>
+      a       owl:Class ;
+      rdfs:comment "Industrial Ethernet (IE) is the use of Ethernet in an industrial environment with protocols that provide determinism and real-time control. Protocols for industrial Ethernet include EtherCAT, EtherNet/IP, PROFINET, POWERLINK, SERCOS III, CC-Link IE, and Modbus TCP. Many industrial Ethernet protocols use a modified Media Access Control (MAC) layer to provide low latency and determinism. Some microcontrollers such as Sitara provide industrial Ethernet support."@en ;
+      rdfs:label "Industrial ethernet"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#implementsOSILayer>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This class is used to relate technologies with the OSI layers where they are implemented."@en ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (<http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol>)
+              ] ;
+      rdfs:label "implements OSI layer"@en ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (<http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer>)
+              ] ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#SECS>
+      a       owl:Class ;
+      rdfs:comment """The SECS/GEM is the semiconductor's equipment interface protocol for equipment-to-host data communications. In an automated fab, the interface can start and stop equipment processing, collect measurement data, change variables and select recipes for products. The SECS (SEMI Equipment Communications Standard)/GEM (Generic Equipment Model) standards do all this in a defined way.
+
+Developed by the SEMI (Semiconductor Equipment and Materials International) organization,[1] the standards define a common set of equipment behaviour and communications capabilities.
+
+The Generic Model for Communications and Control Of Manufacturing Equipment (GEM) standard is maintained and published by the non-profit organization Semiconductor Equipment and Materials International (SEMI). Generally speaking, the SECS/GEM standard defines messages, state machines and scenarios to enable factory software to control and monitor manufacturing equipment. The GEM standard is formally designated and referred to as SEMI standard E30, but frequently simply referred to as the GEM or SECS/GEM standard. GEM intends \"to produce economic benefits for both device manufacturers and equipment suppliers...\" by defining \"... a common set of equipment behavior and communications capabilities that provide the functionality and flexibility to support the manufacturing automation programs of semiconductor device manufacturers\" [SEMI E30, 1.3]. GEM is a standard implementation of the SECS-II standard, SEMI standard E5. Many equipment in semiconductor (front end and back end), surface mount technology, electronics assembly, photovoltaic, flat panel display and other manufacturing industries worldwide provide a GEM/SECS interface on the manufacturing equipment so that the factory host software can communicate with the machine for monitoring and/or controlling purposes. Because the GEM standard was written with very few semiconductor-specific features, it can be applied to virtually any automated manufacturing equipment in any industry.
+
+All GEM compliant manufacturing equipment share a consistent interface and certain consistent behavior. GEM equipment can communicate with a GEM capable host using either TCP/IP (using the HSMS standard, SEMI E37) or RS-232 based protocol (using the SECS-I standard, SEMI E4). Often both protocols are supported. Each equipment can be monitored and controlled using a common set of SECS-II messages specified by GEM.
+
+There are many additional SEMI standards and factory specifications that reference the GEM standard its features. These additional standards are either industry-specific or equipment-type specific. Following are a few examples.
+
+Source: https://en.wikipedia.org/wiki/SECS/GEM"""@en ;
+      rdfs:label "Communication Protocol of the SECS/GEM protocol standard."@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#5G>
+      a       owl:Class ;
+      rdfs:comment """5G uses a scalable orthogonal frequency-division multiplexing (OFDM) framework with different numerologies. Within a 1ms time duration, six separate slot configurations are available, e.g. 1, 2, 4, 8, 16, and 32 slots. The minimum size of a transport block could be reduced to a minimum of 0.03125ms
+based on the new configuration:
+To reduce the waste of periodically allocated resources, 5G enables multiple devices to share the periodic resources, called a configured grant (Type 1). The configured grant is based on the LTE SPS feature. A base station can allocate
+the configured grant resources to multiple vehicles, and the vehicles randomly utilize the resources when they have data to transmit. By assigning the configured grant resources, the 5G network eliminates the packet transmission delay for a scheduling request procedure and increases the utilization
+ratio of allocated periodic radio resources.
+Source: https://www.edn.com/electronics-blogs/5g-waves/4460644/How-5G-reduces-data-transmission-latency"""@en ;
+      rdfs:label "5G"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol>
+      a       owl:Class ;
+      rdfs:comment "This class includes the protocols applied in the OSI application layer"@en ;
+      rdfs:label "OSI 5 7 application protocol"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#AMQP>
+      a       owl:Class ;
+      rdfs:comment """AMQP mandates the behavior of the messaging provider and client to the extent that implementations from different vendors are interoperable, in the same way as SMTP, HTTP, FTP, etc. have created interoperable systems. Previous standardizations of middleware have happened at the API level (e.g. JMS) and were focused on standardizing programmer interaction with different middleware implementations, rather than on providing interoperability between multiple implementations.[2] Unlike JMS, which defines an API and a set of behaviors that a messaging implementation must provide, AMQP is a wire-level protocol. A wire-level protocol is a description of the format of the data that is sent across the network as a stream of bytes. Consequently, any tool that can create and interpret messages that conform to this data format can interoperate with any other compliant tool irrespective of implementation language.
+(https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)"""@en , """AMQP (Advanced Message Queuing Protocol)
+\"An open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing (including point-to-point and publish-and-subscribe), reliability and security.\"
+(https://www.postscapes.com/internet-of-things-protocols/ )"""@en ;
+      rdfs:label "Advanced Message Queuing Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#HTTP>
+      a       owl:Class ;
+      rdfs:comment """HTTP is an application layer protocol designed within the framework of the Internet protocol suite. Its definition presumes an underlying and reliable transport layer protocol.
+  – Transmission Control Protocol (TCP) is commonly used here.
+  – However, HTTP can be adapted to use unreliable protocols such as the User Datagram Protocol (UDP), for example in HTTPU, and Simple Service Discovery Protocol (SSDP).
+• An HTTP session is a sequence of network request-response transactions.
+  – An HTTP client initiates a request by establishing a Transmission Control Protocol (TCP) connection to a particular port on a server (typically port 80, occasionally port 8080.
+  – An HTTP server listening on that port waits for a client's request message. Upon receiving the request, the server sends back a status line, such as \"HTTP/1.1 200 OK\", and a message of its own. The body of this message is typically the requested resource, although an error message or other information may also be returned."""@en ;
+      rdfs:label "Hypertext Transfer Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#DHCP>
+      a       owl:Class ;
+      rdfs:comment "The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) local area networks. A DHCP server must be present on the network. A device connected to the network requests an IP address from the DHCP server using the DHCP protocol; the server assigns a unique address to the device, identifying it for TCP/IP communication, and supplies other network configuration parameters. In the absence of a DHCP server, a device that needs an IP address must be manually assigned a static address by a network administrator, or must assign itself an APIPA address (which will not enable it to communicate outside its local subnet). A device configured to use dynamic (DHCP) addressing that is connected to a different network will be assigned an address on that network without needing to be reconfigured. However if the address of a device must be known—for example, a printer which processes print jobs sent to its IP address—a known static address is required."@en ;
+      rdfs:label "Dynamic Host Configuration Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L2_DataLink>
+      a       owl:Class ;
+      rdfs:comment """Provides error-free transfer of data frames from one node to another over the physical layer. 
+Frames are \"envelopes\", contains MAC address (MAC: Media Access Control). 
+Topics: establishes and terminates the logical link between nodes. Frame traffic control. Frame sequencing. Frame acknowledgement. Frame delimiting. Frame error checking. Media access control. 
+Central devices: Switch, Bridge, WAP
+Examples: PPP/SLIP"""@en ;
+      rdfs:label "OSI - Layer 2- Data Link"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.purl.org/i4go/domain-task/osimodel>
+      a       owl:Ontology ;
+      rdfs:comment "The 'OSI model' ontology module represents data about the Open Systems Interconnection model (OSI model)."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en , "2021-05-05"@en ;
+      dc:title "OSI model ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_AL2_InternetLayer>
+      a       owl:Class ;
+      rdfs:comment """Corresponds 1:1 to ISO/OSI layer 3: Network Layer. 
+conducts transmission of data packets and choice of the net node (routing), i.e. determines the next intermediate node for received data packets and transmits the data packet there. 
+Handles point-to-pint (node-to-node) transmissions, no transmission paths. 
+Examples: Internet Protocol Version 4 (IPv4), IPv6."""@en ;
+      rdfs:label "OSI Internet layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#MQTT_TCPIP_based>
+      a       owl:Class ;
+      rdfs:comment "This class represents Message Queue Telemetry Transport protocols based TCP/IP infrastructure"@en ;
+      rdfs:label "MQTT TCP/IP-based"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#CoAP>
+      a       owl:Class ;
+      rdfs:comment """CoAP is an application layer protocol that is intended for use in resource-constrained internet devices, such as WSN nodes. CoAP is designed to easily translate to HTTP for simplified integration with the web, while also meeting specialized requirements such as multicast support, very low overhead, and simplicity. The CoRE group has proposed the following features for CoAP: RESTful protocol design minimizing the complexity of mapping with HTTP, Low header overhead and parsing complexity, URI and content-type support, Support for the discovery of resources provided by known CoAP services. Simple subscription for a resource, and resulting push notifications, Simple caching based on max-age.
+(https://www.postscapes.com/internet-of-things-protocols/)"""@en ;
+      rdfs:label "Constrained Application Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#6LoWPAN>
+      a       owl:Class ;
+      rdfs:comment """6LoWPAN is an acronym of IPv6 over Low -Power Wireless Personal Area Networks. 6LoWPAN is the name of a concluded working group in the Internet area of the IETF.
+
+The 6LoWPAN concept originated from the idea that \"the Internet Protocol could and should be applied even to the smallest devices, and that low-power devices with limited processing capabilities should be able to participate in the Internet of Things."""@en ;
+      rdfs:label "IPv6 over Low Power Wireless Personal Area Network"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#IMAP>
+      a       owl:Class ;
+      rdfs:comment """The Internet Message Access Protocol (IMAP), originally Interactive Mail Access Protocol, is a network protocol that provides a network file system for e-mail.
+IMAP was designed in the 1980s with the advent of personal computers to resolve in mail communication dependencies of individual client computers. To do this, IMAP extends Post Office Protocol (POP) features and procedures so that users can store and leave their mail, folder structures, and settings on their (mail) servers. The (PC) clients access the information directly on the servers directly online and may need to accommodate copies of it. While a user of POP either has lost all emails or has already deleted emails after losing his PC, an IMAP user keeps his emails on the servers and, even across several and different clients, unified access."""@en ;
+      rdfs:label "Internet Message Access Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#WIMAX_802_16>
+      a       owl:Class ;
+      rdfs:comment "WiMAX (Worldwide Interoperability for Microwave Access) is a family of wireless broadband communication standards based on the IEEE 802.16 set of standards, which provide multiple physical layer (PHY) and Media Access Control (MAC) options."@en ;
+      rdfs:label "WIMAX 802.16"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#IndustrialWLAN>
+      a       owl:Class ;
+      rdfs:comment "Wireless communication via Industrial Wireless LAN (IWLAN) is already used in countless solutions, e.g. by mobile network participants in Automatic Guided Vehicles (AGV) or in crane applications."@en ;
+      rdfs:label "Industrial Wireless Local Area Network"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#3G_UMTS>
+      a       owl:Class ;
+      rdfs:comment """Third generation of wireless wide area data transmission networks. 
+First generation with completely separated infrastructure, i.e. own modules and antennas at base stations and own antennas in Smartphones"""@en ;
+      rdfs:label "Universal Mobile Telecommunications System"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#STOMP>
+      a       owl:Class ;
+      rdfs:comment """Simple (or Streaming) Text Oriented Message Protocol (STOMP), formerly known as TTMP, is a simple text-based protocol, designed for working with message-oriented middleware (MOM). It provides an interoperable wire format that allows STOMP clients to talk with any message broker supporting the protocol. It is thus language-agnostic, meaning a broker developed for one programming language or platform can receive communications from client software developed in another language.
+
+Overview
+The protocol is broadly similar to HTTP, and works over TCP using the following commands:
+CONNECT
+SEND
+SUBSCRIBE
+UNSUBSCRIBE
+BEGIN
+COMMIT
+ABORT
+ACK
+NACK
+DISCONNECT
+
+Communication between client and server is through a \"frame\" consisting of a number of lines. The first line contains the command, followed by headers in the form <key>: <value> (one per line), followed by a blank line and then the body content, ending in a null character. Communication between server and client is through a MESSAGE, RECEIPT or ERROR frame with a similar format of headers and body content.
+
+Implementations
+These are some MOM products that support STOMP:
+Apache ActiveMQ, also known as Fuse Message Broker
+HornetQ
+Net::STOMP::Client (an open source client implementation in Perl)
+ocamlmq (A lightweight STOMP message broker, written in OCaml)
+Open Message Queue (OpenMQ)
+POE::Component::MessageQueue (a server implementation in Perl)
+RabbitMQ (message broker, has support for STOMP)
+Ruby server, also known as stompserver
+stomp.erl (an open source client implementation in Erlang)
+syslog-ng through its STOMP destination plugin
+Stomp.py (an open source client implementation in Python)
+tStomp (an open source client implementation in Tcl)
+STOMP Implementation in Spring Framework
+A list of implementations is also maintained on the STOMP web site."""@en ;
+      rdfs:label "Streaming Text Oriented Message Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L7_ApplicationLayer>
+      a       owl:Class ;
+      rdfs:comment """Serves as the window for users and application processes to access the network services. 
+End User Layer. Application system / process: program that opens what was sent or creates what is to be sent. 
+Topics: resource sharing, remote file access, remote printer access, directory services, network management
+Example protocols: HTTP, HTTPS, SMTP, FTP, CoAP, MQTT,"""@en ;
+      rdfs:label "OSI - Layer 7 - Application Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#2G_GPRS>
+      a       owl:Class ;
+      rdfs:comment """Second generation of Wireless Wide Area Data Transmission Networks. 
+Uses GSM radio infrastructure."""@en ;
+      rdfs:label "General Packaged Radio Service"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology>
+      a       owl:Class ;
+      rdfs:comment "This class includes the technolgies of the network layer of the OSI model. The network layer provides the functional and procedural means of transferring packets from one node to another connected in \"different networks\". A network is a medium to which many nodes can be connected, on which every node has an address and which permits nodes connected to it to transfer messages to other nodes connected to it by merely providing the content of a message and the address of the destination node and letting the network find the way to deliver the message to the destination node, possibly routing it through intermediate nodes. If the message is too large to be transmitted from one node to another on the data link layer between those nodes, the network may implement message delivery by splitting the message into several fragments at one node, sending the fragments independently, and reassembling the fragments at another node. It may, but does not need to, report delivery errors."@en ;
+      rdfs:label "OSI 3 4 Network technology"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#DNS>
+      a       owl:Class ;
+      rdfs:comment """El sistema de nombres de dominio (Domain Name System o DNS, por sus siglas en inglés) es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Este sistema asocia información variada con nombres de dominio asignados a cada uno de los participantes. Su función más importante es \"traducir\" nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto con el propósito de poder localizar y direccionar estos equipos mundialmente.
+
+El servidor DNS utiliza una base de datos distribuida y jerárquica que almacena información asociada a nombres de dominio en redes como Internet. Aunque como base de datos el DNS es capaz de asociar diferentes tipos de información a cada nombre, los usos más comunes son la asignación de nombres de dominio a direcciones IP y la localización de los servidores de correo electrónico de cada dominio."""@en ;
+      rdfs:label "Domain Name Service"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#X400>
+      a       owl:Class ;
+      rdfs:comment """X.400, often called Message Handling System (MHS), is an e-mail system based on the OSI model and an alternative to Internet e-mail. The standard was published in 1984 by the CCITT (now ITU) and expanded in 1988. The ISO refers to the system as its Message Oriented Text Interchange System (MOTIS) in its ISO 10021 standard based on X.400 (1988).
+
+In Germany, X.400 is often still known under the old brand name Telebox400 the German Federal Post. Meanwhile, the successor Deutsche Telekom called it BusinessMail X.400. EDI systems often use X.400 for data transfer.
+
+Access to the message store is from X.400 (1988) via the P7 protocol defined in X.419 from the user agent (UA) to the message store (MS). The message exchange takes place by means of a message transfer system (MTS), which can consist of one or more message transfer agents (MTA) and gateways to non-X.400 systems. Telekom Deutschland GmbH also offers a client for the transmission of messages, which can transmit messages based on the protocol P7. This client software is called Filework for Windows (all versions) and is now available in version 5.1.1. Filework also has a script interface, with which the program independently transmits messages in both directions and processes them accordingly.
+
+The MTA is the central component for messaging with other X.400 systems. By means of pre-configured routing information, the MTA uses the X.400 destination address to decide via which route the messages are forwarded to the recipient. An X.400 address has a hierarchical structure and uniquely identifies sender and recipient. Since 1 July 2012, SMTP MTAs can also be networked with the BusinessMail X.400 system. Thus, the connectivity to current, popular e-mail server such. For example, \"sendmail\" or \"postfix\", which are part of any Linux system, has been greatly enhanced. This increases compatibility with other systems while reducing customer service costs.
+
+Unlike Internet e-mail, the X.400 network only has well-known domain operators and traceable ways in which messages move through the network. For this reason, when using X.400, some of the messages are not encrypted.
+
+For the transmission of EDI messages, for example in the European food trade, X.400 is frequently used.
+
+X.400 is next to AS2 one of the most common forms of communication used in professional electronic data exchange. Whether a company uses X.400 or AS2 depends on how the company weights certain operating costs and which EDI infrastructure it owns. With AS2, the fees for the provider for the X.400 service can be saved. This saving is offset by a higher expenditure in-house for the administration of the regularly to be renewed, partner-individual certificates and the operation of an uninterruptible own EDI system. With X.400, the X.400 provider stands between two EDI systems, so that both partners do not communicate directly with each other. Likewise, connection tests with new partner connections or the elimination of connection problems with X.400 are simpler because they are abstracted from the direct communication partner. Since the beginning of 2014, there is a free pilot operation for the introduction of the Odette File Transfer Protocol (OFTP). OFTP is used as a transmission protocol above all in the electronic business data exchange in the automotive industry, ie between the car manufacturers and their suppliers, as well as banks. As of October 1, 2015, OFTP access was officially transferred to production and also offered."""@en ;
+      rdfs:label "Message Handling System (MHS)"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#SMTP>
+      a       owl:Class ;
+      rdfs:comment "The Simple Mail Transfer Protocol (SMTP) is an internet standard communication protocol for electronic mail transmission. Mail servers and other message transfer agents use SMTP to send and receive mail messages. User-level email clients typically use SMTP only for sending messages to a mail server for relaying, and typically submit outgoing email to the mail server on port 587 or 465 per RFC 8314. For retrieving messages, IMAP and POP3 are standard, but proprietary servers also often implement proprietary protocols, e.g., Exchange ActiveSync."@en ;
+      rdfs:label "The Simple Mail Transfer Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#ZigBee>
+      a       owl:Class ;
+      rdfs:comment "Zigbee is an IEEE 802.15.4-based specification for a suite of high-level communication protocols used to create personal area networks with small, low-power digital radios, such as for home automation, medical device data collection, and other low-power low-bandwidth needs, designed for small scale projects which need wireless connection. Hence, Zigbee is a low-power, low data rate, and close proximity (i.e., personal area) wireless ad hoc network."@en ;
+      rdfs:label "ZigBee"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#RFID>
+      a       owl:Class ;
+      rdfs:comment "RFID (radio frequency identification) is a form of wireless communication that incorporates the use of electromagnetic or electrostatic coupling in the radio frequency portion of the electromagnetic spectrum to uniquely identify an object, animal or person."@en ;
+      rdfs:label "Radio Frequency Identification"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OPC>
+      a       owl:Class ;
+      rdfs:comment """OPC (Open Platform Communication or OLE for Process Control) is a service-oriented communication protocol which was developed based on Microsoft standards like DCOM and Object Linking and Embedding (OLE). 
+It is the basis for OPC-UA (which defines a Microsoft-independent architecture). 
+
+For communication between the applications, OPC mainly uses Microsoft's Distributed Component Object Model (DCOM) technology. Thanks to DCOM, it is transparent for OPC applications whether the data exchanged via OPC comes from an application in its own address space, from a foreign, local process, or even from a computer remotely connected via TCP / IP. The transmission and access speeds are DCOM usual slowed down by unnecessary administrative effort.
+DCOM makes other applications, (compiled) functions and objects accessible. The OPC standard now defines certain DCOM objects, i. H. The functions / interfaces that an OPC user must make available (via DCOM) in order to exchange data with other OPC applications. The exact specifications required for an implementation can be freely downloaded from the OPC Foundation website.
+
+Disadvantages / criticisms
+OPC is based (with a few specifications) on Microsoft's DCOM specification. Communication over the boundaries of firewalls or domains is possible in the best case using so-called OPC tunnels. These software products convert the OPC communication into \"normal\" TCP / IP communication, transport it over the network and convert the TCP / IP into OPC communication in the target computer again. This significantly facilitates the general configuration.
+However, even without an OPC tunnel, OPC can communicate across routers and firewalls, even if the server and client are not in the same domain. Authentication takes place via the local user table. Disadvantage: For this an identical local user must exist on both terminals (server and client), under which the OPC or DCOM communication is handled (server and client must run under this user). Also the password must be identical. However, this proves to be extremely impractical in many scenarios.
+Furthermore, it is useful or even necessary to restrict the DCOM communication ports; This is possible via a Windows registry entry. The number of required ports depends on the application itself."""@en ;
+      rdfs:label "OLE for Process Control"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_AL3_TransportLayer>
+      a       owl:Class ;
+      rdfs:comment """Corresponds 1:1 to ISO/OSI layer 4: Transport Layer. 
+takes care for end-to-end transmission of data. 
+Mostly known protocol of this layer is the Transmission Control Protocol (TCP).
+It realizes connections between two network hosts for ensured transmission of data streams."""@en ;
+      rdfs:label "OSI Transport layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> .
+
+<http://www.purl.org/i4go/domain-task/osimodel/TransferProtocol>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent any data transfer protoco"@en ;
+      rdfs:label "Transfer protocol"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L4_TransportLayer>
+      a       owl:Class ;
+      rdfs:comment """Ensures that messages are delivered error-free, in sequence, and with no losses or duplications. 
+Host-to-host flow control: Host refers to a device on which an application system runs which sends or receives a message. I.e., this layer is the lowest layer which cares for end-to-end communication in terms of devices. 
+Topics: Message segmentation, Message acknowledgement, Message traffic control, Session multiplexing
+Example protocols: TCP, SPX, UDP"""@en ;
+      rdfs:label "OSI - Layer 4 - Transport Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#AS2>
+      a       owl:Class ;
+      rdfs:comment "AS2 (Applicability Statement 2) is a specification about how to transport structured business-to-business data securely and reliably over the Internet. Security is achieved by using digital certificates and encryption."@en ;
+      rdfs:label "Applicability Statement 2"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#FDDI>
+      a       owl:Class ;
+      rdfs:comment "The Fiber Distributed Data Interface (FDDI, colloquially called Fiber Optic Metro Ring) is a late-1980s standardized 100 Mbps network structure for local area networks (ANSI Standard X3T9.5). As a medium fiber optic cable in a double, counter-rotating ring with token access mechanism are used. In 1994, the FDDI standard was extended and the transmission also standardized over shielded (STP) and unshielded (UTP type 5) twisted copper cables (CDDI, C for Copper). FDDI was gradually supplanted by low-cost Ethernet technology. Market-leading network component manufacturers are no longer offering FDDI support for their products, so the technology is outdated"@en ;
+      rdfs:label "The Fiber Distributed Data Interface"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology>
+      a       owl:Class ;
+      rdfs:comment "A net access technology provides the physical link layer and the data link layer  of the OSI layer model (i.e. OSI layer 1 and 2)."@en ;
+      rdfs:label "OSI 1 2 net access technology"@en .
+
+owl:topObjectProperty
+      rdfs:domain <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.purl.org/i4go/domain-task/osimodel/Point-to-PointCommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "In telecommunications, a point-to-point connection refers to a communications connection between two communication endpoints or nodes. An example is a telephone call, in which one telephone is connected with one other, and what is said by one caller can only be heard by the other. This is contrasted with a point-to-multipoint or broadcast connection, in which many nodes can receive information transmitted by one node. Other examples of point-to-point communications links are leased lines and microwave radio relay."@en ;
+      rdfs:label "Point-to-point communication technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L5_SessionLayer>
+      a       owl:Class ;
+      rdfs:comment """Allows session establishment between processes running on different stations (hosts). 
+Provides Sync and Send-to ports (logical ports). 
+Topics: Session establishment, maintenance and termination; Session support; perform security, name recognition, logging etc. 
+Central elements: logical ports
+Example protocols: RPC (Remote Procedure Call), SQL, NFS, NetBIOS names,"""@en ;
+      rdfs:label "OSI - Layer 5 - Session Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#containsOSILayer>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This class is used to relate OSI layers groups with OSI layers."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> ;
+      rdfs:label "contains OSI layer"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#hasDataTransmissionUnit>
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#OPC_UA_BinaryProtocol>
+      a       owl:Class ;
+      rdfs:comment """OPC UA supports two protocols. They can be stated in the URL:
+• Binary protocol: opc.tcp://Server
+• Web Service: http://Server
+The binary protocol offers
+• the best performance/least overhead,
+• takes minimum resources (no XML Parser, SOAP and HTTP required, which is important for embedded devices),
+• offers best interoperability (binary is explicitly specified and allows fewer degrees of freedom during implementation) and
+• uses a single arbitrarily choosable TCP port for communication easing tunneling or easy enablement through a firewall.
+
+The Web Service (SOAP) protocol is best supported from available tools, e.g., from Java or .NET environments, and is firewall-friendly, using standard HTTP(S) ports.
+Binary is supported by all implementations, while only .NET implementation supports SOAP.
+
+The protocol stack is: 
+
+TCP/IP - UA-TCP - UA Secure Conversation - UA Binary Encoding. 
+
+The standardized port for this protocol is 4840. 
+That is, use of OPC-UA binary protocol requires to open only this one port at a firewall."""@en ;
+      rdfs:label "Open Platform Communications Unified Architecture Binary Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#HTTPS>
+      a       owl:Class ;
+      rdfs:comment """HTTPS adds an additional layer between the transport protocol (TCP) and the application protocols: SSL/TLS. 
+Syntactically, HTTPS is identical to the scheme for HTTP, the additional encryption of the data is done via SSL / TLS: Using the SSL handshake protocol, a protected identification and authentication of the communication partners takes place first. Subsequently, a common symmetric session key is exchanged using asymmetric encryption or the Diffie-Hellman key exchange. This is finally used to encrypt the user data.
+The default port for HTTPS connections is 443.
+In addition to server certificates, signed client certificates can also be created after X.509.3. This allows clients to authenticate to the server but is rarely used.
+An older protocol variant of HTTPS was S-HTTP."""@en ;
+      rdfs:label "Hypertext Transfer Protocol Secure"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#TCP_IP>
+      a       owl:Class ;
+      rdfs:comment "The Internet protocol suite is the conceptual model and set of communications protocols used in the Internet and similar computer networks. It is commonly known as TCP/IP because the foundational protocols in the suite are the Transmission Control Protocol (TCP) and the Internet Protocol (IP). During its development, versions of it were known as the Department of Defense (DoD) model because the development of the networking method was funded by the United States Department of Defense through DARPA. Its implementation is a protocol stack."@en ;
+      rdfs:label "TCP/IP"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#UDS>
+      a       owl:Class ;
+      rdfs:comment "Unified Diagnostic Services (UDS) is a diagnostic communication protocol used in electronic control units (ECUs) within automotive electronics, which is specified in the ISO 14229-1. It is derived from ISO 14230-3 (KWP2000) and the now obsolete ISO 15765-3 (Diagnostic Communication over Controller Area Network (DoCAN)). 'Unified' in this context means that it is an international and not a company-specific standard. By now this communication protocol is used in all new ECUs made by Tier 1 suppliers of Original Equipment Manufacturer (OEM), and is incorporated into other standards, such as AUTOSAR. The ECUs in modern vehicles control nearly all functions, including electronic fuel injection (EFI), engine control, the transmission, anti-lock braking system, door locks, braking, window operation, and more."@en ;
+      rdfs:label "Unified Diagnostic Services"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#ZigBee_RF4CE>
+      a       owl:Class ;
+      rdfs:comment "A radio frequency (RF) signal refers to a wireless electromagnetic signal used as a form of communication, if one is discussing wireless electronics. Radio waves are a form of electromagnetic radiation with identified radio frequencies that range from 3kHz to 300 GHz."@en ;
+      rdfs:label "Radio Frequency for Consumer Electronics"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#TokenRing>
+      a       owl:Class ;
+      rdfs:comment """Token Ring is a networking technology for computer networks, specified in the IEEE 802.5 specification. It defines cable types and signaling for the physical layer, packet formats, and media access control (MAC) / link layer protocols of the OSI model. It is one of the two implementations of the token passing method.
+The token-ring technology was largely replaced by the various Ethernet variants and is hardly used today in LAN new installations.
+Token Ring can be used for Layer 1 and 2 in a TCP/IP protocol stack or as part of the Network Layer in the AppleTalk-Protocol stack (TokenTalk)."""@en ;
+      rdfs:label "Token Ring"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#Bluetooth>
+      a       owl:Class ;
+      rdfs:comment "Bluetooth is a short-range wireless technology standard used for exchanging data between fixed and mobile devices over short distances using UHF radio waves in the ISM bands, from 2.402 GHz to 2.48 GHz, and building personal area networks (PANs). It was originally conceived as a wireless alternative to RS-232 data cables."@en ;
+      rdfs:label "Bluethoot"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#AppleTalk>
+      a       owl:Class ;
+      rdfs:comment "Outdated, replaced by IP-based service system by Apple, cf. Bonjour."@en ;
+      rdfs:label "Appletalk"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#MQTT-SN>
+      a       owl:Class ;
+      rdfs:comment "MQTT-SN (MQTT for sensor networks) is an optimized version of the IoT communications protocol, MQTT (Message Query Telemetry Transport), designed specifically for efficient operation in large low-power IoT sensor networks."@en ;
+      rdfs:label "MQTT for Sensor Networks"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#MQTT_nonTCPIP_based> .
+
+<http://www.w3id.org/ecsel-dr-AT#WPAN_802_15_4>
+      a       owl:Class ;
+      rdfs:comment """IEEE 802.15.4 is a standard which specifies the physical layer and media access control for low-rate wireless personal area networks (LR-WPANs). 
+It is maintained by the IEEE 802.15 working group. 
+It is the basis for the ZigBee, ISA100.11a, WirelessHART, and MiWi specifications, each of which further extends the standard by developing the upper layers which are not defined in IEEE 802.15.4. Alternatively, it can be used with 6LoWPAN and standard Internet protocols to build a wireless embedded Internet.
+(https://www.postscapes.com/internet-of-things-protocols/)"""@en ;
+      rdfs:label "WPAN 802.15.4"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer>
+      a       owl:Class ;
+      rdfs:comment "This class includes all the OSI model layers"@en ;
+      rdfs:label "OSI Detailed layer"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#TCP>
+      a       owl:Class ;
+      rdfs:comment "The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It originated in the initial network implementation in which it complemented the Internet Protocol (IP). Therefore, the entire suite is commonly referred to as TCP/IP. TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP, which is part of the Transport Layer of the TCP/IP suite. SSL/TLS often runs on top of TCP."@en ;
+      rdfs:label "The Transmission Control Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_TransportProtocol> .
+
+<http://www.purl.org/i4go/domain-task/osimodel/End-to-EndCommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "End-to-end communication is the problem of sending a sequence of messages from one pro- cessor, the sender, to another processor, the receiver, through an unreliable communication. network. This paper surveys positive and negative results concerning deterministic protocols."@en ;
+      rdfs:label "End-to-end communication technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer>
+      a       owl:Class ;
+      rdfs:comment "This class includes the OSI layers classified by groups (specialy low level layers)."@en ;
+      rdfs:label "OSI Aggregated layer"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#ARCNET>
+      a       owl:Class ;
+      rdfs:comment """ARCNET (Attached Resource Computer Network) is a networking technology for local area networks (LANs). It defines cable types and signaling for the physical layer, and packet formats and media access control (MAC) / link layer protocols of the OSI model.
+
+On December 1, 1977 ARCNET was first presented to the public, after the computer manufacturer Datapoint, who had developed this technique, in the same year, the installation of the first customer, the Chase Manhattan Bank in New York City, had completed. ARCNET was developed at the same time as Ethernet, but was held as a proprietary unique selling point for a number of years until Standard Microsystems Corporation took over the production of the corresponding controllers, reaching a release in 1982, and winning Novell as another partner in 1985. [1] For example, ARCNET is one of the foundations of BACnet.
+
+ARCNET is physically constructed either as a classic 10BASE2 Ethernet as a bus or alternatively as a star or tree. [2] In the case of the bus variant, the switching components are simple tees, or star active or passive hubs, whereby active and passive hubs can be mixed as desired. In its original form, ARCNET was built with coaxial cables. During development, UTP and fiber were also specified. The coaxial cables do not conform to the 10BASE2 (Thin Ethernet) known type RG-58 (with a characteristic impedance of 50 ohms), but RG-62 with a characteristic impedance of 93 ohms. As a result, Arcnet's Ethernet adoption accelerated, as RG-62 cables matched IBM's SNA cabling and many of them could now rely on existing infrastructure.
+
+Connection to the hub and the computer can be made in star form directly via BNC connector without the TBASE2 known T-piece to the hub, where no terminator is required because the termination of the cable is done directly in the hub or on the card. The bus variant is as wired with T-pieces as 10BASE2 and also has terminating resistors (93 ohms) at the cable end. The possible distances between nodes are 2.5 to 4 times 10BASE2.The access method of ARCNET is token passing on a token bus. Here, similar to the access procedure token ring, a token is sent on the journey, which is passed on in a fixed order. For token ring, this is dictated by the ring wiring. With ARCNET, the token is always sent to the entire network, and the next station in a logical order receives the token. The order is to be given to the cards as node ID (consecutive numbering) on ​​an externally accessible DIP switch; For current products, the ARCNET ID is communicated to the card via the software.
+
+The access method of ARCNET is token passing on a token bus. Here, similar to the access procedure token ring, a token is sent on the journey, which is passed on in a fixed order. For token ring, this is dictated by the ring wiring. With ARCNET, the token is always sent to the entire network, and the next station in a logical order receives the token. The order is to be given to the cards as node ID (consecutive numbering) on an externally accessible DIP switch; For current products, the ARCNET ID is communicated to the card via the software.
+
+The transfer rate is lower than Ethernet and Token Ring at 2.5 Mbps (20 Mbps using ARCNET-Plus cards). However, as with Token Ring, no collision slows down the speed of transmission - even at maximum network load - even higher speeds can be achieved with 2.5 Mbit than with 4 times faster Ethernet networks. The US network specialist Thomas Conrad in 1990 under the name \"TCNS\" a (unspecified) 100-Mbit version of the ARCNET with RG-62 and fiber optic cabling was presented that had all the advantages of ARCNET via Ethernet and Token Ring. Compaq dropped this system but after the acquisition of Thomas Conrad in favor of the meanwhile much cheaper become Fast Ethernet. In the early years, however, ARCNET was much less expensive than Ethernet or Token Ring in terms of components, cabling and maintenance costs.
+
+A special feature were the ARCNET cards. ARCNET was an open design and in particular had a standardized map API, so that even cards from different manufacturers could work with a single driver. This practical simplification was later also used by many manufacturers with the widespread NE2000-compatible Ethernet cards. Even there, this reduced the development costs and soon led to very inexpensive cards. Today's ARCNET cards, however, require vendor-specific drivers.
+
+An ARCNET network with a hub in the middle gave a good example in explaining network topologies: the wiring was a star, electrically the network was a bus and logically a ring. ARCNET has become less important with the proliferation of Fast Ethernet in local area networks, but continues to be used in areas such as industrial manufacturing, printing, wind energy, but also medical and logistics."""@en ;
+      rdfs:label "Attached Resource Computer Network"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#SMQTT-SN>
+      a       owl:Class ;
+      rdfs:comment """Abstract:
+Rapid innovations in the area of digital things and Information Communication Technology are driving rapid deployment of Internet of Things (IoT) around the globe. Device to Device communications (D2D) in IoT are envisaged through various protocols such as Constrained Access Protocol (CoAP), Message Queue Telemetry Transport (MQTT) and MQTT-SN (for sensor networks). One of the major concerns in the deployment of IoT is to ensure the security of devices and D2D communications. Besides, existing communication protocols for IoT are devoid of security features. To address this, we propose a secure version of MQTT and MQTT-SN protocols (SMQTT and SMQTT-SN) in which security feature is augmented to the existing MQTT protocol based on Key/Cipher text Policy-Attribute Based Encryption(KP/CP-ABE) using lightweight Elliptic Curve Cryptography. Further we demonstrate feasibility of SMQTT and SMQTT-SNprotocols for various IoT requirements through simulations and evaluate their performance.
+Published in: Communication Systems and Network Technologies (CSNT), 2015 Fifth International Conference on"""@en ;
+      rdfs:label "Secure Message Queue Telemetry Transport for Sensor Networks"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#MQTT_nonTCPIP_based> .
+
+<http://www.w3id.org/ecsel-dr-AT#MQTT>
+      a       owl:Class ;
+      rdfs:comment """MQTT (Message Queuing Telemetry Transport) is an ISO standard (ISO/IEC PRF 20922) publish-subscribe-based messaging protocol. It works on top of the TCP/IP protocol. It is designed for connections with remote locations where a \"small code footprint\" is required or the network bandwidth is limited. The publish-subscribe messaging pattern requires a message broker.
+
+Andy Stanford-Clark of IBM and Arlen Nipper of Cirrus Link authored the first version of the protocol in 1999.
+
+The specification does not specify the meaning of \"small code footprint\" or the meaning of \"limited network bandwidth\". Thus, the protocol's availability for use depends on the context. In 2013, IBM submitted MQTT v3.1 to the OASIS specification body with a charter that ensured only minor changes to the specification could be accepted. MQTT-SN is a variation of the main protocol aimed at embedded devices on non-TCP/IP networks, such as ZigBee.
+
+Historically, the \"MQ\" in \"MQTT\" came from IBM's MQ Series message queuing product line. However, queuing itself is not required to be supported as a standard feature in all situations.
+
+Alternative protocols include the Advanced Message Queuing Protocol (AMQP), Streaming Text Oriented Messaging Protocol (STOMP), the IETF Constrained Application Protocol, XMPP, DDS, OPC UA, and Web Application Messaging Protocol (WAMP).
+(https://en.wikipedia.org/wiki/MQTT)"""@en ;
+      rdfs:label "Message Queuing Telemetry Transport"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#ZigBee_IP>
+      a       owl:Class ;
+      rdfs:comment "ZigBee IP is the first open standard for an IPv6-based full wireless mesh networking solution, providing seamless Internet connections to control low-power, low-cost devices and connecting dozens of different devices into a single control network. ZigBee IP was designed to support the ZigBee Smart Energy IP stack."@en ;
+      rdfs:label "Zigbee IP"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L3_NetworkLayer>
+      a       owl:Class ;
+      rdfs:comment """Controls the operations of the subnet, deciding which physical path the data takes. 
+Transmits Packets: \"letters\" containing IP addresses. 
+Topics: Routing, Subnet traffic control, Frame fragmentation, logical-physical address mapping, Subnet usage accounting. 
+Central devices: Routers. 
+Example protocols: IPv4, IPv6, IPX, ICMP"""@en ;
+      rdfs:label "OSI - Layer 3 - Network Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_TransportProtocol>
+      a       owl:Class ;
+      rdfs:comment "This class includes the protocols of the OSI transport protocol"@en ;
+      rdfs:label "OSI Transport Protocol"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#MQTT_TCPIP>
+      a       owl:Class ;
+      rdfs:comment """Specification
+The MQTT specification distinguishes between TCP / IP-based and non-TCP / IP networks. Here the TCP / IP-based variant is described.
+
+Main specification
+The protocol allows for a very simple way of observing behavior. It is particularly suitable for connections that allow only a small amount of administrative data. The OASIS standardization process is based on version 3.1 of the MQTT specification.
+
+Protocol
+MQTT is a client-server protocol. Clients send messages to the server (\"broker\") after connection with a topic that hierarchically classifies the message; for example kitchen/fridge/temperature or car/wheel/3/barometric_pressure. Clients can subscribe to these topics, with the server passing the received messages to the appropriate subscribers.
+
+Messages always consist of a topic and the message content. Messages are sent with a definable Quality of Service: at most once (the message is sent once and may not arrive when the connection is lost), at least once (the message is sent until receipt is acknowledged and can be repeated at the recipient arrive) and exactly once (this ensures that the message arrives exactly once even when the connection is interrupted). In addition, the server can be instructed with the retain flag to cache the message for this topic. Clients who subscribe to this topic are the first to receive the cached message.
+
+When establishing a connection, clients can define a \"last will\" in the form of a message. If the connection to the client is lost, this message is published and sent to the appropriate subscribers.
+
+MQTT is typically used over TCP and has a 2-byte header. The first byte contains the message type (4 bits), the quality of service (2 bits) and a retain flag.
+
+There are the following message types:
+
+    CONNECT
+    CONNACK
+    PUBLISH
+    PUBACK
+    PUBREC
+    Pubrel
+    PUBCOMP
+    SUBSCRIBE
+    SUBACK
+    UNSUBSCRIBE
+    UNSUBACK
+    PINGREQ
+    PINGRESP
+    DISCONNECT
+
+The second byte contains the length of the remainder of the MQTT packet.
+
+This is followed by a variable part that contains the MQTT topic, ie the topic. Finally comes the payload, ie the data content that is published under the topic."""@en ;
+      rdfs:label "Message Queue Telemetry Transport over TCP/IP infrastructure"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#MQTT_TCPIP_based> .
+
+<http://www.w3id.org/ecsel-dr-AT#Enocean>
+      a       owl:Class ;
+      rdfs:comment """The EnOcean technology is an energy harvesting wireless technology used primarily in building automation systems, and is also applied to other applications in industry, transportation, logistics and smart homes. Modules based on EnOcean technology combine micro energy converters with ultra low power electronics, and enable wireless communications between batteryless wireless sensors, switches, controllers and gateways.
+
+In March 2012, the EnOcean wireless standard was ratified as the international standard ISO/IEC 14543-3-10. The standard covers the OSI (Open Systems Interconnection) layers 1-3 which are the physical, data link and networking layers."""@en ;
+      rdfs:label "Enocean"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#Z-Wave>
+      a       owl:Class ;
+      rdfs:comment """Wireless communications protocol for home automation
+– allowing for wireless control of residential appliances and other devices, such as lighting control, security systems, thermostats, windows, locks, swimming pools and garage door openers
+• operates at 868.42 MHz in Europe, at 908.42 MHz in the North America
+  – Depending on national regulations of countries
+  – Better pervasion of walls and lower reflection than 2,4 GHz radio waves
+• Reliable, low-latency transmission of small data packets at data rates up to 100kbit/s
+• Realized as System-on-Chip (SoC)
+• Accepted by many producers of home appliances etc.
+  – Certified interoperable products: 2017: 1700, 2018: 2400
+• Current owner: Silicon Labs (since April 2018)
+  – Many companies involved before, origin: Zensys, Copenhagen, Danmark
+• Supporting organization: Z-Wave Alliance
+• Standards: Z-Wave PHY and MAC layer are one option in standard G.9959 for wireless devices under 1 GHz of International Telecommunications Union (ITU)"""@en ;
+      rdfs:label "Z-Wave"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#DNS-SD>
+      a       owl:Class ;
+      rdfs:comment """DNS-SD allows clients to discover a named list of service instances, given a service type, and to resolve those services to hostnames using standard DNS queries. The specification is compatible with existing unicast DNS server and client software, but works equally well with Multicast DNS in a zero-configuration environment. Each service instance is described using a DNS SRV (RFC 2782) and DNS TXT (RFC 1035) record. A client discovers the list of available instances for a given service type by querying the DNS PTR (RFC 1035) record of that service type's name; the server returns zero or more names of the form \"<Service>.<Domain>\", each corresponding to a SRV/TXT record pair. The SRV record resolves to the domain name providing the instance, while the TXT can contain service-specific configuration parameter. A client can then resolve the A/AAAA record for the domain name and connect to the service.
+History
+
+In 1997 Stuart Cheshire proposed adapting Apple's mature Name Binding Protocol to IP networks to address the lack of service discovery capability. Cheshire subsequently joined Apple and authored IETF draft proposals for Multicast DNS and DNS-based Service Discovery, supporting the transition from AppleTalk to IP networking. In 2002, Apple announced an implementation of both protocols under the name Rendezvous (later renamed Bonjour), included in Mac OS X 10.2 and replacing the Service Location Protocol used in 10.1.In 2013, the proposals were ratified as RFC 6762 and RFC 6763.
+DNS-SD with multicast
+
+Multicast DNS (mDNS) is a protocol that uses packets similar to unicast DNS except sent over a multicast link to resolve hostnames. Each host listens on the mDNS port, 5353, and resolves requests for the DNS record of its .local hostname (e.g. the A, AAAA, CNAME) to its IP address. When an mDNS client needs to resolve a local hostname to an IP address, it sends a DNS request for that name to a well-known multicast address; the computer with the corresponding A/AAAA record replies with its IP address. The mDNS multicast address is 224.0.0.251 for IPv4 and ff02::fb for IPv6 link-local addressing.
+
+DNS service discovery (DNS-SD) requests can also be sent over a multicast link, and it can be combined with mDNS to yield zero-configuration DNS-SD. It still uses DNS PTR, SRV, TXT records to advertise instances of service types, domain names for those instances, and optional configuration parameters for connecting to those instances. But SRV records can now resolve to multicastable .local domain names, which mDNS can resolve to local IP addresses.
+Support
+
+DNS-SD is used by Apple products, most network printers, many Linux distributions including Debian and Ubuntu, and a number of third party products for various operating systems. For example, many OS X network applications written by Apple, including Safari, iChat, and Messages, can use DNS-SD to locate nearby servers and peer-to-peer clients. On Windows, the operating system includes support for DNS-SD at least on Windows 10 for applications written using JavaScriptand other languages may be supported shortly. Individual applications may include their own support in older versions of the operating system, such that most instant messaging and VoIP clients on Windows support DNS-SD. Some Unix, BSD, and Linux distributions also include DNS-SD. For example, Ubuntu ships Avahi, an mDNS/DNS-SD implementation, in its base distribution.
+
+Service types are given on a first-serve basis. A service type registry was originally maintained by DNS-SD.org, but has since been merged into IANA's registry for DNS SRV records."""@en ;
+      rdfs:label "DNS-based service discovery"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#XMPP>
+      a       owl:Class ;
+      rdfs:comment """XMPP (Extensible Messaging and Presence Protocol)
+\"An open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware, content syndication, and generalized routing of XML data.\"
+(https://www.postscapes.com/internet-of-things-protocols/)"""@en ;
+      rdfs:label "Extensible Messaging and Presence Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#uPnP>
+      a       owl:Class ;
+      rdfs:comment "UPnP (Universal Plug and Play) - Now managed by the Open Connectivity Foundation is a set of networking protocols that permits networked devices to seamlessly discover each other's presence on the network and establish functional network services for data sharing, communications, and entertainment."@en ;
+      rdfs:label "Universal Plug and Play"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#SMQTT>
+      a       owl:Class ;
+      rdfs:comment """Abstract:
+Rapid innovations in the area of digital things and Information Communication Technology are driving rapid deployment of Internet of Things (IoT) around the globe. Device to Device communications (D2D) in IoT are envisaged through various protocols such as Constrained Access Protocol (CoAP), Message Queue Telemetry Transport (MQTT) and MQTT-SN (for sensor networks). One of the major concerns in the deployment of IoT is to ensure the security of devices and D2D communications. Besides, existing communication protocols for IoT are devoid of security features. To address this, we propose a secure version of MQTT and MQTT-SN protocols (SMQTT and SMQTT-SN) in which security feature is augmented to the existing MQTT protocol based on Key/Cipher text Policy-Attribute Based Encryption(KP/CP-ABE) using lightweight Elliptic Curve Cryptography. Further we demonstrate feasibility of SMQTT and SMQTT-SNprotocols for various IoT requirements through simulations and evaluate their performance.
+Published in: Communication Systems and Network Technologies (CSNT), 2015 Fifth International Conference on"""@en ;
+      rdfs:label "Secure Message Queue Telemetry Transport"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#MQTT_TCPIP_based> .
+
+<http://www.purl.org/i4go/domain-task/osimodel/CommunicationSecurityMechanism>
+      a       owl:Class ;
+      rdfs:comment "Communications security includes cryptosecurity [i.e., encryption or decryption], transmission security, emission security [i.e., intercept and analysis of emanations from equipment], and physical security of COMSEC material."@en ;
+      rdfs:label "Communication security mechanism"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#WirelessHART>
+      a       owl:Class ;
+      rdfs:comment """In September 2007, the HCF (HART Communication Foundation) set and released the new WirelessHART standard. The radio transmission is based on the wireless communication standard IEEE 802.15.4 (ISM band) and uses TDMA as a transmission method. The communication provides encryption based on the Advanced Encryption Standard (AES 128) so that the data transfer and the parameterization of the field devices can not be changed without authorization.
+WirelessHART is part of the new HART 7 specification and has been standardized as IEC 62591: 2010. Completion of the HART test specification is expected by mid-2008. Thus, the first WirelessHART-compliant measuring devices should still be available in 2008. 
+Essential Features
+The network builds itself up (meshed network). If a field device to be added to an existing network, only a kind of password must be entered, the topology is self-organizing. Outside, transmission distances of up to 3 km from subscriber to subscriber are possible. In spatially consecutive participants, therefore, significantly longer distances can be bridged, since the intermediate participants act as a kind of repeater.
+Built-in redundancy: If a subscriber fails as a transmission path, the transmission is automatically established by another subscriber. The same information is transmitted as with the wired HART. The measured value transmission cycles depend on the particular system configuration and are typically between 15 seconds and several hours."""@en ;
+      rdfs:label "Wireless HART"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_3_4_NetworkTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#Ethernet_802_3>
+      a       owl:Class ;
+      rdfs:comment "Ethernet is a family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN). It was commercially introduced in 1980 and first standardized in 1983 as IEEE 802.3. Ethernet has since been refined to support higher bit rates, a greater number of nodes, and longer link distances, but retains much backward compatibility. Over time, Ethernet has largely replaced competing wired LAN technologies such as Token Ring, FDDI and ARCNET."@en ;
+      rdfs:label "Ethernet 802.3"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#UDP>
+      a       owl:Class ;
+      rdfs:comment "In computer networking, the User Datagram Protocol (UDP) is one of the core members of the Internet protocol suite. With UDP, computer applications can send messages, in this case referred to as datagrams, to other hosts on an Internet Protocol (IP) network. Prior communications are not required in order to set up communication channels or data paths."@en ;
+      rdfs:label "User Datagram Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_TransportProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#WLAN_802_11>
+      a       owl:Class ;
+      rdfs:comment """Collection of technologies defined in several sub-standards of IEEE 802.11: 
+a, b, g, n, ac, 
+They differ in the frequency band (2,4 GHz or 5 GHz), the data transmission rate and several specific methods."""@en ;
+      rdfs:label "WLAN 802.11"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_AL1_NetworkAccessLayer>
+      a       owl:Class ;
+      rdfs:comment """Aggregation of ISO/OSI layer 1 and 2. 
+Describes different techniques for point-to-point (node-to-node) data transfer.  Examples: Ethernet, FDDI  (Fiber Distributed Data Interface), PPP (Point-to-Point Protocol), WLAN, Wide-area wireless networks (WWAN): 2G, 3G, 4G, 5G.
+\"Physical infrastructure\" for data transmission / M2M communication."""@en ;
+      rdfs:label "OSI Network Access Layer"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_AggregatedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#SCTP>
+      a       owl:Class ;
+      rdfs:comment "Stream Control Transmission Protocol (SCTP) is a transport-layer protocol that ensures reliable, in-sequence transport of data. SCTP provides multihoming support where one or both endpoints of a connection can consist of more than one IP address. This enables transparent failover between redundant network paths."@en ;
+      rdfs:label "Stream Control Transmission Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_TransportProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#DSL>
+      a       owl:Class ;
+      rdfs:comment "DSL (for Digital Subscriber Loop or Digital Subscriber Line) is a way to transmit digital data over a telephone line. Telephone lines only transmit a limited spectrum of signals (roughly 20 Hertz to 20,000 Hertz, for voice). This means that the other frequencies can be used to transmit data. The data is combined or multiplexed onto the telephone line. At both ends, a device called a Splitter (or DSL filter) separates the data part and the telephony part. DSL provides the physical layer, the lowest layer of the OSI model that is used for understanding how the different parts of a telecommunications network can connect with each other. In this model, ATM or Ethernet are two communications protocols used as the data link layer (layer 2) and IP is used at the network layer (layer 3)."@en ;
+      rdfs:label "Digital Subscriber Line"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AT#OSI_L1_PhysicalLink>
+      a       owl:Class ;
+      rdfs:comment """Concerned with the transmission and reception of unstructured raw bit stream over the physical medium. 
+Physical structure can be wired (cables, hubs) or wireless (radio wave technologies with antennas, base stations etc.). 
+Topics: Data encoding, Physical medium attachment, Transmission technique, Baseband or Broadband, physical medium transmission: Bits and Volts.
+Central device: Hub."""@en ;
+      rdfs:label "OSI - Layer 1- Physical Link"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_DetailedLayer> .
+
+<http://www.w3id.org/ecsel-dr-AT#FTP>
+      a       owl:Class ;
+      rdfs:comment "The File Transfer Protocol (FTP) is a standard communication protocol used for the transfer of computer files from a server to a client on a computer network. FTP is built on a client–server model architecture using separate control and data connections between the client and the server. FTP users may authenticate themselves with a clear-text sign-in protocol, normally in the form of a username and password, but can connect anonymously if the server is configured to allow it. For secure transmission that protects the username and password, and encrypts the content, FTP is often secured with SSL/TLS (FTPS) or replaced with SSH File Transfer Protocol (SFTP)."@en ;
+      rdfs:label "File Transfer Protocol"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_5_7_ApplicationProtocol> .
+
+<http://www.w3id.org/ecsel-dr-AT#LoRaWAN>
+      a       owl:Class ;
+      rdfs:comment "Long Range Wide Area Network (LoRaWAN) is a low-power wireless network protocol. The LoRaWAN specification is set by the LoRa Alliance, is freely available and utilizes Semtech Corporation's proprietary Chirp Spread Spectrum Modulation technique \"LoRa\". It is asymmetrically geared to the energy efficiency of IoT devices and achieves high ranges (> 10 km) for uplink communication, ie the transmission from the IoT device to the network. The data transfer rate ranges between 292 bps and 50 kilobits per second. Different operating shifts up to a quasi-continuous downlink communication are possible, the latter at the expense of energy efficiency."@en ;
+      rdfs:label "Long Range Wide Area Network"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#OSI_1_2_NetAccessTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AH#DataLinkAndMediaAccessTechnology>
+      a       owl:Class ;
+      rdfs:comment "corresponds to OSI layer 1 and 2 technologies, like Ethernet, WLAN (802.11), WPAN (802.15.4), EtherCAT, ProfiNet, ..."@en ;
+      rdfs:label "Data link and media access technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/osimodel/CommunicationTechnology> .

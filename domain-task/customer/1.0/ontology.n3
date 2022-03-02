@@ -1,0 +1,47 @@
+<http://www.w3id.org/ecsel-dr-OM#CustomerData> <http://www.w3.org/2000/01/rdf-schema#label> "Customer data"@en .
+<http://www.w3id.org/ecsel-dr-OM#CustomerData> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to represent any information about a customer"@en .
+<http://www.w3id.org/ecsel-dr-OM#CustomerData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OM#OrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Order change request"@en .
+<http://www.w3id.org/ecsel-dr-OM#OrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "Change Order Request (COR means a Contractor generated document which describes a change in the scope of Work, including a detailed description, Drawings and Specifications, and a request for changes to costs or time, as necessary, to inform Owner of the nature of the requested change to the Contract."@en .
+<http://www.w3id.org/ecsel-dr-OM#OrderChangeRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#label> "requests order change request"@en .
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates a customer with an order change request."@en .
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-OM#Customer> .
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-OM#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer"@en .
+<http://www.w3id.org/ecsel-dr-OM#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "The purchaser/user of a product or service supplied by a service provider or utility."@en .
+<http://www.w3id.org/ecsel-dr-OM#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#customerPartNumber> <http://www.w3.org/2000/01/rdf-schema#label> "customer part number"@en .
+<http://www.w3id.org/ecsel-dr-PROD#customerPartNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Product identifier used by the customer to identify one IFX product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#customerPartNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-PROD#customerPartNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-OM#ownsCustomerPlant> <http://www.w3.org/2000/01/rdf-schema#label> "owns customer plant"@en .
+<http://www.w3id.org/ecsel-dr-OM#ownsCustomerPlant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OM#ownsCustomerPlant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OM#CustomerPlant> <http://www.w3.org/2000/01/rdf-schema#label> "Customer plant"@en .
+<http://www.w3id.org/ecsel-dr-OM#CustomerPlant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/domain-task/customer/DemandSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "Demand snapshot"@en .
+<http://www.purl.org/i40go/domain-task/customer/DemandSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "The \u201CDemand\u201D entity stores redundant demand at every product level."@en .
+<http://www.purl.org/i40go/domain-task/customer/DemandSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-SO#hasCustomerWishTime> <http://www.w3.org/2000/01/rdf-schema#label> "has customer wish time"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasCustomerWishTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Customer wish time of the demand entry"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasCustomerWishTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasCustomerWishTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-PROD#customer> <http://www.w3.org/2000/01/rdf-schema#label> "customer"@en .
+<http://www.w3id.org/ecsel-dr-PROD#customer> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the customer of an organization"@en .
+<http://www.w3id.org/ecsel-dr-PROD#customer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<http://www.w3id.org/ecsel-dr-PROD#customer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PROD#customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i40go/domain-task/customer> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://purl.org/dc/elements/1.1/title> "Customer ontology"@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://purl.org/dc/terms/issued> "2021-25-05"@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Customer' ontology module represents data about the customers of the organization products."@en .
+<http://www.purl.org/i40go/domain-task/customer> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i40go/common-domain/organization> .
+<http://www.purl.org/i40go/domain-task/customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .

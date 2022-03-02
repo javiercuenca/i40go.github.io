@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/common-domain/manufacture" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/common-domain/manufacture/1.0/manufacture.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/manufacturingresource" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/manufacturingresource/1.0/manufacturingresource.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/variant-domain/productionplant" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/productionplant/1.0/productionplant.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1621927926399" name="http://www.purl.org/i40go/domain-task/supplychain" uri="supplychain.owl"/>
+    </group>
+</catalog>

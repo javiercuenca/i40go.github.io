@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/common-domain/equipment#"
+     xml:base="http://www.purl.org/i4go/common-domain/equipment"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/common-domain/equipment">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/system"/>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <dc:title xml:lang="en">Equipment, devices and apparatus ontology</dc:title>
+        <rdfs:comment xml:lang="en">The &apos;Equipment, devices and apparatus&apos; ontology module represents data about any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task.</rdfs:comment>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <terms:issued xml:lang="en">2021-05-03</terms:issued>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/ipAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/i4go/common-domain/equipment/ipAddress">
+        <rdfs:comment xml:lang="en">The IP address of the device.</rdfs:comment>
+        <rdfs:label xml:lang="en">ip address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/macAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/i4go/common-domain/equipment/macAddress">
+        <rdfs:comment xml:lang="en">MAC address of the device.</rdfs:comment>
+        <rdfs:label xml:lang="en">mac address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#DeviceID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-AH#DeviceID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">This property is used to provide an unique identifier for a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#DeviceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-AH#DeviceName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">The name of the device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration">
+        <rdfs:comment xml:lang="en">In computers and computer networks, a configuration often refers to the specific hardware and software details in terms of devices attached, capacity or capability, and exactly what the system is made up of.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device configuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/DeviceElements -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/DeviceElements">
+        <rdfs:comment xml:lang="en">This class is used to represent the elements that compound a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device elements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">This class is used to identify the different kinds of equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Device -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Device">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">A device is a material element or assembly of such elements intended to perform a required function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">An equipment is any single apparatus or set of devices or apparatuses, the set of main devices of an installation, or all devices necessary to perform a specific task.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

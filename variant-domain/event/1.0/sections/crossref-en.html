@@ -1,0 +1,512 @@
+<h2  id="crossreference" class="list">Cross reference for Event ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by event ontology.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#EndEvent" title="http://www.w3id.org/ecsel-dr-PMV#EndEvent">End event</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+      </li>
+      <li>
+         <a href="#/EventCalendar"
+            title="http://www.purl.org/i4go/variant-domain/event/EventCalendar">Event calendar</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#JoinRule" title="http://www.w3id.org/ecsel-dr-PMV#JoinRule">Join rule</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#SplitRule" title="http://www.w3id.org/ecsel-dr-PMV#SplitRule">Split rule</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#StartEvent" title="http://www.w3id.org/ecsel-dr-PMV#StartEvent">Start event</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#EndEvent">
+      <h3>End event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#EndEvent</p>
+      <div class="comment">
+         <span class="markdown">Denotes the event element that stands at the end of a branch in the process flow and thus, ends the process flow branch or the total process.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Event">
+      <h3>Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Event</p>
+      <div class="comment">
+         <span class="markdown">Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#EndEvent" title="http://www.w3id.org/ecsel-dr-PMV#EndEvent">End event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#StartEvent" title="http://www.w3id.org/ecsel-dr-PMV#StartEvent">Start event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesFunction"
+               title="http://www.w3id.org/ecsel-dr-PMV#activatesFunction">activates function</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isCreatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy">is created by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isDependentOn" title="http://www.w3id.org/ecsel-dr-PMV#isDependentOn">is dependent on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy">is evaluated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#leadsToEvent" title="http://www.w3id.org/ecsel-dr-PMV#leadsToEvent">leads to event</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo"
+               title="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo">responds to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/EventCalendar">
+      <h3>Event calendar<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.purl.org/i4go/variant-domain/event/EventCalendar</p>
+      <div class="comment">
+         <span class="markdown">In the “Event Calendar” tracing entity, certain events like planned facility shutdowns, etc. can be scheduled</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#JoinRule">
+      <h3>Join rule<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#JoinRule</p>
+      <div class="comment">
+         <span class="markdown">Rule element that unites the control flow after being split into several branches. Has several incoming paths (at least two) and one outgoing.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy">is evaluated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Rule">
+      <h3>Rule<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Rule</p>
+      <div class="comment">
+         <span class="markdown">Rules allow to model alternative, exclusive alternative and parallel process flows.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3id.org/ecsel-dr-PMV#ModelElement">model element</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#JoinRule" title="http://www.w3id.org/ecsel-dr-PMV#JoinRule">Join rule</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#SplitRule" title="http://www.w3id.org/ecsel-dr-PMV#SplitRule">Split rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#leadsToEvent" title="http://www.w3id.org/ecsel-dr-PMV#leadsToEvent">leads to event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isDependentOn" title="http://www.w3id.org/ecsel-dr-PMV#isDependentOn">is dependent on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#SplitRule">
+      <h3>Split rule<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#SplitRule</p>
+      <div class="comment">
+         <span class="markdown">Rule element that splits the control flow into several branches. Has one incoming path and several (at least two) outgoing paths.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#StartEvent">
+      <h3>Start event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#StartEvent</p>
+      <div class="comment">
+         <span class="markdown">Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#activates" title="http://www.w3id.org/ecsel-dr-PMV#activates">activates</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesFunction"
+            title="http://www.w3id.org/ecsel-dr-PMV#activatesFunction">activates function</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#creates" title="http://www.w3id.org/ecsel-dr-PMV#creates">creates</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction"
+            title="http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction">is activated by function</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isCreatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy">is created by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isDependentOn" title="http://www.w3id.org/ecsel-dr-PMV#isDependentOn">
+            <span>is dependent on</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy">is evaluated by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#leadsToEvent" title="http://www.w3id.org/ecsel-dr-PMV#leadsToEvent">leads to event</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo"
+            title="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo">responds to</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#activates">
+      <h3>activates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#activates</p>
+      <div class="comment">
+         <span class="markdown">The connector is used to represent the chronological order in an EPC, where an Event or a Rule activate a Task or Process Interface.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">modelling function object</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#activatesFunction">
+      <h3>activates function<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#activatesFunction</p>
+      <div class="comment">
+         <span class="markdown">Specialization of the activates property that links the class Event with Task and Process Interface in the course of the process flow.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3id.org/ecsel-dr-PMV#ProcessInterface">process interface</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction"
+                  title="http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction">is activated by function</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#creates">
+      <h3>creates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#creates</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isCreatedBy" title="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy">is created by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction">
+      <h3>is activated by function<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesFunction"
+                  title="http://www.w3id.org/ecsel-dr-PMV#activatesFunction">activates function</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy">
+      <h3>is created by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isCreatedBy</p>
+      <div class="comment">
+         <span class="markdown">An event is created by a process step. The connector is used to represent the chronological order in an EPC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">modelling function object</span>
+            </dd>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3id.org/ecsel-dr-PMV#ProcessInterface">process interface</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#creates" title="http://www.w3id.org/ecsel-dr-PMV#creates">creates</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isDependentOn">
+      <h3>is dependent on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isDependentOn</p>
+      <div class="comment">
+         <span class="markdown">An event is dependent on a rule. The connector is used to represent the chronological order in an EPC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy">
+      <h3>is evaluated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy</p>
+      <div class="comment">
+         <span class="markdown">An event is evaluated by a rule. The connector is used to represent the chronological order in an EPC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#JoinRule" title="http://www.w3id.org/ecsel-dr-PMV#JoinRule">Join rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#leadsToEvent">
+      <h3>leads to event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#leadsToEvent</p>
+      <div class="comment">
+         <span class="markdown">A rule leads to an event. The connector is used to represent the chronological order in an EPC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo">
+      <h3>responds to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo</p>
+      <div class="comment">
+         <span class="markdown">This property is used to specify the element that reponds to an event.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Event" title="http://www.w3id.org/ecsel-dr-PMV#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType"
+            title="http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType">Event Calendar: Type of event</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType">
+      <h3>Event Calendar: Type of event<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

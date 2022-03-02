@@ -1,0 +1,57 @@
+@prefix :        <http://www.purl.org/i40go/domain-task/arrowheadsystem#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem/AHapplicationSystem>
+      a       owl:Class ;
+      rdfs:label "ArrowHead application component"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadsystem/AHsystem> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem/AHcoreSystem>
+      a       owl:Class ;
+      rdfs:comment """Software system, that belongs to the \"standard\" components offered by Arrowhead framework. 
+Arrowhead core systems can occur once in each Arrowhead Local Cloud. 
+Arriwhead Core Systems can be distinguished in Arrowhead Mandatory Core Systems and Automation supporting systems. Mandatory core systems must exist in each Arrowhead Local Cloud, Automation supporting systems can occur in an Arrowhead Local Cloud."""@en ;
+      rdfs:label "ArrowHead core component"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadsystem/AHsystem> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem/AHmandatoryCoreSystem>
+      a       owl:Class ;
+      rdfs:label "ArrowHead mandatory core system"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadsystem/AHcoreSystem> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem/AHautomationSupportingSystem>
+      a       owl:Class ;
+      rdfs:label "ArrowHead automation supporting system"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadsystem/AHcoreSystem> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem/AHsystem>
+      a       owl:Class ;
+      rdfs:comment "A System is what is providing and/or consuming services (see “Arrowhead Service”). A System can be the Service Provider of one or more services and at the same time the Service Consumer of one or more services. It normally includes software executing on hardware. It may also be referred to as Component or Device. A system can be user interface display, used to control the air-conditioning within a house, but is can also be a small temperature sensor that complies with the Arrowhead Framework."@en ;
+      rdfs:label "ArrowHead system"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadsystem>
+      a       owl:Ontology ;
+      rdfs:comment "This ontology represents data about systems of the Arrowhead framework The Arrowhead Framework is addressing IoT based automation. The approach take is that IoT's are abstracted to services. This to enable IoT interoperability in-between almost any IoT's."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Arrowhead System ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-06"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/software> ;
+      owl:versionInfo "1.0"@en .

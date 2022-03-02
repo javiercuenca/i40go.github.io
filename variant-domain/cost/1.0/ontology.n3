@@ -1,0 +1,51 @@
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has WIP costs per unit and time unit"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Capital bounding costs + Storage costs + Mean production costs of a unit of a certain technology and time unit"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> .
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/2000/01/rdf-schema#label> "has target costs"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate a prodcut with its target cost"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/cost> <http://purl.org/dc/elements/1.1/title> "Cost ontology"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://purl.org/dc/terms/issued> "2021-05-24"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Cost' ontology module represents data about the cost of manufacturing products"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/cost> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/variant-domain/product> .
+<http://www.purl.org/i4go/variant-domain/cost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/2000/01/rdf-schema#label> "has finished product costs"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Costs of a finished unit of a certain technology"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has revenue per init"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Revenue per unit of a certain technology"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> <http://www.w3.org/2000/01/rdf-schema#label> "Target revenue"@en .
+<http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> <http://www.w3.org/2000/01/rdf-schema#comment> "The target revenue is the amount of income a company wants to generate for the current accounting period."@en .
+<http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf> <http://www.w3.org/2000/01/rdf-schema#label> "is target revenue of"@en .
+<http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/cost/TargetCosts> <http://www.w3.org/2000/01/rdf-schema#label> "Target costs"@en .
+<http://www.purl.org/i4go/variant-domain/cost/TargetCosts> <http://www.w3.org/2000/01/rdf-schema#comment> "The \"target costs\" entity is the final cost of a product or service that must be achieved in order to generate the desired level of sales revenue and income or due to contractual agreements."@en .
+<http://www.purl.org/i4go/variant-domain/cost/TargetCosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/2000/01/rdf-schema#label> "has target revenue"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

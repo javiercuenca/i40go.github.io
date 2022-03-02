@@ -1,0 +1,242 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/task#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-PMV#activatesTask>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Specialization of the activates property that links the class Rule with Task in the course of the process flow."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Rule> ;
+      rdfs:label "activates task"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isSupportedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step is supported by an application system type."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "is supported by"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#contributesTo>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Role(s) that contribute(s) to a process step during it is carried out."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PRIMA#Role> ;
+      rdfs:label "contributes to"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf> .
+
+<http://www.w3id.org/ecsel-dr-PMV#supports>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step is supported by an Application system."@en ;
+      rdfs:label "supports"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#carriesOut>
+      a       owl:ObjectProperty ;
+      rdfs:label "carries out"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy> .
+
+<http://www.w3id.org/ecsel-dr-PMV#represents>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A aris:BPActivity is the graphical representation of a aris:VACD or aris:BPFlow in a aris:VACD."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#BPActivity> ;
+      rdfs:label "represents"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#BPFlow> , <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isInputFor>
+      a       owl:ObjectProperty ;
+      rdfs:label "is input for"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Role(s) to be informed after/ during the process step is carried out (one-way-communication) (equivalent to I in RACI notation)"@en ;
+      rdfs:label "must be informed about"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo> .
+
+<http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm>
+      a       owl:Class ;
+      rdfs:comment "Set up with connection to a function or activity or VAC. It can be either input or output, where the direction of the arrow describes whether it is an input or an output. Set up of a connection is not mandatory."@en ;
+      rdfs:label "Technical term"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#hasSubFlow>
+      a       owl:ObjectProperty ;
+      rdfs:comment "EPCs can have other EPCs as subordinates. The connector is used to represent the hierarchical order."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "has subflow"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#BPFlow> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf> .
+
+<http://www.w3id.org/ecsel-dr-PMV#Task>
+      a       owl:Class ;
+      rdfs:comment "The lowest level of detail, a task are the activities required to execute a subprocess. A single task within a subprocess can be manual or system supported. E.g. Create Purchase Order"@en ;
+      rdfs:label "Task"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> .
+
+<http://www.w3id.org/ecsel-dr-PMV#isOutputOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is output of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/variant-domain/task>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Task' ontology module represents data about required, recommended, or permissible actions intended to contribute to the achievement of one or more outcomes of a process"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Task ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en , "2021-24-05"@en ;
+      owl:imports <http://www.purl.org/i4go/common-domain/organization> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf>
+      a       owl:ObjectProperty ;
+      rdfs:comment "The connector is used to represent the chronological order of value chain elements."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> , <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> ;
+      rdfs:label "is predecessor of"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#leadsToRule>
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a tasks with the project or process it belongs to."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "is task of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A result of a process step is forwarded to role(s)."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "results forwareded to"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PRIMA#Role> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step is worked on by collaboration of role(s)."@en ;
+      rdfs:label "is worked on by collaboration of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#hasAsInput>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step can have technical term(s) as input."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "has as input"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isInputFor> .
+
+<http://www.w3id.org/ecsel-dr-PMV#BPActivity>
+      a       owl:Class ;
+      rdfs:comment "A Business Process Activity is a part of a Business Process containing one or more sub Business Processes or a Process Flow."@en ;
+      rdfs:label "Business Process Activity"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isAssignedTo>
+      a       owl:ObjectProperty ;
+      rdfs:label "is assigned to"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#leadsToRule> .
+
+<http://www.w3id.org/ecsel-dr-PMV#hasAsOutput>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step can have technical term(s) as output."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "has as output"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isOutputOf> .
+
+<http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject>
+      a       owl:Class ;
+      rdfs:comment "Function objects are used to model the decomposition of the process flow."@en ;
+      rdfs:label "Modelling Function Object"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#Function> .
+
+<http://www.w3id.org/ecsel-dr-PMV#Rule>
+      a       owl:Class ;
+      rdfs:comment "Rules allow to model alternative, exclusive alternative and parallel process flows."@en ;
+      rdfs:label "Rule"@en .
+
+owl:topObjectProperty
+      rdfs:comment "A process step leads to a rule. The connector is used to represent the chronological order in an EPC."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "leads to rule"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+
+<http://www.w3id.org/ecsel-dr-PMV#BPFlow>
+      a       owl:Class ;
+      rdfs:comment """An EPC describes a Business Process Flow, which is a sequence of required tasks to create specified outputs using defined inputs.
+A Business Process Flow is a sequence of required tasks to create specified outputs using defined inputs."""@en ;
+      rdfs:label "Business Process Flow"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType>
+      a       owl:Class ;
+      rdfs:comment "An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available)."@en ;
+      rdfs:label "Application system type"@en .
+
+terms:issued
+      a       owl:AnnotationProperty ;
+      rdfs:subPropertyOf terms:creator .
+
+<http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy>
+      a       owl:ObjectProperty ;
+      rdfs:label "is represented by"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#represents> .
+
+<http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#BPFlow> ;
+      rdfs:label "is subflow of"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step is carried out by role(s) or organizational unit(s) (equivalent to R in RACI notation)."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "is carried out by"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PRIMA#Role> , <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#Function>
+      a       owl:Class ;
+      rdfs:comment "The function type represents several action elements as task, process interfaces or business process activities."@en ;
+      rdfs:label "Function"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#follows>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A process step follows a process step. The connector is used to represent the chronological order in an EPC."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:label "follows"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Task> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf> .
+
+<http://www.w3id.org/ecsel-dr-PRIMA#hasTask>
+      a       owl:ObjectProperty ;
+      rdfs:label "has taks"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf> .

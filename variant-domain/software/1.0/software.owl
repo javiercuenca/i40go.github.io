@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/variant-domain/software#"
+     xml:base="http://www.purl.org/i4go/variant-domain/software"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/variant-domain/software">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/equipment"/>
+        <rdfs:comment xml:lang="en">The &apos;Computer Software&apos; ontology module represents the data about software applications</rdfs:comment>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:created xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:created>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <terms:issued xml:lang="en">2021-05-04</terms:issued>
+        <dc:title xml:lang="en">Computer software ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/comprisedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/i4go/variant-domain/software/comprisedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">comprised of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#executes -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#executes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#isExecutedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <rdfs:label xml:lang="en">executes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isExecutedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isExecutedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Software is executed by a function in a process flow.</rdfs:comment>
+        <rdfs:label xml:lang="en">is executed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Software -->
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Software">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment xml:lang="en">assembly of programs, procedures, rules, documentation and data, pertaining to the operation of an information processing device or system. For example, firmware, operating system, application software.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/SoftwareComponent -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/software/SoftwareComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Software"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+                        <owl:allValuesFrom rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class used to represent a set of software units.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/SoftwareUnit -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Software"/>
+                            <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Generically dependent continuant and element that is (according to ISO26262) an atomic level softwarecomponent of the software architecture that can be subjected to stand-alone testing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <rdfs:comment xml:lang="en">An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available).</rdfs:comment>
+        <rdfs:label xml:lang="en">Application system type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Function -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Function">
+        <rdfs:comment xml:lang="en">The function type represents several action elements as task, process interfaces or business process activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/common-domain/manufacture#"
+     xml:base="http://www.purl.org/i4go/common-domain/manufacture"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/common-domain/manufacture">
+        <dc:title xml:lang="en">Manufacture ontology</dc:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:created xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:created>
+        <terms:issued xml:lang="en">2021-05-13</terms:issued>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+        <rdfs:comment xml:lang="en">The &apos;Manufacture&apos; ontology module includes data about manufacture, that is, the production of products for use or sale, using labour and machines, tools, and chemical or biological processing or formulation. It also includes relevant concepts related with the Industry 4.0. The Fourth Industrial Revolution (or Industry 4.0) is the ongoing automation of traditional manufacturing and industrial practices, using modern smart technology. Large-scale machine-to-machine communication (M2M) and the internet of things (IoT) are integrated for increased automation, improved communication and self-monitoring, and production of smart machines that can analyze and diagnose issues without the need for human intervention.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell">
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component"/>
+        <rdfs:range rdf:resource="http://www.purl.org/i4go/common-domain/manufacture/AdminShell"/>
+        <rdfs:comment xml:lang="en">Points the I4.0 Component to the Administration Shell</rdfs:comment>
+        <rdfs:label xml:lang="en">contains Admin Shell</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#standardOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-AT#standardOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#usesStandard"/>
+        <rdfs:label xml:lang="en">standard of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">This class is used to relate a standard with its versión.</rdfs:comment>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">This property is used to relate the administration shell with the standard that describes it.</rdfs:comment>
+        <rdfs:label xml:lang="en">is described with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#usesStandard -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#usesStandard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">Points to the standards describing the functions attached to the asset via the administration shell.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses standard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/AdminShell -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/manufacture/AdminShell">
+        <rdfs:comment xml:lang="en">The Asset Administration Shell (AAS), a key concept of Industry 4.0, is used to describe an asset electronically in a standardized manner. Its purpose is to exchange asset-related data among industrial assets and between assets and production orchestration systems or engineering tools.</rdfs:comment>
+        <rdfs:label xml:lang="en">Administration Shell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept">
+        <rdfs:comment xml:lang="en">Concept that represents fabrication</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturing concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ANSI-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ANSI-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The American National Standards Institute is a private non-profit organization that oversees the development of voluntary consensus standards for products, services, processes, systems, and personnel in the United States. The organization also coordinates U.S. standards with international standards so that American products can be used worldwide.</rdfs:comment>
+        <rdfs:label xml:lang="en">ANSI standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IEC-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IEC-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The International Electrotechnical Commission (IEC; in French: Commission électrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies – collectively known as &quot;electrotechnology&quot;. IEC standards cover a vast range of technologies from power generation, transmission and distribution to home appliances and office equipment, semiconductors, fibre optics, batteries, solar energy, nanotechnology and marine energy as well as many others. The IEC also manages four global conformity assessment systems that certify whether equipment, system or components conform to its international standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">IEC standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IEEE-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IEEE-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The Institute of Electrical and Electronics Engineers (IEEE) is a professional association for electronic engineering and electrical engineering (and associated disciplines).</rdfs:comment>
+        <rdfs:label xml:lang="en">IEEE standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#IETF-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#IETF-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The Internet Engineering Task Force (IETF) is an open standards organization, which develops and promotes voluntary Internet standards, in particular the standards that comprise the Internet protocol suite (TCP/IP). It has no formal membership roster or membership requirements. All participants and managers are volunteers, though their work is usually funded by their employers or sponsors.</rdfs:comment>
+        <rdfs:label xml:lang="en">IETF standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ISA-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ISA-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISA standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#ISO-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#ISO-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISO standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#MESA-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#MESA-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">Manufacturing Enterprise Solutions Association International (MESA, also known as MESA International) is a worldwide not-for-profit community of manufacturing companies, information technology hardware and software suppliers, system integrators, consulting service providers, analysts, editors, academics, and students. MESA’s goal is to help member companies improve business results and production operations through application and implementation of information technology and best management practices.</rdfs:comment>
+        <rdfs:label xml:lang="en">MESA standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OASIS-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OASIS-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The Organization for the Advancement of Structured Information Standards is a global nonprofit consortium that works on the development, convergence, and adoption of open standards for cybersecurity, blockchain, Internet of Things (IoT), emergency management, cloud computing, legal data exchange, energy, content technologies, and other areas.</rdfs:comment>
+        <rdfs:label xml:lang="en">OASIS Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OCF-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OCF-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The Open Connectivity Foundation (OCF) is an industry organization having as its stated mission is to develop specification standards, promote a set of interoperability guidelines, and provide a certification program for devices involved in the Internet of Things (IoT). It has become one of the biggest industrial connectivity standards organizations for IoT, including in its membership Samsung Electronics, Intel, Microsoft, Qualcomm and Electrolux. Currently, there are more than 500 member companies.</rdfs:comment>
+        <rdfs:label xml:lang="en">OCF standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#OMG-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#OMG-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">The Object Management Group (OMG) is a computer industry standards consortium. OMG Task Forces develop enterprise integration standards for a range of technologies.</rdfs:comment>
+        <rdfs:label xml:lang="en">OMG standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Standard">
+        <rdfs:comment xml:lang="en">Standards are published documents created to ensure the reliability of the materials, products, methods, and/or services.  They establish requirements, specifications, guidelines, characteristics, and/or procedures designed. Typically, they are developed through a consensus process and approved by various national and international agencies, professional societies, or industry organizations. Standards are the minimally accepted professional practice and/or quality that must be observed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#W3C-Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#W3C-Standard">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Standard"/>
+        <rdfs:comment xml:lang="en">W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs.</rdfs:comment>
+        <rdfs:label xml:lang="en">W3C standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component">
+        <rdfs:comment xml:lang="en">Globally uniquely identifiable participant with communication capability consisting of administration shell and asset within an I4.0 system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Industry 4.0 component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#StandardVersion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#StandardVersion">
+        <rdfs:comment xml:lang="en">This class is used to represent the version of a standard</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard version</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,42 @@
+<http://www.w3id.org/ecsel-dr-AT#WAP> <http://www.w3.org/2000/01/rdf-schema#label> "Wireless Access Point"@en .
+<http://www.w3id.org/ecsel-dr-AT#WAP> <http://www.w3.org/2000/01/rdf-schema#comment> "In computer networking, a wireless access point (WAP), or more generally just access point (AP), is a networking hardware device that allows other Wi-Fi devices to connect to a wired network. As a standalone device, the AP may have a wired connection to a router, but, in a wireless router, it can also be an integral component of the router itself. An AP is differentiated from a hotspot which is a physical location where Wi-Fi access is available."@en .
+<http://www.w3id.org/ecsel-dr-AT#WAP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#WAP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i4go/common-domain/communication> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Communication' ontology module represents data about devices used for information transfer according to agreed conventions."@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://purl.org/dc/terms/issued> "2021-05-06"@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://purl.org/dc/elements/1.1/title> "Communication ontology"@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/common-domain/communication> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/equipment> .
+<http://www.purl.org/i4go/common-domain/communication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-AT#Switch> <http://www.w3.org/2000/01/rdf-schema#label> "Switch"@en .
+<http://www.w3id.org/ecsel-dr-AT#Switch> <http://www.w3.org/2000/01/rdf-schema#comment> "A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device."@en .
+<http://www.w3id.org/ecsel-dr-AT#Switch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Bridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Bridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-AT#Router> <http://www.w3.org/2000/01/rdf-schema#label> "Router"@en .
+<http://www.w3id.org/ecsel-dr-AT#Router> <http://www.w3.org/2000/01/rdf-schema#comment> "A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. Data sent through the internet, such as a web page or email, is in the form of data packets. A packet is typically forwarded from one router to another router through the networks that constitute an internetwork (e.g. the Internet) until it reaches its destination node."@en .
+<http://www.w3id.org/ecsel-dr-AT#Router> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Router> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Repeater> <http://www.w3.org/2000/01/rdf-schema#label> "Repeater"@en .
+<http://www.w3id.org/ecsel-dr-AT#Repeater> <http://www.w3.org/2000/01/rdf-schema#comment> "In telecommunications, a repeater is an electronic device that receives a signal and retransmits it. Repeaters are used to extend transmissions so that the signal can cover longer distances or be received on the other side of an obstruction. Some types of repeaters broadcast an identical signal, but alter its method of transmission, for example, on another frequency or baud rate."@en .
+<http://www.w3id.org/ecsel-dr-AT#Repeater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Repeater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Communication device"@en .
+<http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Devices used for information transfer according to agreed conventions."@en .
+<http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Device> .
+<http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Proxy> <http://www.w3.org/2000/01/rdf-schema#label> "Proxy"@en .
+<http://www.w3id.org/ecsel-dr-AT#Proxy> <http://www.w3.org/2000/01/rdf-schema#comment> "In computer networking, a proxy server is a server application or appliance that acts as an intermediary for requests from clients seeking resources from servers that provide those resources. A proxy server thus functions on behalf of the client when requesting service, potentially masking the true origin of the request to the resource server."@en .
+<http://www.w3id.org/ecsel-dr-AT#Proxy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Proxy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Gateway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Gateway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Hub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+<http://www.w3id.org/ecsel-dr-AT#Hub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

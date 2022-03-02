@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/common-domain/communication#"
+     xml:base="http://www.purl.org/i4go/common-domain/communication"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/domain-task/communication">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/equipment"/>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+        <dc:title xml:lang="en">Communication ontology</dc:title>
+        <terms:issued xml:lang="en">2021-05-06</terms:issued>
+        <rdfs:comment xml:lang="en">The &apos;Communication&apos; ontology module represents data about devices used for information transfer according to agreed conventions.</rdfs:comment>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Bridge -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Bridge">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#CommunicationDevice -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Device"/>
+        <rdfs:comment xml:lang="en">Devices used for information transfer according to agreed conventions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Communication device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Gateway -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Gateway">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Hub -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Hub">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Proxy -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Proxy">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">In computer networking, a proxy server is a server application or appliance that acts as an intermediary for requests from clients seeking resources from servers that provide those resources. A proxy server thus functions on behalf of the client when requesting service, potentially masking the true origin of the request to the resource server.</rdfs:comment>
+        <rdfs:label xml:lang="en">Proxy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Repeater -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Repeater">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">In telecommunications, a repeater is an electronic device that receives a signal and retransmits it. Repeaters are used to extend transmissions so that the signal can cover longer distances or be received on the other side of an obstruction. Some types of repeaters broadcast an identical signal, but alter its method of transmission, for example, on another frequency or baud rate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Repeater</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Router -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Router">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. Data sent through the internet, such as a web page or email, is in the form of data packets. A packet is typically forwarded from one router to another router through the networks that constitute an internetwork (e.g. the Internet) until it reaches its destination node.</rdfs:comment>
+        <rdfs:label xml:lang="en">Router</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Switch -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Switch">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#WAP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#WAP">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">In computer networking, a wireless access point (WAP), or more generally just access point (AP), is a networking hardware device that allows other Wi-Fi devices to connect to a wired network. As a standalone device, the AP may have a wired connection to a router, but, in a wireless router, it can also be an integral component of the router itself. An AP is differentiated from a hotspot which is a physical location where Wi-Fi access is available.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wireless Access Point</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

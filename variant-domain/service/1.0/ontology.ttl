@@ -1,0 +1,306 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/service#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-AH#InformationModel>
+      a       owl:Class ;
+      rdfs:comment "An information model in software engineering is a representation of concepts and the relationships, constraints, rules, and operations to specify data semantics for a chosen domain of discourse."@en ;
+      rdfs:label "Information model"@en .
+
+<http://www.w3id.org/ecsel-dr-AH#hasMethod>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate servicies with the methods they provide."@en ;
+      rdfs:label "has method"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-AH#isMethodOf> .
+
+<http://www.purl.org/i4go/variant-domain/service>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Service' ontology module represents the data about the functionalities provided by devices."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Service ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "20201-05-04"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/software> ;
+      owl:versionInfo "1.0"@en .
+
+<http://purl.org/ontology/is/core#InfoService>
+      a       owl:Class ;
+      rdfs:comment "Service offered by a system that provides information"@en ;
+      rdfs:label "Info service"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Service> .
+
+<http://purl.org/dc/dcmitype/Service>
+      a       owl:Class ;
+      rdfs:comment "Distinct part of the functionality that is provided by an entity through interfaces"@en ;
+      rdfs:label "Service"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasInterface>
+              ] .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#constraints>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceInterface> ;
+      rdfs:label "constraints"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-AH#usesCommTech>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a service with the communication technology it uses."@en ;
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:label "uses communication technology"@en ;
+      rdfs:range <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "The communication technology used by a service."@en ;
+      rdfs:label "Communication technology"@en .
+
+<http://www.purl.org/i4go/variant-domain/service/End-to-EndCommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "The end-to-end principle is a network design method in which application-specific features are kept at communication end points."@en ;
+      rdfs:label "End-to-end communication technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AH#isInformationModelOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is information model of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/service/Point-to-PointCommunicationTechnology>
+      a       owl:Class ;
+      rdfs:comment "In telecommunications, a point-to-point connection refers to a communications connection between two communication endpoints or nodes. An example is a telephone call, in which one telephone is connected with one other, and what is said by one caller can only be heard by the other."@en ;
+      rdfs:label "Point-to-point communication technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> .
+
+<http://www.w3id.org/ecsel-dr-AH#isMethodOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is method of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+owl:topObjectProperty
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AH#Method> .
+
+<http://www.w3id.org/ecsel-dr-AH#produces>
+      a       owl:ObjectProperty ;
+      rdfs:comment """Relation expressing that a software system produces a service. 
+Equivalent names for this relation include
+- offers
+- provides 
+- isServiceProducerOf 
+Since Arrowhead uses the pair produce / consume and corresponding service producer / service consumer adressing the relations and the software systems, this ontology uses these names for the relations too. 
+If it is needed, object properties with other names can be added and stated to be equivalent to these ones."""@en ;
+      rdfs:label "produces"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Effect>
+      a       owl:Class ;
+      rdfs:comment "The effect of a service contract."@en ;
+      rdfs:label "Effect"@en .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#specifies>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property relates a service contract with the effect it specifies."@en ;
+      rdfs:label "specifies"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#legalAspect>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceContract> ;
+      rdfs:label "legal aspect"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasInterface>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate the servicies with their interfaces"@en ;
+      rdfs:label "has interface"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isInterfaceOf> .
+
+<http://www.w3id.org/ecsel-dr-AH#producedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property relates the servicies with the software systems that provide them."@en ;
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:label "produced by"@en ;
+      rdfs:range <http://purl.org/dc/dcmitype/Software> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-AH#produces> .
+
+<http://www.purl.org/i4go/variant-domain/service/DataLinkAndMediaAccessTechnology>
+      a       owl:Class ;
+      rdfs:comment "Corresponds to OSI layer 1 and 2 technologies, like Ethernet, WLAN (802.11), WPAN (802.15.4), EtherCAT, ProfiNet, ..."@en ;
+      rdfs:label "Data link and media access technology"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> .
+
+<http://www.purl.org/i4go/variant-domain/service/CommunicationSecurityMechanism>
+      a       owl:Class ;
+      rdfs:comment "Corresponds to a part of OSI layer 5"@en ;
+      rdfs:label "Communication technology mecanism"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasContract>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a service with its service contract."@en ;
+      rdfs:label "has contract"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isContractFor> .
+
+<http://www.w3id.org/ecsel-dr-AH#hasInformationModel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate services with their information model."@en ;
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:label "has information model"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-AH#InformationModel> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-AH#isInformationModelOf> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceContract>
+      a       owl:Class ;
+      rdfs:comment "Is a document that sets out the provision and delivery of software services to customers through the internet."@en ;
+      rdfs:label "Service contract"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#legalAspect>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isContractFor>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#specifies>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#legalAspect>
+              ] .
+
+<http://www.purl.org/i4go/variant-domain/service/ServiceDocumentation>
+      a       owl:Class ;
+      rdfs:comment "Collection of documents that contain the information about a service."@en ;
+      rdfs:label "Service documentation"@en .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isContractFor>
+      a       owl:ObjectProperty ;
+      rdfs:label "is contract for"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AH#usesSecurityMechanism>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a service with the security mechanism it uses."@en ;
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:label "uses security mechanism"@en ;
+      rdfs:range <http://www.purl.org/i4go/variant-domain/service/CommunicationSecurityMechanism> ;
+      rdfs:subPropertyOf <http://www.w3id.org/ecsel-dr-AH#usesCommTech> .
+
+<http://www.w3id.org/ecsel-dr-AH#Method>
+      a       owl:Class ;
+      rdfs:comment "Method of a service: method that is provided by a service within a SoA."@en ;
+      rdfs:label "Method"@en .
+
+<http://www.w3id.org/ecsel-dr-AH#usesTransferProtocol>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a service with the data transfer protocol it uses."@en ;
+      rdfs:label "uses transfer protocol"@en ;
+      rdfs:subPropertyOf <http://www.w3id.org/ecsel-dr-AH#usesCommTech> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isInterfaceOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is interface of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AH#isServiceProducerOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is service producer of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-AH#producedBy> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceContract> ;
+      rdfs:label "interfaction aspect"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#OtherServices>
+      a       owl:Class ;
+      rdfs:comment "Collection of other services used as input to a production process or which are created during a production process."@en ;
+      rdfs:label "Other services"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Service> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceInterface>
+      a       owl:Class ;
+      rdfs:comment "A service interface is a published interface used to invoke a service. An interface can be implemented using any number of technologies, including WSDL, XML-RPC, COM+, CORBA (IDL), Java RMI, and others. A service interface can be described using multiple methods."@en ;
+      rdfs:label "Service interface"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#constraints>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#constraints>
+              ] .
+
+<http://www.w3id.org/ecsel-dr-AH#usesDataFormat>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://purl.org/dc/dcmitype/Service> ;
+      rdfs:label "uses data format"@en , "This property is used to relate a service with the data format it uses."@en ;
+      rdfs:subPropertyOf <http://www.w3id.org/ecsel-dr-AH#usesCommTech> .
+
+<http://www.purl.org/i4go/variant-domain/service/DataFormat>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent any data format."@en ;
+      rdfs:label "Data format"@en .
+
+<http://www.w3id.org/ecsel-dr-AH#isDocumentedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate systems and services with their documentation"@en ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (<http://purl.org/dc/dcmitype/Service> <http://purl.org/dc/dcmitype/Software> <http://www.w3id.org/ecsel-dr-AH#System-of-Systems>)
+              ] ;
+      rdfs:label "is documented by"@en ;
+      rdfs:range <http://www.purl.org/i4go/common-domain/system/SystemDocumentation> , <http://www.purl.org/i4go/variant-domain/service/ServiceDocumentation> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/service/TransferProtocol>
+      a       owl:Class ;
+      rdfs:comment "This class is used to reptresent a data transfer protocol."@en ;
+      rdfs:label "Transfer protocol"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology> .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isSpecifiedBy>
+      a       owl:ObjectProperty ;
+      rdfs:label "is specified by"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-AH#documents>
+      a       owl:ObjectProperty ;
+      rdfs:label "documents"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-AH#isDocumentedBy> .

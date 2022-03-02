@@ -1,0 +1,143 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/event#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-PMV#isCreatedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "An event is created by a process step. The connector is used to represent the chronological order in an EPC."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:label "is created by"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> , <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#SplitRule>
+      a       owl:Class ;
+      rdfs:comment "Rule element that splits the control flow into several branches. Has one incoming path and several (at least two) outgoing paths."@en ;
+      rdfs:label "Split rule"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+
+<http://www.w3.org/2006/time#hasDuration>
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#activates>
+      a       owl:ObjectProperty ;
+      rdfs:comment "The connector is used to represent the chronological order in an EPC, where an Event or a Rule activate a Task or Process Interface."@en ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (<http://www.w3id.org/ecsel-dr-PMV#Event> <http://www.w3id.org/ecsel-dr-PMV#Rule>)
+              ] ;
+      rdfs:label "activates"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+owl:topDataProperty
+      rdfs:domain <http://www.purl.org/i4go/variant-domain/event/EventCalendar> ;
+      rdfs:range xsd:string .
+
+<http://www.purl.org/i4go/variant-domain/event/EventCalendar>
+      a       owl:Class ;
+      rdfs:comment "In the “Event Calendar” tracing entity, certain events like planned facility shutdowns, etc. can be scheduled"@en ;
+      rdfs:label "Event calendar"@en .
+
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to specify the element that reponds to an event."@en ;
+      rdfs:label "responds to"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#StartEvent>
+      a       owl:Class ;
+      rdfs:comment "Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process."@en ;
+      rdfs:label "Start event"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#Event> .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#leadsToEvent>
+      a       owl:ObjectProperty ;
+      rdfs:comment "A rule leads to an event. The connector is used to represent the chronological order in an EPC."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Rule> ;
+      rdfs:label "leads to event"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#creates>
+      a       owl:ObjectProperty ;
+      rdfs:label "creates"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isCreatedBy> .
+
+<http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction>
+      a       owl:ObjectProperty ;
+      rdfs:label "is activated by function"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType>
+      a       owl:DatatypeProperty ;
+      rdfs:label "Event Calendar: Type of event" ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#EndEvent>
+      a       owl:Class ;
+      rdfs:comment "Denotes the event element that stands at the end of a branch in the process flow and thus, ends the process flow branch or the total process."@en ;
+      rdfs:label "End event"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#Event> .
+
+<http://www.w3id.org/ecsel-dr-PMV#Rule>
+      a       owl:Class ;
+      rdfs:comment "Rules allow to model alternative, exclusive alternative and parallel process flows."@en ;
+      rdfs:label "Rule"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+
+<http://www.w3id.org/ecsel-dr-PMV#JoinRule>
+      a       owl:Class ;
+      rdfs:comment "Rule element that unites the control flow after being split into several branches. Has several incoming paths (at least two) and one outgoing."@en ;
+      rdfs:label "Join rule"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PMV#Rule> .
+
+<http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "An event is evaluated by a rule. The connector is used to represent the chronological order in an EPC."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:label "is evaluated by"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#JoinRule> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#activatesFunction>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Specialization of the activates property that links the class Event with Task and Process Interface in the course of the process flow."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:label "activates function"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction> .
+
+<http://www.purl.org/i4go/variant-domain/event>
+      a       owl:Ontology ;
+      rdfs:comment """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en , "The 'Event' ontology module represents data about events and the elements that generate them. A noteworthy occurrence that has a location in time and space, and does not have duration."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Event ontology"@en ;
+      terms:issued "2021-24-05"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/manufacturingprocess> , <http://www.w3.org/2006/time#2016> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#Event>
+      a       owl:Class ;
+      rdfs:comment "Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process."@en ;
+      rdfs:label "Event"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#isDependentOn>
+      a       owl:ObjectProperty ;
+      rdfs:comment "An event is dependent on a rule. The connector is used to represent the chronological order in an EPC."@en , "is dependent on"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Event> ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PMV#Rule> ;
+      rdfs:subPropertyOf owl:topObjectProperty .

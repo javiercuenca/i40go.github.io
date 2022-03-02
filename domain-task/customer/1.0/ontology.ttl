@@ -1,0 +1,86 @@
+@prefix :        <http://www.purl.org/i40go/domain-task/customer#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-OM#CustomerPlant>
+      a       owl:Class ;
+      rdfs:label "Customer plant"@en .
+
+<http://www.w3id.org/ecsel-dr-OM#requestsOrderChangeRequest>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property relates a customer with an order change request."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-OM#Customer> ;
+      rdfs:label "requests order change request"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i40go/domain-task/customer/DemandSnapshot>
+      a       owl:Class ;
+      rdfs:comment "The “Demand” entity stores redundant demand at every product level."@en ;
+      rdfs:label "Demand snapshot"@en .
+
+<http://www.w3id.org/ecsel-dr-PROD#customerPartNumber>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Product identifier used by the customer to identify one IFX product"@en ;
+      rdfs:label "customer part number"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-OM#ownsCustomerPlant>
+      a       owl:ObjectProperty ;
+      rdfs:label "owns customer plant"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-OM#Customer>
+      a       owl:Class ;
+      rdfs:comment "The purchaser/user of a product or service supplied by a service provider or utility."@en ;
+      rdfs:label "Customer"@en .
+
+owl:topDataProperty
+      rdfs:range xsd:string .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-OM#CustomerData>
+      a       owl:Class ;
+      rdfs:comment "This class is used to represent any information about a customer"@en ;
+      rdfs:label "Customer data"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#hasCustomerWishTime>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Customer wish time of the demand entry"@en ;
+      rdfs:label "has customer wish time"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PROD#customer>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to indicate the customer of an organization"@en ;
+      rdfs:label "customer"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i40go/domain-task/customer>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Customer' ontology module represents data about the customers of the organization products."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Customer ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-25-05"@en ;
+      owl:imports <http://www.purl.org/i40go/common-domain/organization> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-OM#OrderChangeRequest>
+      a       owl:Class ;
+      rdfs:comment "Change Order Request (COR means a Contractor generated document which describes a change in the scope of Work, including a detailed description, Drawings and Specifications, and a request for changes to costs or time, as necessary, to inform Owner of the nature of the requested change to the Contract."@en ;
+      rdfs:label "Order change request"@en .

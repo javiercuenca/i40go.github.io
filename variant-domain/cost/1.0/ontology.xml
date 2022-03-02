@@ -1,0 +1,86 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ns="http://creativecommons.org/ns#"
+    xmlns="http://www.purl.org/i4go/variant-domain/cost#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts">
+    <rdfs:label xml:lang="en">has finished product costs</rdfs:label>
+    <rdfs:comment xml:lang="en">Costs of a finished unit of a certain technology</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetCosts"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit">
+    <rdfs:label xml:lang="en">has WIP costs per unit and time unit</rdfs:label>
+    <rdfs:comment xml:lang="en">Capital bounding costs + Storage costs + Mean production costs of a unit of a certain technology and time unit</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetCosts"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTargetCosts">
+    <rdfs:label xml:lang="en">has target costs</rdfs:label>
+    <rdfs:comment xml:lang="en">This property is used to relate a prodcut with its target cost</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetCosts"/>
+    <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf">
+    <rdfs:label xml:lang="en">is target revenue of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/cost/TargetCosts">
+    <rdfs:label xml:lang="en">Target costs</rdfs:label>
+    <rdfs:comment xml:lang="en">The "target costs" entity is the final cost of a product or service that must be achieved in order to generate the desired level of sales revenue and income or due to contractual agreements.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/cost">
+    <dc:title xml:lang="en">Cost ontology</dc:title>
+    <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    <terms:issued xml:lang="en">2021-05-24</terms:issued>
+    <rdfs:comment xml:lang="en">The 'Cost' ontology module represents data about the cost of manufacturing products</rdfs:comment>
+    <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.purl.org/i4go/variant-domain/product"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i4go/variant-domain/cost/TargetRevenue">
+    <rdfs:label xml:lang="en">Target revenue</rdfs:label>
+    <rdfs:comment xml:lang="en">The target revenue is the amount of income a company wants to generate for the current accounting period.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit">
+    <rdfs:label xml:lang="en">has revenue per init</rdfs:label>
+    <rdfs:comment xml:lang="en">Revenue per unit of a certain technology</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetRevenue"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue">
+    <rdfs:label xml:lang="en">has target revenue</rdfs:label>
+    <rdfs:range rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetRevenue"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/cost/TargetCosts"/>
+    <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

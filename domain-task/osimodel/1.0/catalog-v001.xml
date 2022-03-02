@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.purl.org/i40go/common-domain/equipment" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/common-domain/equipment/1.0/equipment.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.purl.org/i40go/variant-domain/processcontrol" uri="file:/C:/Proyectos_Investigacion/ArrowheadTools/MODDALS%20application/I40GO/variant-domain/processcontrol/1.0/processcontrol.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1621846313679" name="http://www.purl.org/i40go/domain-task/osimodel" uri="osimodel.owl"/>
+    </group>
+</catalog>

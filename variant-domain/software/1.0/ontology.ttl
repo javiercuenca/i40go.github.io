@@ -1,0 +1,106 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/software#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://purl.org/dc/dcmitype/Software>
+      a       owl:Class ;
+      rdfs:comment "assembly of programs, procedures, rules, documentation and data, pertaining to the operation of an information processing device or system. For example, firmware, operating system, application software."@en ;
+      rdfs:label "Software"@en ;
+      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> .
+
+<http://www.purl.org/i4go/variant-domain/software/comprisedOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "comprised of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/software>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Computer Software' ontology module represents the data about software applications"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Computer software ontology"@en ;
+      terms:created """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-04"@en ;
+      owl:imports <http://www.purl.org/i4go/common-domain/equipment> ;
+      owl:versionInfo "1.0"@en .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#isExecutedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Software is executed by a function in a process flow."@en ;
+      rdfs:label "is executed by"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent>
+      a       owl:Class ;
+      rdfs:comment "Class used to represent a set of software units."@en ;
+      rdfs:label "Software component"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Software> ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (<http://purl.org/dc/dcmitype/Software> [ a       owl:Restriction ;
+                            owl:onProperty <http://www.purl.org/i4go/variant-domain/software/comprisedOf> ;
+                            owl:someValuesFrom <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit>
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> ;
+                            owl:onProperty <http://www.purl.org/i4go/variant-domain/software/comprisedOf>
+                          ] [ a       owl:Restriction ;
+                            owl:minQualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> ;
+                            owl:onProperty <http://www.purl.org/i4go/variant-domain/software/comprisedOf>
+                          ])
+              ] .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType>
+      a       owl:Class ;
+      rdfs:comment "An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available)."@en ;
+      rdfs:label "Application system type"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Software> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit>
+      a       owl:Class ;
+      rdfs:comment "Generically dependent continuant and element that is (according to ISO26262) an atomic level softwarecomponent of the software architecture that can be subjected to stand-alone testing."@en ;
+      rdfs:label "Software unit"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Software> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> ;
+                owl:onProperty <http://www.purl.org/i4go/variant-domain/software/comprisedOf>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onClass
+                        [ a       owl:Class ;
+                          owl:unionOf (<http://purl.org/dc/dcmitype/Software> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit>)
+                        ] ;
+                owl:onProperty <http://www.purl.org/i4go/variant-domain/software/comprisedOf> ;
+                owl:qualifiedCardinality
+                        "0"^^xsd:nonNegativeInteger
+              ] .
+
+<http://www.w3id.org/ecsel-dr-PMV#Function>
+      a       owl:Class ;
+      rdfs:comment "The function type represents several action elements as task, process interfaces or business process activities."@en ;
+      rdfs:label "Function"@en .
+
+<http://www.w3id.org/ecsel-dr-PMV#executes>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PMV#Function> ;
+      rdfs:label "executes"@en ;
+      rdfs:range <http://purl.org/dc/dcmitype/Software> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> .

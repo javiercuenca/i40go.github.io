@@ -1,0 +1,98 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="http://www.purl.org/i40go/variant-domain/manufacturingresource#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ns="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#Resource">
+    <rdfs:label xml:lang="en">Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Any capability that is to be scheduled, assigned or controlled by the underlying implementation to assure non-conflicting usage by processes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/common-domain/manufacture/ManufacturingConcept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#Building">
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/ProgrammingOperator">
+    <rdfs:label xml:lang="en">Programming operator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/ProceduresExpert">
+    <rdfs:label xml:lang="en">Procedures expert</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#Operator">
+    <rdfs:label xml:lang="en">Operator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/MaterialResource">
+    <rdfs:label xml:lang="en">Material resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Material resources are materials found in the natural world that have practical use and value for humans. Material resources include wood, glass (which comes from sand), metals, edible plants, and plastics (which are made from natural chemicals).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/mason.owl#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource">
+    <rdfs:label xml:lang="en">Geographic resource</rdfs:label>
+    <rdfs:comment xml:lang="en">A gepgraphic resource is any physical material constituting part of Earth that people need and value.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/mason.owl#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource">
+    <rdfs:label xml:lang="en">Human resource</rdfs:label>
+    <rdfs:comment xml:lang="en">The personnel of a business or organization, regarded as a significant asset in terms of skills and abilities.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/mason.owl#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/BuildingZone">
+    <rdfs:label xml:lang="en">Building zone</rdfs:label>
+    <rdfs:comment xml:lang="en">Each zone determines a building's shape and permitted uses. A building's shape is controlled by zonal restrictions on allowable floor area ratio and height (in absolute terms and in relation with adjacent buildings and roads).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource/PreparationOperator">
+    <rdfs:label xml:lang="en">Preparation operator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#Site">
+    <rdfs:label xml:lang="en">Site</rdfs:label>
+    <rdfs:comment xml:lang="en">An area of ground on which a town, building, or monument is constructed.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/GeographicResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i40go/variant-domain/manufacturingresource">
+    <terms:issued xml:lang="en">2021-24-05</terms:issued>
+    <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    <dc:title xml:lang="en">Manufacturing Resource ontology</dc:title>
+    <rdfs:comment xml:lang="en">The 'Manufacturing Resource' ontology module represents data about the resources (i.e., tools, human resources) used during the manufacturing process.</rdfs:comment>
+    <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.purl.org/i40go/common-domain/manufacture"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#HandlingOperator">
+    <rdfs:label xml:lang="en">Handling operator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/i40go/variant-domain/manufacturingresource/HumanResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

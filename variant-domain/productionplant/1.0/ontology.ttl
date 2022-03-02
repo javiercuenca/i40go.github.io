@@ -1,0 +1,68 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/productionplant#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-SO#hasPlantName>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The name of the plant"@en ;
+      rdfs:label "has plant name"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasPlantInternal>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Does the plant belong to the company or to an external partner"@en ;
+      rdfs:label "has plant internal"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#Plant>
+      a       owl:Class ;
+      rdfs:comment "The “Plant” entity describes the plant as a physical location of one or more fabs. The Plant belongs to a supply chain and can either be internal or external. (master entity)"@en ;
+      rdfs:label "Plant"@en ;
+      rdfs:subClassOf <http://www.owl-ontologies.com/mason.owl#Resource> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/variant-domain/productionplant>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Production Plant' ontology module represents data related to plant topology, including the concrete equipment of an actual project – the instance data."@en ;
+      dc:title "Production Plant ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-25"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/manufacturingresource> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#hasFab>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a production plant with the factory ot belongs to"@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-SO#Plant> ;
+      rdfs:label "has fab"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-SO#Fab> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasPlantID>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Will generally refer to the geographical location of the plant"@en ;
+      rdfs:label "has plant ID"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#Fab>
+      a       owl:Class ;
+      rdfs:comment "The “Fab” entity depicts the fab as a technological and physical production unit. (master entity)"@en ;
+      rdfs:label "Fab"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/variant-domain/manufacturingresource/GeographicResource> .

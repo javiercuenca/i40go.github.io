@@ -1,0 +1,84 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/cost#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-SO#hasFinishedProductCosts>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Costs of a finished unit of a certain technology"@en ;
+      rdfs:domain <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> ;
+      rdfs:label "has finished product costs"@en ;
+      rdfs:range xsd:integer ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasWIPCostsPerUnitAndTimeUnit>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Capital bounding costs + Storage costs + Mean production costs of a unit of a certain technology and time unit"@en ;
+      rdfs:domain <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> ;
+      rdfs:label "has WIP costs per unit and time unit"@en ;
+      rdfs:range xsd:integer ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf>
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasTargetCosts>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a prodcut with its target cost"@en ;
+      rdfs:label "has target costs"@en ;
+      rdfs:range <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-SO#isTargetCostsOf> .
+
+<http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf>
+      a       owl:ObjectProperty ;
+      rdfs:label "is target revenue of"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/cost/TargetCosts>
+      a       owl:Class ;
+      rdfs:comment "The \"target costs\" entity is the final cost of a product or service that must be achieved in order to generate the desired level of sales revenue and income or due to contractual agreements."@en ;
+      rdfs:label "Target costs"@en .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/variant-domain/cost>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Cost' ontology module represents data about the cost of manufacturing products"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Cost ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-24"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/product> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.purl.org/i4go/variant-domain/cost/TargetRevenue>
+      a       owl:Class ;
+      rdfs:comment "The target revenue is the amount of income a company wants to generate for the current accounting period."@en ;
+      rdfs:label "Target revenue"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#hasRevenuePerUnit>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Revenue per unit of a certain technology"@en ;
+      rdfs:domain <http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> ;
+      rdfs:label "has revenue per init"@en ;
+      rdfs:range xsd:integer ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasTargetRevenue>
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://www.purl.org/i4go/variant-domain/cost/TargetCosts> ;
+      rdfs:label "has target revenue"@en ;
+      rdfs:range <http://www.purl.org/i4go/variant-domain/cost/TargetRevenue> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-SO#isTargetRevenueOf> .

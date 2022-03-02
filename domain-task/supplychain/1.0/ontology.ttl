@@ -1,0 +1,74 @@
+@prefix :        <http://www.purl.org/i40go/domain-task/supplychain#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Name of the supply chain"@en ;
+      rdfs:label "has supply chain name"@en ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i40go/domain-task/supplychain>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Supply Chain' ontology module"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Supply Chain ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-25"@en ;
+      owl:imports <http://www.purl.org/i40go/variant-domain/productionplant> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.purl.org/i40go/domain-task/supplychain/SupplyChain>
+      a       owl:Class ;
+      rdfs:comment "The entity “Supply Chain” describes the supply chain from the topmost level with all possible material flow edges."@en ;
+      rdfs:label "Supply chain"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#fromFabID>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Source ID of supply chain edge"@en ;
+      rdfs:domain <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> ;
+      rdfs:label "from fab id"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Length of, or element of the length of, a temporal extent expressed in seconds"@en ;
+      rdfs:domain <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> ;
+      rdfs:label "has travel time"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#hasPlant>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate the supply chain with the production plant."@en ;
+      rdfs:domain <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> ;
+      rdfs:label "has plant"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-SO#Plant> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-SO#toFabID>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Sink ID of supply chain edge"@en ;
+      rdfs:domain <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> ;
+      rdfs:label "to fab ID"@en ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .

@@ -1,0 +1,58 @@
+<http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Semiconductor product"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "A semiconductor product is a physical product that is produced and sold within the semiconductor industry."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Device> .
+<http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_ElectricPowerMax200> <http://www.w3.org/2000/01/rdf-schema#label> "Motor Control and Drive Solution With Electric Power Max 200.0"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_ElectricPowerMax200> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_ElectricPowerMax200> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Motor control and drive solution with sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://purl.org/dc/elements/1.1/title> "Microcontroller ontology"@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Microcontroller' ontology module represents data about microcontroller devices."@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://purl.org/dc/terms/issued> "2021-05-06"@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/equipment> .
+<http://www.purl.org/i4go/common-domain/microcontroller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-AT#IndustryPC> <http://www.w3.org/2000/01/rdf-schema#label> "Industry PC"@en .
+<http://www.w3id.org/ecsel-dr-AT#IndustryPC> <http://www.w3.org/2000/01/rdf-schema#comment> "An industrial PC is a computer intended for industrial purposes (production of goods and services), with a form factor between a nettop and a server rack. Industrial PCs have higher dependability and precision standards, and are generally more expensive than consumer electronics. They often use complex instruction sets, such as x86, where reduced instruction sets such as ARM would otherwise be used."@en .
+<http://www.w3id.org/ecsel-dr-AT#IndustryPC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#ControlDevice> .
+<http://www.w3id.org/ecsel-dr-AT#IndustryPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#MicroController> <http://www.w3.org/2000/01/rdf-schema#label> "Microcontroller"@en .
+<http://www.w3id.org/ecsel-dr-AT#MicroController> <http://www.w3.org/2000/01/rdf-schema#comment> "A microcontroller (MCU for microcontroller unit) is a small computer on a single metal-oxide-semiconductor (MOS) integrated circuit (IC) chip. A microcontroller contains one or more CPUs (processor cores) along with memory and programmable input/output peripherals. Program memory in the form of ferroelectric RAM, NOR flash or OTP ROM is also often included on chip, as well as a small amount of RAM. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications consisting of various discrete chips."@en .
+<http://www.w3id.org/ecsel-dr-AT#MicroController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#ControlDevice> .
+<http://www.w3id.org/ecsel-dr-AT#MicroController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithoutSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Motor Control and Drive Solution Without Sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithoutSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithoutSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_DCLinkVoltage155> <http://www.w3.org/2000/01/rdf-schema#label> "Motor Control and Drive Solution With DC Link Voltage 155.0"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_DCLinkVoltage155> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_DCLinkVoltage155> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ControlDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Control device"@en .
+<http://www.w3id.org/ecsel-dr-AT#ControlDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A control system manages, commands, directs, or regulates the behavior of other devices or systems using control loops. It can range from a single home heating controller using a thermostat controlling a domestic boiler to large industrial control systems which are used for controlling processes or machines."@en .
+<http://www.w3id.org/ecsel-dr-AT#ControlDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Device> .
+<http://www.w3id.org/ecsel-dr-AT#ControlDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_IndustrialQualification> <http://www.w3.org/2000/01/rdf-schema#label> "Motor Control and Drive Solution With Industrial Qualification"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_IndustrialQualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_IndustrialQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#label> "contains microcontroller"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsMicrocontroller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-AT#PLC> <http://www.w3.org/2000/01/rdf-schema#label> "Programmable Logic Controller"@en .
+<http://www.w3id.org/ecsel-dr-AT#PLC> <http://www.w3.org/2000/01/rdf-schema#comment> "A programmable logic controller (PLC) or programmable controller is an industrial digital computer that has been ruggedized and adapted for the control of manufacturing processes, such as assembly lines, robotic devices, or any activity that requires high reliability, ease of programming, and process fault diagnosis."@en .
+<http://www.w3id.org/ecsel-dr-AT#PLC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#ControlDevice> .
+<http://www.w3id.org/ecsel-dr-AT#PLC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#label> "part of as microcontroller"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate a microcontroller with its components."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-AT#MicroController> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

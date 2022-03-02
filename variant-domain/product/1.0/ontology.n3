@@ -1,0 +1,103 @@
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Solution> <http://www.w3.org/2000/01/rdf-schema#label> "Solution"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Solution> <http://www.w3.org/2000/01/rdf-schema#comment> "A solution is a combination of products which is produced or assembled by an organization. Further, a solution is sold to a customer and solves a specific problem / fulfills a specific need."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/product/ProductNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Product number"@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The product number is a unique identifier of a product. The scope is limited to finished products only."@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductNumber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.purl.org/i4go/variant-domain/product/ProductNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough> <http://www.w3.org/2000/01/rdf-schema#label> "finds application through"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsProduct> <http://www.w3.org/2000/01/rdf-schema#label> "contains product"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsProduct> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-OOSMP#partOf> .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#containsProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasDemand> <http://www.w3.org/2000/01/rdf-schema#label> "has demand"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasDemand> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-SO#hasDemand> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PWR#Products> <http://www.w3.org/2000/01/rdf-schema#label> "Products"@en .
+<http://www.w3id.org/ecsel-dr-PWR#Products> <http://www.w3.org/2000/01/rdf-schema#comment> "The superclass of all classes describing products or services types, either by nature or purpose. Examples for such subclasses are \"TV set\", \"vacuum cleaner\", etc. An instance of this class can be either an actual product or service (gr:Individual), a placeholder instance for unknown instances of a mass-produced commodity (gr:SomeItems), or a model / prototype specification (gr:ProductOrServiceModel). When in doubt, use gr:SomeItems.\n\nExamples: \na) MyCellphone123, i.e. my personal, tangible cell phone (gr:Individual)\nb) Siemens1234, i.e. the Siemens cell phone make and model 1234 (gr:ProductOrServiceModel)\nc) dummyCellPhone123 as a placeholder for actual instances of a certain kind of cell phones (gr:SomeItems)"@en .
+<http://www.w3id.org/ecsel-dr-PWR#Products> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffb .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-PROD#NotReleasedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Not released product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#NotReleasedProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "NotReleasedProduct are those finishedProductNumbers that are not allowed to be shipped to any customer"@en .
+<http://www.w3id.org/ecsel-dr-PROD#NotReleasedProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-PROD#NotReleasedProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#SalesProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Sales product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#SalesProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Sellable product; it can be identified by salesProductNumber"@en .
+<http://www.w3id.org/ecsel-dr-PROD#SalesProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-PROD#SalesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffa .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-OOSMP#Solution> .
+<http://www.purl.org/i4go/variant-domain/product/ProductLine> <http://www.w3.org/2000/01/rdf-schema#label> "Product line"@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The product line is one of the most prominent grouping of products. It is used in reporting as well as for structuring organizations."@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.purl.org/i4go/variant-domain/product/ProductLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#ProductDevelopmentLifeCycle> <http://www.w3.org/2000/01/rdf-schema#label> "Product development cycle"@en .
+<https://w3id.org/i40/sto#ProductDevelopmentLifeCycle> <http://www.w3.org/2000/01/rdf-schema#comment> "PLM is the process of managing the entire lifecycle of a product from inception, through engineering design and manufacture, to service and disposal of manufactured products. Related areas are PLMManagement, Modeling Practice, Product Model Data exchange, Manufacturing Model Data, Product Catalog Data."@en .
+<https://w3id.org/i40/sto#ProductDevelopmentLifeCycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-PROD#SKU> <http://www.w3.org/2000/01/rdf-schema#label> "SKU"@en .
+<http://www.w3id.org/ecsel-dr-PROD#SKU> <http://www.w3.org/2000/01/rdf-schema#comment> "Finished product by storage location; called DC BauNumber"@en .
+<http://www.w3id.org/ecsel-dr-PROD#SKU> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-PROD#SKU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/2000/01/rdf-schema#label> "can be applied in"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the application area of a product or solution."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX1ced578eX3aX17a623495e4X3aXX2dX7ffc .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough> .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/product/ProductGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Prodcut group"@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A (main) product group is a grouping of products for calculation or sales purposes. The scope includes finished and unfinished products of one product line."@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.purl.org/i4go/variant-domain/product/ProductGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/product/ProductClass> <http://www.w3.org/2000/01/rdf-schema#label> "Product class"@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductClass> <http://www.w3.org/2000/01/rdf-schema#comment> "The product class is an entity used for planning and reporting. This helps create stable brand/name architectures to enable highest possible product portfolio transparency, true value creation ad to prevent from product TM overload."@en .
+<http://www.purl.org/i4go/variant-domain/product/ProductClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.purl.org/i4go/variant-domain/product/ProductClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#Product> <http://www.w3.org/2000/01/rdf-schema#comment> "A product is any tangible output or service that is a result of a process and that is intended for delivery to a customer or end user. A product is a work product that is delivered to the customer."@en .
+<http://www.w3id.org/ecsel-dr-PROD#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2000/01/rdf-schema#label> "owned by"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate a product with the organization that owns it."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-OOSMP#owns> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/product> <http://purl.org/dc/terms/issued> "2021-05-14"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Product' ontology module represents data about the product supplied by the organization to the customer and their application areas. The result of a process; an artefact that is produced, is quantifiable, and can be either an end item in itself or a component item"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://purl.org/dc/elements/1.1/title> "Product ontology"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/product> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/organization> .
+<http://www.purl.org/i4go/variant-domain/product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-OOSMP#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#owns> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#owns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate products with the solution they belong to."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-OOSMP#Solution> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PWR#ApplicationArea> <http://www.w3.org/2000/01/rdf-schema#label> "Application area"@en .
+<http://www.w3id.org/ecsel-dr-PWR#ApplicationArea> <http://www.w3.org/2000/01/rdf-schema#comment> "The different application ares that the product can be used."@en .
+<http://www.w3id.org/ecsel-dr-PWR#ApplicationArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#FinishedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Finished product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#FinishedProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "End result of the manufacturing process"@en .
+<http://www.w3id.org/ecsel-dr-PROD#FinishedProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-PROD#FinishedProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#NonShippableProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Non shippable product"@en .
+<http://www.w3id.org/ecsel-dr-PROD#NonShippableProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "NonShippableProduct are those finishedProductNumbers that are not allowed to be shipped to a given customer"@en .
+<http://www.w3id.org/ecsel-dr-PROD#NonShippableProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Product> .
+<http://www.w3id.org/ecsel-dr-PROD#NonShippableProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

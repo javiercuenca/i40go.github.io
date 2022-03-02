@@ -1,0 +1,105 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.purl.org/i4go/common-domain/microcontroller#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ns="http://creativecommons.org/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-AT#PLC">
+    <rdfs:label xml:lang="en">Programmable Logic Controller</rdfs:label>
+    <rdfs:comment xml:lang="en">A programmable logic controller (PLC) or programmable controller is an industrial digital computer that has been ruggedized and adapted for the control of manufacturing processes, such as assembly lines, robotic devices, or any activity that requires high reliability, ease of programming, and process fault diagnosis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ControlDevice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/i4go/common-domain/microcontroller">
+    <dc:title xml:lang="en">Microcontroller ontology</dc:title>
+    <rdfs:comment xml:lang="en">The 'Microcontroller' ontology module represents data about microcontroller devices.</rdfs:comment>
+    <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    <terms:issued xml:lang="en">2021-05-06</terms:issued>
+    <terms:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</terms:creator>
+    <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.purl.org/i4go/common-domain/equipment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_IndustrialQualification">
+    <rdfs:label xml:lang="en">Motor Control and Drive Solution With Industrial Qualification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithSensor">
+    <rdfs:label xml:lang="en">Motor control and drive solution with sensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-AT#IndustryPC">
+    <rdfs:label xml:lang="en">Industry PC</rdfs:label>
+    <rdfs:comment xml:lang="en">An industrial PC is a computer intended for industrial purposes (production of goods and services), with a form factor between a nettop and a server rack. Industrial PCs have higher dependability and precision standards, and are generally more expensive than consumer electronics. They often use complex instruction sets, such as x86, where reduced instruction sets such as ARM would otherwise be used.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ControlDevice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-AT#MicroController">
+    <rdfs:label xml:lang="en">Microcontroller</rdfs:label>
+    <rdfs:comment xml:lang="en">A microcontroller (MCU for microcontroller unit) is a small computer on a single metal-oxide-semiconductor (MOS) integrated circuit (IC) chip. A microcontroller contains one or more CPUs (processor cores) along with memory and programmable input/output peripherals. Program memory in the form of ferroelectric RAM, NOR flash or OTP ROM is also often included on chip, as well as a small amount of RAM. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications consisting of various discrete chips.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#ControlDevice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-AT#ControlDevice">
+    <rdfs:label xml:lang="en">Control device</rdfs:label>
+    <rdfs:comment xml:lang="en">A control system manages, commands, directs, or regulates the behavior of other devices or systems using control loops. It can range from a single home heating controller using a thermostat controlling a domestic boiler to large industrial control systems which are used for controlling processes or machines.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#containsMicrocontroller">
+    <rdfs:label xml:lang="en">contains microcontroller</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#partOfAsMicrocontroller">
+    <rdfs:label xml:lang="en">part of as microcontroller</rdfs:label>
+    <rdfs:comment xml:lang="en">This property is used to relate a microcontroller with its components.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-AT#MicroController"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution">
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_WithoutSensor">
+    <rdfs:label xml:lang="en">Motor Control and Drive Solution Without Sensor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_ElectricPowerMax200">
+    <rdfs:label xml:lang="en">Motor Control and Drive Solution With Electric Power Max 200.0</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution_DCLinkVoltage155">
+    <rdfs:label xml:lang="en">Motor Control and Drive Solution With DC Link Voltage 155.0</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#MotorControlAndDriveSolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#SemiconductorProduct">
+    <rdfs:label xml:lang="en">Semiconductor product</rdfs:label>
+    <rdfs:comment xml:lang="en">A semiconductor product is a physical product that is produced and sold within the semiconductor industry.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-AT#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

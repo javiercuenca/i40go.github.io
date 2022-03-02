@@ -1,0 +1,168 @@
+@prefix :        <http://www.purl.org/i4go/variant-domain/product#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.purl.org/i4go/variant-domain/product>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Product' ontology module represents data about the product supplied by the organization to the customer and their application areas. The result of a process; an artefact that is produced, is quantifiable, and can be either an end item in itself or a component item"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Product ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-14"@en ;
+      owl:imports <http://www.purl.org/i4go/common-domain/organization> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-PROD#SKU>
+      a       owl:Class ;
+      rdfs:comment "Finished product by storage location; called DC BauNumber"@en ;
+      rdfs:label "SKU"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#Solution>
+      a       owl:Class ;
+      rdfs:comment "A solution is a combination of products which is produced or assembled by an organization. Further, a solution is sold to a customer and solves a specific problem / fulfills a specific need."@en ;
+      rdfs:label "Solution"@en .
+
+<http://www.w3id.org/ecsel-dr-PROD#NotReleasedProduct>
+      a       owl:Class ;
+      rdfs:comment "NotReleasedProduct are those finishedProductNumbers that are not allowed to be shipped to any customer"@en ;
+      rdfs:label "Not released product"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#ownedBy>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate a product with the organization that owns it."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Product> ;
+      rdfs:label "owned by"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PROD#Organization> ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-OOSMP#owns> .
+
+terms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#containsProduct>
+      a       owl:ObjectProperty ;
+      rdfs:label "contains product"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-OOSMP#partOf> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PROD#SalesProduct>
+      a       owl:Class ;
+      rdfs:comment "Sellable product; it can be identified by salesProductNumber"@en ;
+      rdfs:label "Sales product"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.purl.org/i4go/variant-domain/product/ProductGroup>
+      a       owl:Class ;
+      rdfs:comment "A (main) product group is a grouping of products for calculation or sales purposes. The scope includes finished and unfinished products of one product line."@en ;
+      rdfs:label "Prodcut group"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.purl.org/i4go/variant-domain/product/ProductClass>
+      a       owl:Class ;
+      rdfs:comment "The product class is an entity used for planning and reporting. This helps create stable brand/name architectures to enable highest possible product portfolio transparency, true value creation ad to prevent from product TM overload."@en ;
+      rdfs:label "Product class"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#canBeAppliedIn>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to specify the application area of a product or solution."@en ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (<http://www.w3id.org/ecsel-dr-OOSMP#Solution> <http://www.w3id.org/ecsel-dr-PROD#Product>)
+              ] ;
+      rdfs:label "can be applied in"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf <http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough> .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#owns>
+      a       owl:ObjectProperty ;
+      rdfs:label "owns"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.purl.org/i4go/variant-domain/product/ProductNumber>
+      a       owl:Class ;
+      rdfs:comment "The product number is a unique identifier of a product. The scope is limited to finished products only."@en ;
+      rdfs:label "Product number"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#findsApplicationThrough>
+      a       owl:ObjectProperty ;
+      rdfs:label "finds application through"@en ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-PWR#Products>
+      a       owl:Class ;
+      rdfs:comment """The superclass of all classes describing products or services types, either by nature or purpose. Examples for such subclasses are \"TV set\", \"vacuum cleaner\", etc. An instance of this class can be either an actual product or service (gr:Individual), a placeholder instance for unknown instances of a mass-produced commodity (gr:SomeItems), or a model / prototype specification (gr:ProductOrServiceModel). When in doubt, use gr:SomeItems.
+
+Examples: 
+a) MyCellphone123, i.e. my personal, tangible cell phone (gr:Individual)
+b) Siemens1234, i.e. the Siemens cell phone make and model 1234 (gr:ProductOrServiceModel)
+c) dummyCellPhone123 as a placeholder for actual instances of a certain kind of cell phones (gr:SomeItems)"""@en ;
+      rdfs:label "Products"@en .
+
+<http://www.purl.org/i4go/variant-domain/product/ProductLine>
+      a       owl:Class ;
+      rdfs:comment "The product line is one of the most prominent grouping of products. It is used in reporting as well as for structuring organizations."@en ;
+      rdfs:label "Product line"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-PROD#FinishedProduct>
+      a       owl:Class ;
+      rdfs:comment "End result of the manufacturing process"@en ;
+      rdfs:label "Finished product"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.w3id.org/ecsel-dr-PWR#ApplicationArea>
+      a       owl:Class ;
+      rdfs:comment "The different application ares that the product can be used."@en ;
+      rdfs:label "Application area"@en .
+
+<http://www.w3id.org/ecsel-dr-PROD#NonShippableProduct>
+      a       owl:Class ;
+      rdfs:comment "NonShippableProduct are those finishedProductNumbers that are not allowed to be shipped to a given customer"@en ;
+      rdfs:label "Non shippable product"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-PROD#Product> .
+
+<http://www.w3id.org/ecsel-dr-PROD#Product>
+      a       owl:Class ;
+      rdfs:comment "A product is any tangible output or service that is a result of a process and that is intended for delivery to a customer or end user. A product is a work product that is delivered to the customer."@en ;
+      rdfs:label "Product"@en .
+
+<http://www.w3id.org/ecsel-dr-SO#hasDemand>
+      a       owl:ObjectProperty ;
+      rdfs:label "has demand"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-PROD#Product> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.w3id.org/ecsel-dr-OOSMP#partOf>
+      a       owl:ObjectProperty ;
+      rdfs:comment "This property is used to relate products with the solution they belong to."@en ;
+      rdfs:domain <http://www.w3id.org/ecsel-dr-PROD#Product> ;
+      rdfs:label "part of"@en ;
+      rdfs:range <http://www.w3id.org/ecsel-dr-OOSMP#Solution> ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+<https://w3id.org/i40/sto#ProductDevelopmentLifeCycle>
+      a       owl:Class ;
+      rdfs:comment "PLM is the process of managing the entire lifecycle of a product from inception, through engineering design and manufacture, to service and disposal of manufactured products. Related areas are PLMManagement, Modeling Practice, Product Model Data exchange, Manufacturing Model Data, Product Catalog Data."@en ;
+      rdfs:label "Product development cycle"@en .

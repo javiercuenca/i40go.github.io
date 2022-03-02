@@ -1,0 +1,43 @@
+<http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName> <http://www.w3.org/2000/01/rdf-schema#label> "has supply chain name"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the supply chain"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasSupplyChainName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/2000/01/rdf-schema#label> "has plant"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate the supply chain with the production plant."@en .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-SO#Plant> .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasPlant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/2000/01/rdf-schema#label> "to fab ID"@en .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/2000/01/rdf-schema#comment> "Sink ID of supply chain edge"@en .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#toFabID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> <http://www.w3.org/2000/01/rdf-schema#label> "Supply chain"@en .
+<http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity \u201CSupply Chain\u201D describes the supply chain from the topmost level with all possible material flow edges."@en .
+<http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/2000/01/rdf-schema#label> "has travel time"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of, or element of the length of, a temporal extent expressed in seconds"@en .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#hasTravelTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://purl.org/dc/terms/issued> "2021-05-25"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Supply Chain' ontology module"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://purl.org/dc/elements/1.1/title> "Supply Chain ontology"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i40go/variant-domain/productionplant> .
+<http://www.purl.org/i40go/domain-task/supplychain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/2000/01/rdf-schema#label> "from fab id"@en .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/2000/01/rdf-schema#comment> "Source ID of supply chain edge"@en .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/i40go/domain-task/supplychain/SupplyChain> .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-SO#fromFabID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

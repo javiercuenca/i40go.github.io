@@ -1,0 +1,258 @@
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7feb <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7feb <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-PMV#BPActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Business Process Activity"@en .
+<http://www.w3id.org/ecsel-dr-PMV#BPActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A Business Process Activity is a part of a Business Process containing one or more sub Business Processes or a Process Flow."@en .
+<http://www.w3id.org/ecsel-dr-PMV#BPActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#BPActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "connected to"@en .
+<http://www.w3id.org/ecsel-dr-PMV#connectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#connectedTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "Subprocess Diagram"@en .
+<http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "The second and lowest level of process decomposition that is comprised of tasks that depict the role-based activities of the subprocess."@en .
+<http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#SubprocessDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of subprocesses that meet a specific business objective. E.g. Perform Sourcing or Purchase Materials and Services."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#Process> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.w3id.org/ecsel-dr-PMV#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/2000/01/rdf-schema#label> "transforms"@en .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/2000/01/rdf-schema#comment> "A function in a process flow transforms environmental data like work schedules."@en .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData> .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Function> .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#transforms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> <http://www.w3.org/2000/01/rdf-schema#label> "Modelling Function Object"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Function objects are used to model the decomposition of the process flow."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#FunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-SO#Tempering> <http://www.w3.org/2000/01/rdf-schema#label> "Tempering"@en .
+<http://www.w3id.org/ecsel-dr-SO#Tempering> <http://www.w3.org/2000/01/rdf-schema#comment> "The tempering process is a type of heat treatment applied by the furnace. The process has the effect of toughening by lessing brittleness and reducing internal stresses."@en .
+<http://www.w3id.org/ecsel-dr-SO#Tempering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess> .
+<http://www.w3id.org/ecsel-dr-SO#Tempering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output"@en .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Procedure and an Output of it."@en .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Output> .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the connection between a \"Function\" and another \"Process\" as this process may deliver an output used in this function."@en .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#diagramedOn> <http://www.w3.org/2000/01/rdf-schema#label> "diagramed on"@en .
+<http://www.w3id.org/ecsel-dr-PMV#diagramedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#diagramedOn> <http://www.w3.org/2000/01/rdf-schema#domain> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff9 .
+<http://www.w3id.org/ecsel-dr-PMV#diagramedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#diagramedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "Process diagram"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "The first level of process decomposition that is comprised of subprocesses that depict a business objective."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap> <http://www.w3.org/2000/01/rdf-schema#label> "Process type map"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of process types and related process groups that define the enterprise for a particular industry/sector."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessTypeMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> <http://www.w3.org/2000/01/rdf-schema#label> "Goal"@en .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap> <http://www.w3.org/2000/01/rdf-schema#label> "Process group map"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of a processes covering a single business area. Usually under the ownership of one business process owner and aligning with a function."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroupMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff0 .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#label> "Input"@en .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#comment> "Any information that is provided to a procedure for its use."@en .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff1 .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff3 .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fea <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fea <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fe9 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fe9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#Subprocess> <http://www.w3.org/2000/01/rdf-schema#label> "Subprocess"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Subprocess> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of related tasks that create an output within the larger objective of the subprocess. E.g. Create and Maintain Purchase Orders."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Subprocess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#Subprocess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Input> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasInput> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fef <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fee .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-PMV#hasRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "has requirements"@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of all requirements for the certain input or output."@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasRequirements> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#hasRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasInput> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Process group"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process Group is the third hierarchy level in the Technology Catalogue and a subset of the Process Class. A Process Group is defined by the device type and its generation (eventually voltage class) or wafer diameter."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#label> "implements"@en .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow> <http://www.w3.org/2000/01/rdf-schema#label> "Process flow"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow> <http://www.w3.org/2000/01/rdf-schema#comment> "A wafer technology is defined as a manufacturing process flow on wafer level including wafer test and pre-assembly which creates one device (discrete technology) or a set of different devices (IC technology) to be used in a product."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A process has an output and possibly inputs, and for a compositive process, describes the temporal and dataflow dependencies and relationships amongst its parts."@en .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fe9 .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fea .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7feb .
+<http://www.w3id.org/ecsel-dr-PWR#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#unionOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffb .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine> <http://www.w3.org/2000/01/rdf-schema#label> "Process line"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process Line is the forth hierarchy level in the Technology Catalogue and is a subset of Process Group. A Process Line is defined by WHAT is produced in detail."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Output> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasOutput> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "implemented by"@en .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."@en .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/implements> .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/implementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fee <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasOutput> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff4 .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff5 .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff6 .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<http://www.w3id.org/ecsel-dr-PMV#contains> <http://www.w3.org/2000/01/rdf-schema#range> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffc .
+<http://www.w3id.org/ecsel-dr-PMV#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Model> .
+<http://www.w3id.org/ecsel-dr-PMV#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Process Interface"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "Process interfaces connect several process models on the same process hierarchical level by linking the EPCs according to their shared events (also known as \"horizontal navigation\"). They thus facilitate process structuring and navigation by keeping models concise and easy-to-read.\nFunctionality: Jump function to next process (e.g. EPC, VAC), typically at the end of process branches. In the EPC flow there is an Event directly before."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffa .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#Function> .
+<http://www.w3id.org/ecsel-dr-PMV#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "One striking commonality between EPC meta models is the Process. One process may contain an unlimited number of elements, but a process element is always linked to a specific process. If a process contains an interface, it is always linked to one specific process and represents a refinement of a normal function."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#label> "is controlled by"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of a function in a process flow is controlled by a goal."@en .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Function> .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implementedBy> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information object"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fed <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fec .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment-related Process"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Place to group all the various Processes related to Deployment. For example, as well as Deployment, installation, maintenance, deployment of the further devices and the like would all be classified under DeploymentRelatedProcess."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#label> "The Process used in the Device Function"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a process that results in the estimation, or calculation, of the value of a device output. \nUsually it derived from the name of the device for example:\nSensor process: sensing: Sensing is a process that results in the estimation, or calculation, of the value of a phenomenon.\nBoost Converter process: boosting: is a process that results in the estimation, or calculation, of the value of a amplified voltage."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessNameOfDeviceFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://purl.org/dc/elements/1.1/title> "Manufacturing Process ontology"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://purl.org/dc/terms/issued> "2021-05-03"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Manufacturing Process' ontology module represents data related to business processes and the sub processes/activities they encompass. Includes the steps through which raw materials are transformed into a final product. Also called manufacturing engineering."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/manufacture> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#unionOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff8 .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Furnace process"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequence of interdependent and linked procedures which, at every stage, consume one or more resources (employee time, energy, machines, money) to convert inputs (data, material, parts, etc.) into outputs. These outputs then serve as inputs for the next stage until a known goal or end result is reached."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#ModelElement> <http://www.w3.org/2000/01/rdf-schema#label> "Model element"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ModelElement> <http://www.w3.org/2000/01/rdf-schema#comment> "An EPC model element is part of the EPC meta model and can be represented by a Function, an Event, an Operator, a Process Interface."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ModelElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#FunctionObject> <http://www.w3.org/2000/01/rdf-schema#label> "Function object"@en .
+<http://www.w3id.org/ecsel-dr-PMV#FunctionObject> <http://www.w3.org/2000/01/rdf-schema#comment> "In IndustryPrint 5, function objects are used to model the decomposition of a process."@en .
+<http://www.w3id.org/ecsel-dr-PMV#FunctionObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff2 .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass> <http://www.w3.org/2000/01/rdf-schema#label> "Process class"@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process Class is the second hierarchy level in the Technology Catalogue and is a subset of top hierarchy level \"Technology Class\". A Process Class is defined by the device category and its generation or wafer diameter."@en .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PWR#Process> .
+<http://www.purl.org/i4go/variant-domain/manufacturingprocess/ProcessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#InformationObject> .
+<http://www.w3id.org/ecsel-dr-PMV#EnvironmentalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fec <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasOutput> .
+<http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/2000/01/rdf-schema#label> "Output"@en .
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/2000/01/rdf-schema#comment> "Any information that is reported from a Procedure."@en .
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fed .
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7fef .
+<http://www.w3.org/ns/ssn/Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Procedure and an Input to it."@en .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Input> .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "uses one or more technology"@en .
+<http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate a process with the technolgies used in it."@en .
+<http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Process> .
+<http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SO#usesOneOrMoreTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#hasSubModel> <http://www.w3.org/2000/01/rdf-schema#label> "has submodel"@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasSubModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes to which instance of \"Process\" an instance of a \"Process Element\" belongs."@en .
+<http://www.w3id.org/ecsel-dr-PMV#hasSubModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#hasSubModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PWR#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/i4go/variant-domain/manufacturingprocess/Deployment-relatedProcess> .
+<http://www.w3id.org/ecsel-dr-PWR#Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Process Group"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of a processes covering a single business area. Usually under the ownership of one business process owner and correlates to one module. E.g. Procurement."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff7 .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/ecsel-dr-PMV#Function> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessType> <http://www.w3.org/2000/01/rdf-schema#label> "Process Type"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessType> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of core and enabler processes of Infineon on Level 0 (highest level). This level helps helps organizing project work/ development and represents a single track in the oneSAP project. It is based on a Deloitte standard which was adapted to Infineon's needs."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#ProcessType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "The function type represents several action elements as task, process interfaces or business process activities."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3id.org/ecsel-dr-PMV#FunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Function Object"@en .
+<http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Function objects are used to model the decomposition of the structure of a process."@en .
+<http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PMV#FunctionObject> .
+<http://www.w3id.org/ecsel-dr-PMV#StructuralFunctionObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/2000/01/rdf-schema#label> "flow"@en .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/2000/01/rdf-schema#comment> "Enables the modelling of the process flow by logically connecting the different process elements. Therefore, the domain and the range are set to a \"Process Element\"."@en .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#ModelElement> .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#flow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A5f2fe6ddX3aX17a6225560eX3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasInput> .

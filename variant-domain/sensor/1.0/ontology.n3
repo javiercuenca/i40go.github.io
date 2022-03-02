@@ -1,0 +1,380 @@
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of"@en .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Property and the entity it belongs to."@en .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property"@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by sensor"@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Sensor which made the Observation."@en .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeObservation> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fec <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasSubSystem> .
+<http://www.w3id.org/ecsel-dr-OOSMP#LinearHallSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Hall Sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#LinearHallSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure the vertical component of a magnetic field and outputs a signal that is directly proportional to the magnetic field. These programmable linear Hall sensors come with different interface options. Our family of TLE499x linear Hall ICs is tailored to the needs of highly accurate angular and linear position detection and current measurement applications.\nEach product measures the vertical component of a magnetic field and outputs a signal that is directly proportional to the magnetic field. These programmable linear Hall sensors come with different interface options."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#LinearHallSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#LinearHallSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/sampling/SampleRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Sample relationship"@en .
+<http://www.w3.org/ns/sosa/sampling/SampleRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/sampling/"@en .
+<http://www.w3.org/ns/sosa/sampling/SampleRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Members of this class represent a relationship between a sample and another."@en .
+<http://www.w3.org/ns/sosa/sampling/SampleRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Sampler"@en .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."@en .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fed .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fee .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fef .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff0 .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Device> .
+<http://www.w3.org/ns/sosa/Sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts"@en .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isHostedBy> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is observed by"@en .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an ObservableProperty and the Sensor able to observe it."@en .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/observes> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an entity and a Property of that entity."@en .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of a measuring instrument, or measuring chain, which is directly affected by the measure and which generates a signal related to the value of the measure."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Device> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7feb <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7feb <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "phenomenon time"@en .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "deployed on platform"@en .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/2000/01/rdf-schema#label> "is proxy for"@en .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."@en .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Stimulus> .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/isProxyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#IntegratedPressureSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated pressure sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#IntegratedPressureSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Infineon offers a different range of barometric air pressure sensor for automotive and industrial applications. The barometric air pressure (BAP) is an important parameter to compute the air-fuel ratio provided to the engine and for controlling spark advance to optimize engine efficiency. In automotive applications where high production volumes are common there is substantial interest in precision, low-cost and fully integrated sensors."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#IntegratedPressureSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#IntegratedPressureSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling"@en .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe8 .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe9 .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fea .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7feb .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff1 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff2 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff3 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff4 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "in deployment"@en .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Platform and a Deployment, recording that the object was used as a platform for a system/ a device (sensor/power converter) for a particular deployment: as in this PhysicalObject is acting as a Platform inDeployment Deployment."@en .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-PWR#Deployment> .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Platform> .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/deployedOnPlatform> .
+<http://www.purl.org/i4go/variant-domain/sensor/inDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Radar> <http://www.w3.org/2000/01/rdf-schema#label> "Radar"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Radar> <http://www.w3.org/2000/01/rdf-schema#comment> "Infineon\u2019s range of radar offerings provide unique benefits not possible with traditional motion sensing technology. Whether you require increased range coverage for outdoor lighting or a small form factor solution to enable soft landing in your multicopter our radar provides you with the ability to make your motion sensing applications perform in a way previously not possible. The BGT24M/L family is the largest and highest integrated 24GHz ISM band radar transceiver family currently in the market, providing a range of different transmitter and receiver channel configurations, supporting different application requirements. the sensor allows a Long range distance detection of moving objects up to 30 m and a wide range speed detection up to more than \u00B1100 km/h."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Radar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Radar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Result> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/ecsel-dr-SCP#hasResult> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#label> "related sample"@en .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/sosa/sampling/"@en .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SampleRelationship to the related Sample."@en .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/sampling/SampleRelationship> .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/sampling/relatedSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeSampling> <http://www.w3.org/2000/01/rdf-schema#label> "made sampling"@en .
+<http://www.w3.org/ns/sosa/madeSampling> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/madeSampling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/2000/01/rdf-schema#label> "detects"@en .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."@en .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Stimulus> .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/detects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fea <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fea <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/ecsel-dr-SCP#hasResult> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticSpeedSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic speed sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticSpeedSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "The  magnetic speed sensors are designed to measure speed in safety and powertrain applications such as speedometers, ABS, camshafts/crankshafts and automatic transmissions. They are also used in similar applications in the industrial sector. The sensors use a ferromagnetic gear tooth or encoder structure to measure linear or rotational speed and position."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticSpeedSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticSpeedSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/ecsel-dr-SCP#hasResult> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#label> "is result of"@en .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."@en .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-SCP#hasResult> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sample of"@en .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was originated by"@en .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Stimulus that originated it."@en .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The simple value of an Observation or Actuation or act of Sampling."@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/TR/vocab-ssn-ext/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Obervation collection"@en .
+<http://www.w3.org/TR/vocab-ssn-ext/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation Collection has at least one member, and may have one of any of the other seven properties mentioned in restrictions."@en .
+<http://www.w3.org/TR/vocab-ssn-ext/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#label> "made observation"@en .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor and an Observation made by the Sensor."@en .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/ecsel-dr-SCP#hasResult> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#label> "result time"@en .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fef <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Platform> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isHostedBy> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-OOSMP#HallSwitch> <http://www.w3.org/2000/01/rdf-schema#label> "Hall switch"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#HallSwitch> <http://www.w3.org/2000/01/rdf-schema#comment> "The sensor provides an easy-to-use and cost effective solution for position sensing applications, requiring high temperature stability of the magnetic threshold. Today the market demands smaller and more energy efficient Hall switches. To satisfy the needs of more compact designs and environmental legislation  with a high quality product is very difficult. Infineon offers attractive pricing, reliable supply, benchmark quality and excellent design-in support to contribute to the customers success."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#HallSwitch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#HallSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sampler> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3id.org/ecsel-dr-PWR#Deployment> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/common-domain/system/hasDeployment> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "has temperature"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the temperature measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/2000/01/rdf-schema#label> "has temperature max"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the maximum temperature measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatueMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSample> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i4go/variant-domain/sensor/3DMagneticSensor> <http://www.w3.org/2000/01/rdf-schema#label> "3D magnetic sensor"@en .
+<http://www.purl.org/i4go/variant-domain/sensor/3DMagneticSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Capable of measuring 3D, linear and rotational movement. The sensor realizes an accurate three-dimensional sensing with extremely low power consumption. Capable of detecting the magnetic field in the x, y, and z-direction, the sensor is ideally suited for the measurement\nof linear, rotation or 3 dimensional movements."@en .
+<http://www.purl.org/i4go/variant-domain/sensor/3DMagneticSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> .
+<http://www.purl.org/i4go/variant-domain/sensor/3DMagneticSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "has supply voltage"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the supply voltage measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe8 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "nature of relationship"@en .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SampleRelationship to an indication of the nature of the relationship."@en .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/sampling/SampleRelationship> .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/sampling/SampleRelationship> .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/sampling/natureOfRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://purl.org/dc/terms/issued> "2021-05-03"@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Sensor' ontology module represents data about sensor devices."@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://purl.org/dc/elements/1.1/title> "Sensor ontology"@en .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time#2016> .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/equipment> .
+<http://www.purl.org/i4go/variant-domain/sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-OOSMP#DigitalBarometricPressureSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Digital barometric pressure sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#DigitalBarometricPressureSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Infineon\u2019s  DPS310 is a miniaturized digital barometric pressure sensor which offers high accuracy and low current consumption, and is capable of measuring both pressure and temperature. A sealed capacitive sensing element is used for pressure measurement, guaranteeing high precision and accuracy across temperature changes. The small package and low energy consumption make  DPS310 ideal for mobile applications and wearable devices."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#DigitalBarometricPressureSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#DigitalBarometricPressureSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-SCP#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+<http://www.w3id.org/ecsel-dr-SCP#hasResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-SCP#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#label> "has sample"@en .
+<http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a FeatureOfInterest and the Sample used to represent it."@en .
+<http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isSampleOf> .
+<http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/Stimulus> <http://www.w3.org/2000/01/rdf-schema#label> "Stimulus"@en .
+<http://www.w3.org/ns/ssn/Stimulus> <http://www.w3.org/2000/01/rdf-schema#comment> "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor."@en .
+<http://www.w3.org/ns/ssn/Stimulus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#label> "quality of observation"@en .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the adjudged quality of the Result. This is complementary to the SystemCapability information recorded for the Sensor that made the Observation."@en .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Result> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/ssn/systems/qualityOfObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fee <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fee <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "used procedure"@en .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff5 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff6 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff7 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff8 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Property> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A pressure sensor is a sensor which measures pressure."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#PressureSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/2000/01/rdf-schema#label> "has supply voltage max"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the maximum supply voltage measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/2000/01/rdf-schema#label> "has temperature min"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the minimum temperature measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/ecsel-dr-OOSMP#hasTemperature> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasTemperatureMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of interest"@en .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffa .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffb .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffc .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sampling> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic position sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A magnetic position sensor is a sensor which measures magnetic positions."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fed <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/System> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fec .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result"@en .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#comment> "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticCurrentSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic current sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticCurrentSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A high-precision current sensor for industrial applications based on Infoneon proven Hall technology. The core-less concept significantly reduces footprint compared with existing solutions. Infineon\u00B4s TLI4970 is an easy-to-use, fully digital solution that does not require external calibration or additional parts such as A/D converters, 0 pAmps or reference voltage. It thus significantly reduces overall implementation effort as well as PCB space and cost."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticCurrentSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#MagneticCurrentSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable property"@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff9 .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2000/01/rdf-schema#label> "made by sampler"@en .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."@en .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sampler> .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeSampling> .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasProperty> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/2000/01/rdf-schema#label> "has supply voltage min"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the minimum supply voltage measured by a sensor."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltage> .
+<http://www.w3id.org/ecsel-dr-OOSMP#hasSupplyVoltageMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#AngleSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Angle sensor"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#AngleSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Infineon offers a family of angle sensors based on integrated Magneto Resistive (ixMR) technologies. Technologies include today iGMR and AMR. The sensors detect the orientation of an applied magnetic field by measuring sine and cosine angle components with monolithically integrated magneto resistive elements. ixMR technology is now widely used in automotive and industrial applications and provides a wide range of benefits. Our iAMR sensors are ideal for applications with the highest accuracy requirements. Our iAMR technology offers best performance over temperature, lifetime and magnetic field range. They are pre-calibrated and ready to use."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#AngleSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-OOSMP#MagneticPositionSensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#AngleSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Microphone> <http://www.w3.org/2000/01/rdf-schema#label> "Microphone"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Microphone> <http://www.w3.org/2000/01/rdf-schema#comment> "The highly performing MEMS Microphones will enable the next performance level of voice user interfaces, audio recording and active noise cancellation. Infineon\u2019s Dual Backplate (DBP) MEMS technology provides crystal clear (SNR), distortion free (THD) audio signals."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#Microphone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Sensor> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Microphone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
+_:AX2dX1b5fd665X3aX17a616f3872X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

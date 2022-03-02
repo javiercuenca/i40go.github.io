@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i4go/variant-domain/event#"
+     xml:base="http://www.purl.org/i4go/variant-domain/event"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/i4go/variant-domain/event">
+        <owl:imports rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingprocess"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+        <rdfs:comment xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;
+Felix Larrinaga &lt;mailto:flarrinaga@mondragon.edu&gt;</rdfs:comment>
+        <dc:title xml:lang="en">Event ontology</dc:title>
+        <rdfs:comment xml:lang="en">The &apos;Event&apos; ontology module represents data about events and the elements that generate them. A noteworthy occurrence that has a location in time and space, and does not have duration.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <terms:issued xml:lang="en">2021-24-05</terms:issued>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#respondsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:comment xml:lang="en">This property is used to specify the element that reponds to an event.</rdfs:comment>
+        <rdfs:label xml:lang="en">responds to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDuration -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#activates -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#activates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/ecsel-dr-PMV#Rule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"/>
+        <rdfs:comment xml:lang="en">The connector is used to represent the chronological order in an EPC, where an Event or a Rule activate a Task or Process Interface.</rdfs:comment>
+        <rdfs:label xml:lang="en">activates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#activatesFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#activatesFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ProcessInterface"/>
+        <rdfs:comment xml:lang="en">Specialization of the activates property that links the class Event with Task and Process Interface in the course of the process flow.</rdfs:comment>
+        <rdfs:label xml:lang="en">activates function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#creates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy"/>
+        <rdfs:label xml:lang="en">creates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isActivatedByFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">is activated by function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isCreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isCreatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ProcessInterface"/>
+        <rdfs:comment xml:lang="en">An event is created by a process step. The connector is used to represent the chronological order in an EPC.</rdfs:comment>
+        <rdfs:label xml:lang="en">is created by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isDependentOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isDependentOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Rule"/>
+        <rdfs:comment xml:lang="en">An event is dependent on a rule. The connector is used to represent the chronological order in an EPC.</rdfs:comment>
+        <rdfs:comment xml:lang="en">is dependent on</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isEvaluatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#JoinRule"/>
+        <rdfs:comment xml:lang="en">An event is evaluated by a rule. The connector is used to represent the chronological order in an EPC.</rdfs:comment>
+        <rdfs:label xml:lang="en">is evaluated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#leadsToEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#leadsToEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Rule"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:comment xml:lang="en">A rule leads to an event. The connector is used to represent the chronological order in an EPC.</rdfs:comment>
+        <rdfs:label xml:lang="en">leads to event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.purl.org/i4go/variant-domain/event/EventCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/ecsel-dr-SO#hasEventCalendarType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>Event Calendar: Type of event</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/event/EventCalendar -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/event/EventCalendar">
+        <rdfs:comment xml:lang="en">In the “Event Calendar” tracing entity, certain events like planned facility shutdowns, etc. can be scheduled</rdfs:comment>
+        <rdfs:label xml:lang="en">Event calendar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#EndEvent -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#EndEvent">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:comment xml:lang="en">Denotes the event element that stands at the end of a branch in the process flow and thus, ends the process flow branch or the total process.</rdfs:comment>
+        <rdfs:label xml:lang="en">End event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Event -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Event">
+        <rdfs:comment xml:lang="en">Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#JoinRule -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#JoinRule">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Rule"/>
+        <rdfs:comment xml:lang="en">Rule element that unites the control flow after being split into several branches. Has several incoming paths (at least two) and one outgoing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Join rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Rule -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Rule">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#ModelElement"/>
+        <rdfs:comment xml:lang="en">Rules allow to model alternative, exclusive alternative and parallel process flows.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#SplitRule -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#SplitRule">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Rule"/>
+        <rdfs:comment xml:lang="en">Rule element that splits the control flow into several branches. Has one incoming path and several (at least two) outgoing paths.</rdfs:comment>
+        <rdfs:label xml:lang="en">Split rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#StartEvent -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#StartEvent">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+        <rdfs:comment xml:lang="en">Denotes the event that stands at the beginning of a branch in the process flow and thus, triggers the execution of this branch or the total process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Start event</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,58 @@
+@prefix :        <http://www.purl.org/i4go/domain-task/arrowheadservice#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-AH#AH_service>
+      a       owl:Class ;
+      rdfs:comment "Arrowhead compliant service - service that is provided within an Arrowhead environment (i.e., service that is provided by an Arrowhead compliant software system that runs on a device within an Arrowhead local cloud; service is registered at the AH service registry system via its method for service registration and can be discovered and consumed by other Arrowhead compliant software systems."@en ;
+      rdfs:label "ArrowHead service"@en ;
+      rdfs:subClassOf <http://purl.org/dc/dcmitype/Service> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadservice>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Arrowhead Service' ontology module represents data about services in the Arrowhead framework context"@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "ArrowHead service ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-06"@en ;
+      owl:imports <http://www.purl.org/i4go/variant-domain/service> ;
+      owl:versionInfo "1.0"@en .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/domain-task/arrowheadservice/AHapplicationservice>
+      a       owl:Class ;
+      rdfs:comment "Application services – they are application specific and are implemented by application systems along with functionalities (to match requirements of an application)"@en ;
+      rdfs:label "ArrowHead application service"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AH#AH_service> .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/domain-task/arrowheadservice/AHcoreservice>
+      a       owl:Class ;
+      rdfs:label "ArrowHead core service"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AH#AH_service> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.purl.org/i4go/domain-task/arrowheadservice/AHautomationsupportingservice>
+      a       owl:Class ;
+      rdfs:label "ArrowHead automation supporting service"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadservice/AHcoreservice> .
+
+<http://www.purl.org/i4go/domain-task/arrowheadservice/AHmandatorycoreservice>
+      a       owl:Class ;
+      rdfs:label "ArrowHead mandatory core service"@en ;
+      rdfs:subClassOf <http://www.purl.org/i4go/domain-task/arrowheadservice/AHcoreservice> .

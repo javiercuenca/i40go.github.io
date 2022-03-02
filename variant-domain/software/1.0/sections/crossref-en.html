@@ -1,0 +1,257 @@
+<h2  id="crossreference" class="list">Cross reference for Computer Software ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Computer Software ontology.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType"
+            title="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">Application system type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Function" title="http://www.w3id.org/ecsel-dr-PMV#Function">Function</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+      </li>
+      <li>
+         <a href="#/SoftwareComponent"
+            title="http://www.purl.org/i4go/variant-domain/software/SoftwareComponent">Software component</a>
+      </li>
+      <li>
+         <a href="#/SoftwareUnit"
+            title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">
+      <h3>Application system type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType</p>
+      <div class="comment">
+         <span class="markdown">An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Function">
+      <h3>Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Function</p>
+      <div class="comment">
+         <span class="markdown">The function type represents several action elements as task, process interfaces or business process activities.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#executes" title="http://www.w3id.org/ecsel-dr-PMV#executes">executes</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dc/dcmitype/Software">
+      <h3>Software<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/dcmitype/Software</p>
+      <div class="comment">
+         <span class="markdown">assembly of programs, procedures, rules, documentation and data, pertaining to the operation of an information processing device or system. For example, firmware, operating system, application software.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/ssn/System">system</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType"
+               title="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">Application system type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/SoftwareComponent"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareComponent">Software component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/SoftwareUnit"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#executes" title="http://www.w3id.org/ecsel-dr-PMV#executes">executes</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SoftwareComponent">
+      <h3>Software component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.purl.org/i4go/variant-domain/software/SoftwareComponent</p>
+      <div class="comment">
+         <span class="markdown">Class used to represent a set of software units.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#/comprisedOf"
+               title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/SoftwareUnit"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#/comprisedOf"
+               title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#/SoftwareUnit"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#/comprisedOf"
+               title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#/SoftwareUnit"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SoftwareUnit">
+      <h3>Software unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.purl.org/i4go/variant-domain/software/SoftwareUnit</p>
+      <div class="comment">
+         <span class="markdown">Generically dependent continuant and element that is (according to ISO26262) an atomic level softwarecomponent of the software architecture that can be subjected to stand-alone testing.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#/comprisedOf"
+               title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 0 </dd>
+         <dd>
+            <a href="#/comprisedOf"
+               title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#/SoftwareUnit"
+               title="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit">Software unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/comprisedOf"
+            title="http://www.purl.org/i4go/variant-domain/software/comprisedOf">comprised of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#executes" title="http://www.w3id.org/ecsel-dr-PMV#executes">executes</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isExecutedBy" title="http://www.w3id.org/ecsel-dr-PMV#isExecutedBy">is executed by</a>
+      </li>
+   </ul>
+   <div class="entity" id="/comprisedOf">
+      <h3>comprised of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.purl.org/i4go/variant-domain/software/comprisedOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#executes">
+      <h3>executes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#executes</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Function" title="http://www.w3id.org/ecsel-dr-PMV#Function">Function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/dc/dcmitype/Software" title="http://purl.org/dc/dcmitype/Software">Software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isExecutedBy" title="http://www.w3id.org/ecsel-dr-PMV#isExecutedBy">is executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isExecutedBy">
+      <h3>is executed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isExecutedBy</p>
+      <div class="comment">
+         <span class="markdown">Software is executed by a function in a process flow.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#executes" title="http://www.w3id.org/ecsel-dr-PMV#executes">executes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

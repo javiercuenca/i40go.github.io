@@ -1,0 +1,1305 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.org/i40ontologymappings#"
+     xml:base="http://www.purl.org/i40ontologymappings"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.purl.org/i40ontologymappings"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#comprised_of -->
+
+    <owl:ObjectProperty rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#comprised_of">
+        <owl:equivalentProperty rdf:resource="http://www.purl.org/i4go/variant-domain/software/comprisedOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#has_property -->
+
+    <owl:ObjectProperty rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#has_property">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#implements -->
+
+    <owl:ObjectProperty rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#implements">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/org#hasUnit"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#contains_Admin_Shell"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/sensor/inDeployment -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/i4go/variant-domain/sensor/inDeployment">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PWR#in_deployment"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/comprisedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/i4go/variant-domain/software/comprisedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasInput">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PWR#has_input"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasOutput">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isInputAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isInputAt">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PMV#isInputFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isOutputAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#isOutputAt">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PMV#isOutputOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/i40/aml#hasUnit"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasInput">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PMV#hasAsInput"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasOutput">
+        <owl:equivalentProperty rdf:resource="http://www.w3id.org/ecsel-dr-PWR#has_output"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#hasAsInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#hasAsOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isInputFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isInputFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#has_input -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PWR#has_input">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#has_output -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PWR#has_output">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#in_deployment -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-PWR#in_deployment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#contains_Admin_Shell -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#contains_Admin_Shell">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/i40/sto#isDescribedin"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/aml#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/aml#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/i40/sto#isDescribedin -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/i40/sto#isDescribedin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#Plant -->
+
+    <owl:Class rdf:about="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#Plant">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/C:/OntoCAPE/OntoCAPE/software_system/software_system.owl#SoftwareSystem -->
+
+    <owl:Class rdf:about="file:/C:/OntoCAPE/OntoCAPE/software_system/software_system.owl#SoftwareSystem">
+        <owl:equivalentClass rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Software_system"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/C:/OntoCAPE/OntoCAPE/upper_level/system.owl#System -->
+
+    <owl:Class rdf:about="file:/C:/OntoCAPE/OntoCAPE/upper_level/system.owl#System">
+        <owl:equivalentClass rdf:resource="http://cpsagila.cs.uni-kl.de/GENIALOnt#system"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/C:/OntoCAPE/OntoCAPE/upper_level/technical_system.owl#SystemFunction -->
+
+    <owl:Class rdf:about="file:/C:/OntoCAPE/OntoCAPE/upper_level/technical_system.owl#SystemFunction">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#component -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#component">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/common-domain/system/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#function -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#function">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#FunctionObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#software_component -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#software_component">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#software_element -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#software_element">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Software_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#software_unit -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#software_unit">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt#system -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt#system">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt/actuator -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt/actuator">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cpsagila.cs.uni-kl.de/GENIALOnt/sensor -->
+
+    <owl:Class rdf:about="http://cpsagila.cs.uni-kl.de/GENIALOnt/sensor">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology#Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology#Country">
+        <owl:equivalentClass rdf:resource="http://dbpedia.org/ontology/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology#Place -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology#Place">
+        <owl:equivalentClass rdf:resource="http://dbpedia.org/ontology/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Place -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Place"/>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Service -->
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Service">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Software -->
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Software"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Building_zone -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Building_zone">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/BuildingZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Geographic_resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Geographic_resource">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/GeographicResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#HandlingOperator -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#HandlingOperator">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/mason.owl#Handling_operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Handling_operator -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Handling_operator"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Human_resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Human_resource">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/HumanResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Manufacturing_concept -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Manufacturing_concept">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Material_resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Material_resource">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Operation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Operation">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Preparation_operator -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Preparation_operator">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/PreparationOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Procedures_expert -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Procedures_expert">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/ProceduresExpert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Programming_operator -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Programming_operator">
+        <owl:equivalentClass rdf:resource="http://www.purl.org/i4go/variant-domain/manufacturingresource/ProgrammingOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#System -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#System">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#System"/>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Workshop -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/mason.owl#Workshop">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/DeviceConfiguration">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Device_Configuration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/DeviceElements -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/DeviceElements">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Device_Elements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/equipment/EquipmentGroup">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Equipment_Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/AdminShell -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/manufacture/AdminShell">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Admin_Shell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/system/Component -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/system/Component"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/common-domain/system/SystemDocumentation -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/common-domain/system/SystemDocumentation">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#System_documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/cost/TargetCosts -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/cost/TargetCosts">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Target_Costs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/cost/TargetRevenue -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/cost/TargetRevenue">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Target_Revenue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/event/EventCalendar -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/event/EventCalendar">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Event_Calendar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingprocess/FurnaceProcess">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Furnace_Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/BuildingZone -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/BuildingZone"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/GeographicResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/GeographicResource"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/HumanResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/HumanResource"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/MaterialResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/MaterialResource"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/PreparationOperator -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/PreparationOperator"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/ProceduresExpert -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/ProceduresExpert"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/manufacturingresource/ProgrammingOperator -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/manufacturingresource/ProgrammingOperator"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/DepletionMode -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/DepletionMode">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Depletion_Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/EventCalendar -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/EventCalendar">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Event_Calendar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/LotSize -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/LotSize">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Lot_Size"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/OperationMode -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/OperationMode">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Operation_Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/ProductionRequests -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/ProductionRequests">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Production_Requests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SimulationPart -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SimulationPart">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Simulation_Part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/SimulationRoute -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/SimulationRoute">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Simulation_Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/operation/TimeConstraints -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/operation/TimeConstraints">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Time_Constraints"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/product/ProductClass -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/product/ProductClass">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Product_Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/product/ProductGroup -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/product/ProductGroup">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Product_Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/product/ProductLine -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/product/ProductLine">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#ProductLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/product/ProductNumber -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/product/ProductNumber">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Product_Number"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/CommunicationSecurityMechanism -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/CommunicationSecurityMechanism">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Communication_security_mechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/CommunicationTechnology">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Communication_technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/DataFormat -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/DataFormat">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Data_format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/DataLinkAndMediaAccessTechnology -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/DataLinkAndMediaAccessTechnology">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Data_link_and_media_access_technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/End-to-EndCommunicationTechnology -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/End-to-EndCommunicationTechnology">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#End-to-End_communication_technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/Point-to-PointCommunicationTechnology -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/Point-to-PointCommunicationTechnology">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Point-to-Point_communication_technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/service/TransferProtocol -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/service/TransferProtocol">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AH#Transfer_protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/SoftwareComponent -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/software/SoftwareComponent"/>
+    
+
+
+    <!-- http://www.purl.org/i4go/variant-domain/software/SoftwareUnit -->
+
+    <owl:Class rdf:about="http://www.purl.org/i4go/variant-domain/software/SoftwareUnit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Event">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Process">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#System"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Task">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Organization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-OOSMP#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Deployment -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+        <owl:equivalentClass rdf:resource="https://w3id.org/i40/aml#SystemUnitClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Communication_security_mechanism -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Communication_security_mechanism"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Communication_technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Communication_technology"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Data_format -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Data_format"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Data_link_and_media_access_technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Data_link_and_media_access_technology"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Device -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Device">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-AT#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#End-to-End_communication_technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#End-to-End_communication_technology"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Point-to-Point_communication_technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Point-to-Point_communication_technology"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Software_system -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Software_system"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#System_documentation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#System_documentation"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AH#Transfer_protocol -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AH#Transfer_protocol"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Device -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Device"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#Standard">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Standard"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/i40/sto#Standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Standard_Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#ApplicationArea -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#ApplicationArea">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#ApplicationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#Product -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#Product">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PROD#Product"/>
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#ProductLine -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#ProductLine">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Product_Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-OOSMP#Sensor -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-OOSMP#Sensor">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PWR#Sensors"/>
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-RAMI40#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Event -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Event"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Function -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Function"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#FunctionObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#FunctionObject"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#HumanOutput -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#HumanOutput">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PMV#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Role -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Role">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-PRIMA#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PMV#Task -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PMV#Task"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#Project -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#Project">
+        <owl:equivalentClass rdf:resource="https://w3id.org/i40/aml#Project"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PRIMA#Role -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PRIMA#Role"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PROD#Organization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PROD#Organization">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PROD#Product -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PROD#Product"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#ApplicationArea -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#ApplicationArea"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Depletion_Mode -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Depletion_Mode"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Deployment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Deployment"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Device_Configuration -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Device_Configuration"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Device_Elements -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Device_Elements"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Operation_Mode -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Operation_Mode"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Process"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-PWR#Sensors -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-PWR#Sensors"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#Admin_Shell -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Admin_Shell"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#Sensor -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Sensor"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#Standard -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Standard">
+        <owl:equivalentClass rdf:resource="https://w3id.org/i40/sto#standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-RAMI40#Standard_Organisation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-RAMI40#Standard_Organisation">
+        <owl:equivalentClass rdf:resource="https://w3id.org/i40/sto#StandardOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#CurrentWIP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#CurrentWIP">
+        <owl:equivalentClass rdf:resource="http://www.w3id.org/ecsel-dr-SO#Current_WIP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Current_WIP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Current_WIP"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Equipment_Group -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Equipment_Group"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Event_Calendar -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Event_Calendar"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Furnace_Process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Furnace_Process"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Lot_Size -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Lot_Size"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Operation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Operation"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Plant -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Plant"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Product -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Product"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Product_Class -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Product_Class"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Product_Group -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Product_Group"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Product_Line -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Product_Line"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Product_Number -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Product_Number"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Production_Requests -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Production_Requests"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Simulation_Part -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Simulation_Part"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Simulation_Route -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Simulation_Route"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Target_Costs -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Target_Costs"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Target_Revenue -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Target_Revenue"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Time_Constraints -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Time_Constraints"/>
+    
+
+
+    <!-- http://www.w3id.org/ecsel-dr-SO#Workshop -->
+
+    <owl:Class rdf:about="http://www.w3id.org/ecsel-dr-SO#Workshop"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- https://w3id.org/i40/aml#Project -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/aml#Project"/>
+    
+
+
+    <!-- https://w3id.org/i40/aml#SystemUnitClass -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/aml#SystemUnitClass"/>
+    
+
+
+    <!-- https://w3id.org/i40/sto#Standard -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#Standard"/>
+    
+
+
+    <!-- https://w3id.org/i40/sto#StandardOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#StandardOrganization"/>
+    
+
+
+    <!-- https://w3id.org/i40/sto#standard -->
+
+    <owl:Class rdf:about="https://w3id.org/i40/sto#standard"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

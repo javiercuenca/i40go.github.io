@@ -1,0 +1,970 @@
+<h2  id="crossreference" class="list">Cross reference for Task ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Task ontology.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType"
+            title="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">Application system type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#BPActivity" title="http://www.w3id.org/ecsel-dr-PMV#BPActivity">Business Process Activity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#BPFlow" title="http://www.w3id.org/ecsel-dr-PMV#BPFlow">Business Process Flow</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Function" title="http://www.w3id.org/ecsel-dr-PMV#Function">Function</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+            title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm" title="http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm">Technical term</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">
+      <h3>Application system type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType</p>
+      <div class="comment">
+         <span class="markdown">An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available).</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isSupportedBy" title="http://www.w3id.org/ecsel-dr-PMV#isSupportedBy">is supported by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#BPActivity">
+      <h3>Business Process Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#BPActivity</p>
+      <div class="comment">
+         <span class="markdown">A Business Process Activity is a part of a Business Process containing one or more sub Business Processes or a Process Flow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+               title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#represents" title="http://www.w3id.org/ecsel-dr-PMV#represents">represents</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#BPFlow">
+      <h3>Business Process Flow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#BPFlow</p>
+      <div class="comment">
+         <span class="markdown">An EPC describes a Business Process Flow, which is a sequence of required tasks to create specified outputs using defined inputs.
+A Business Process Flow is a sequence of required tasks to create specified outputs using defined inputs.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf" title="http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf">is subflow of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#hasSubFlow" title="http://www.w3id.org/ecsel-dr-PMV#hasSubFlow">has subflow</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#represents" title="http://www.w3id.org/ecsel-dr-PMV#represents">represents</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Function">
+      <h3>Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Function</p>
+      <div class="comment">
+         <span class="markdown">The function type represents several action elements as task, process interfaces or business process activities.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+               title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">
+      <h3>Modelling Function Object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject</p>
+      <div class="comment">
+         <span class="markdown">Function objects are used to model the decomposition of the process flow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#Function" title="http://www.w3id.org/ecsel-dr-PMV#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#BPActivity" title="http://www.w3id.org/ecsel-dr-PMV#BPActivity">Business Process Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf" title="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">is predecessor of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf" title="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">is predecessor of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Rule">
+      <h3>Rule<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Rule</p>
+      <div class="comment">
+         <span class="markdown">Rules allow to model alternative, exclusive alternative and parallel process flows.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesTask" title="http://www.w3id.org/ecsel-dr-PMV#activatesTask">activates task</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#Task">
+      <h3>Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#Task</p>
+      <div class="comment">
+         <span class="markdown">The lowest level of detail, a task are the activities required to execute a subprocess. A single task within a subprocess can be manual or system supported. E.g. Create Purchase Order</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+               title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#follows" title="http://www.w3id.org/ecsel-dr-PMV#follows">follows</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsInput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">has as input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsOutput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">has as output</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#hasSubFlow" title="http://www.w3id.org/ecsel-dr-PMV#hasSubFlow">has subflow</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy" title="http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy">is carried out by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf" title="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">is predecessor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isSupportedBy" title="http://www.w3id.org/ecsel-dr-PMV#isSupportedBy">is supported by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf" title="http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf">is task of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo"
+               title="http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo">results forwareded to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesTask" title="http://www.w3id.org/ecsel-dr-PMV#activatesTask">activates task</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#contributesTo" title="http://www.w3id.org/ecsel-dr-PMV#contributesTo">contributes to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#follows" title="http://www.w3id.org/ecsel-dr-PMV#follows">follows</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf" title="http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf">is subflow of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#represents" title="http://www.w3id.org/ecsel-dr-PMV#represents">represents</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm">
+      <h3>Technical term<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm</p>
+      <div class="comment">
+         <span class="markdown">Set up with connection to a function or activity or VAC. It can be either input or output, where the direction of the arrow describes whether it is an input or an output. Set up of a connection is not mandatory.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsInput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">has as input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsOutput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">has as output</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#activatesTask" title="http://www.w3id.org/ecsel-dr-PMV#activatesTask">activates task</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#carriesOut" title="http://www.w3id.org/ecsel-dr-PMV#carriesOut">carries out</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#contributesTo" title="http://www.w3id.org/ecsel-dr-PMV#contributesTo">contributes to</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#follows" title="http://www.w3id.org/ecsel-dr-PMV#follows">follows</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsInput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">has as input</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsOutput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">has as output</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#hasSubFlow" title="http://www.w3id.org/ecsel-dr-PMV#hasSubFlow">has subflow</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PRIMA#hasTask" title="http://www.w3id.org/ecsel-dr-PRIMA#hasTask">has taks</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isAssignedTo" title="http://www.w3id.org/ecsel-dr-PMV#isAssignedTo">is assigned to</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy" title="http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy">is carried out by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isInputFor" title="http://www.w3id.org/ecsel-dr-PMV#isInputFor">is input for</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isOutputOf" title="http://www.w3id.org/ecsel-dr-PMV#isOutputOf">is output of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf" title="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">is predecessor of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy" title="http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy">is represented by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf" title="http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf">is subflow of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isSupportedBy" title="http://www.w3id.org/ecsel-dr-PMV#isSupportedBy">is supported by</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf" title="http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf">is task of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf"
+            title="http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf">is worked on by collaboration of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#leadsToRule" title="http://www.w3id.org/ecsel-dr-PMV#leadsToRule">
+            <span>leads to rule</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout"
+            title="http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout">must be informed about</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#represents" title="http://www.w3id.org/ecsel-dr-PMV#represents">represents</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo"
+            title="http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo">results forwareded to</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/ecsel-dr-PMV#supports" title="http://www.w3id.org/ecsel-dr-PMV#supports">supports</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#activatesTask">
+      <h3>activates task<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#activatesTask</p>
+      <div class="comment">
+         <span class="markdown">Specialization of the activates property that links the class Rule with Task in the course of the process flow.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Rule" title="http://www.w3id.org/ecsel-dr-PMV#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#carriesOut">
+      <h3>carries out<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#carriesOut</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy" title="http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy">is carried out by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#contributesTo">
+      <h3>contributes to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#contributesTo</p>
+      <div class="comment">
+         <span class="markdown">Role(s) that contribute(s) to a process step during it is carried out.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3id.org/ecsel-dr-PRIMA#Role">role</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf"
+                  title="http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf">is worked on by collaboration of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#follows">
+      <h3>follows<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#follows</p>
+      <div class="comment">
+         <span class="markdown">A process step follows a process step. The connector is used to represent the chronological order in an EPC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf" title="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">is predecessor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">
+      <h3>has as input<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#hasAsInput</p>
+      <div class="comment">
+         <span class="markdown">A process step can have technical term(s) as input.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm" title="http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm">Technical term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isInputFor" title="http://www.w3id.org/ecsel-dr-PMV#isInputFor">is input for</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">
+      <h3>has as output<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#hasAsOutput</p>
+      <div class="comment">
+         <span class="markdown">A process step can have technical term(s) as output.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm" title="http://www.w3id.org/ecsel-dr-PMV#TechnicalTerm">Technical term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isOutputOf" title="http://www.w3id.org/ecsel-dr-PMV#isOutputOf">is output of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#hasSubFlow">
+      <h3>has subflow<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#hasSubFlow</p>
+      <div class="comment">
+         <span class="markdown">EPCs can have other EPCs as subordinates. The connector is used to represent the hierarchical order.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#BPFlow" title="http://www.w3id.org/ecsel-dr-PMV#BPFlow">Business Process Flow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf" title="http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf">is subflow of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PRIMA#hasTask">
+      <h3>has taks<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PRIMA#hasTask</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf" title="http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf">is task of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isAssignedTo">
+      <h3>is assigned to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isAssignedTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#leadsToRule" title="http://www.w3id.org/ecsel-dr-PMV#leadsToRule">leads to rule</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy">
+      <h3>is carried out by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isCarriedOutBy</p>
+      <div class="comment">
+         <span class="markdown">A process step is carried out by role(s) or organizational unit(s) (equivalent to R in RACI notation).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3id.org/ecsel-dr-PRIMA#Role">role</span>
+            </dd>
+            <dd>
+               <span class="dotted" title="http://www.w3id.org/ecsel-dr-PROD#Organization">organization</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#carriesOut" title="http://www.w3id.org/ecsel-dr-PMV#carriesOut">carries out</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isInputFor">
+      <h3>is input for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isInputFor</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsInput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsInput">has as input</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isOutputOf">
+      <h3>is output of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isOutputOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#hasAsOutput" title="http://www.w3id.org/ecsel-dr-PMV#hasAsOutput">has as output</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf">
+      <h3>is predecessor of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isPredecessorOf</p>
+      <div class="comment">
+         <span class="markdown">The connector is used to represent the chronological order of value chain elements.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+                  title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject"
+                  title="http://www.w3id.org/ecsel-dr-PMV#ModellingFunctionObject">Modelling Function Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#follows" title="http://www.w3id.org/ecsel-dr-PMV#follows">follows</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy">
+      <h3>is represented by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#represents" title="http://www.w3id.org/ecsel-dr-PMV#represents">represents</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf">
+      <h3>is subflow of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isSubFlowOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#BPFlow" title="http://www.w3id.org/ecsel-dr-PMV#BPFlow">Business Process Flow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#hasSubFlow" title="http://www.w3id.org/ecsel-dr-PMV#hasSubFlow">has subflow</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isSupportedBy">
+      <h3>is supported by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isSupportedBy</p>
+      <div class="comment">
+         <span class="markdown">A process step is supported by an application system type.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType"
+                  title="http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType">Application system type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf">
+      <h3>is task of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PRIMA#isTaskOf</p>
+      <div class="comment">
+         <span class="markdown">This property is used to relate a tasks with the project or process it belongs to.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PRIMA#hasTask" title="http://www.w3id.org/ecsel-dr-PRIMA#hasTask">has taks</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf">
+      <h3>is worked on by collaboration of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#isWorkedOnByCollaborationOf</p>
+      <div class="comment">
+         <span class="markdown">A process step is worked on by collaboration of role(s).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#contributesTo" title="http://www.w3id.org/ecsel-dr-PMV#contributesTo">contributes to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#leadsToRule">
+      <h3>leads to rule<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#leadsToRule</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isAssignedTo" title="http://www.w3id.org/ecsel-dr-PMV#isAssignedTo">is assigned to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout">
+      <h3>must be informed about<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout</p>
+      <div class="comment">
+         <span class="markdown">Role(s) to be informed after/ during the process step is carried out (one-way-communication) (equivalent to I in RACI notation)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo"
+                  title="http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo">results forwareded to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#represents">
+      <h3>represents<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#represents</p>
+      <div class="comment">
+         <span class="markdown">A aris:BPActivity is the graphical representation of a aris:VACD or aris:BPFlow in a aris:VACD.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#BPActivity" title="http://www.w3id.org/ecsel-dr-PMV#BPActivity">Business Process Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#BPFlow" title="http://www.w3id.org/ecsel-dr-PMV#BPFlow">Business Process Flow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy" title="http://www.w3id.org/ecsel-dr-PMV#isRepresentedBy">is represented by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo">
+      <h3>results forwareded to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#resultIsForwardedTo</p>
+      <div class="comment">
+         <span class="markdown">A result of a process step is forwarded to role(s).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#Task" title="http://www.w3id.org/ecsel-dr-PMV#Task">Task</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3id.org/ecsel-dr-PRIMA#Role">role</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout"
+                  title="http://www.w3id.org/ecsel-dr-PMV#mustBeInformedAbout">must be informed about</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/ecsel-dr-PMV#supports">
+      <h3>supports<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/ecsel-dr-PMV#supports</p>
+      <div class="comment">
+         <span class="markdown">A process step is supported by an Application system.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">leads to rule</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

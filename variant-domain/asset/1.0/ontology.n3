@@ -1,0 +1,63 @@
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical entity or digital entity that has value to an individual, an organization or a government. An item, such as design, specification, source code, documentation, test suites, manual procedures, etc., that has been designed for use in multiple contexts."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/mason.owl#Resource> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasData> <http://www.w3.org/2000/01/rdf-schema#label> "has data"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasData> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects the AdminShell with the different types of Data for the Object/Entity"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType> <http://www.w3.org/2000/01/rdf-schema#label> "has datatype"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the datatypes of the Submodels"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Structure> <http://www.w3.org/2000/01/rdf-schema#label> "Structure"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Structure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasReference> <http://www.w3.org/2000/01/rdf-schema#label> "has reference"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasReference> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#MESConnection> <http://www.w3.org/2000/01/rdf-schema#label> "MES connection"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#MESConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Connection of a manufacturing execution systems (MES). MESs are computerized systems used in manufacturing to track and document the transformation of raw materials to finished goods."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#MESConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#MESConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#EnergyEfficiency> <http://www.w3.org/2000/01/rdf-schema#label> "Energy efficiency"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#EnergyEfficiency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#EnergyEfficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/2000/01/rdf-schema#label> "in accordance with"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/2000/01/rdf-schema#comment> "The Submodel is in accordance with a given standard specified in the STO ontology"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#inAccordanceWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#SensorMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor measurement"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#SensorMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#SensorMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#TransportInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Transport interface"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#TransportInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Submodel> .
+<http://www.w3id.org/ecsel-dr-RAMI40#TransportInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Submodel> <http://www.w3.org/2000/01/rdf-schema#label> "Submodel"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Submodel> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe the different types of Data related to the I4.0 Asset"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Submodel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel> <http://www.w3.org/2000/01/rdf-schema#label> "has submodel"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the information about I4.0 asset"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasSubmodel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Machine> <http://www.w3.org/2000/01/rdf-schema#label> "Machine"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Machine> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine is ordered, designed, commissioned, operated, serviced, converted and recycled."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#Machine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-RAMI40#Asset> .
+<http://www.w3id.org/ecsel-dr-RAMI40#Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i40go/variant-domain/asset> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Asset' ontology module represents data about assets. An asset is a physical entity or digital entity that has value to an individual, an organization or a government. This ontology module also provides a representation about the Asset Administration Shell and associated concepts. Includes the administration of the asset concept, the functionalities of the administration shell, assets and sub models that describe an asset."@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://purl.org/dc/terms/issued> "2021-24-05"@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://purl.org/dc/elements/1.1/title> "Asset ontology module"@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i40go/variant-domain/asset> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i40go/variant-domain/manufacturingresource> .
+<http://www.purl.org/i40go/variant-domain/asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .

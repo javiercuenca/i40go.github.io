@@ -1,0 +1,79 @@
+<http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is executed by"@en .
+<http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Software is executed by a function in a process flow."@en .
+<http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/variant-domain/software/comprisedOf> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onClass> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff2 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/variant-domain/software/comprisedOf> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i4go/variant-domain/software> <http://purl.org/dc/elements/1.1/title> "Computer software ontology"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://purl.org/dc/terms/issued> "2021-05-04"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://purl.org/dc/terms/created> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Computer Software' ontology module represents the data about software applications"@en .
+<http://www.purl.org/i4go/variant-domain/software> <http://www.w3.org/2002/07/owl#imports> <http://www.purl.org/i4go/common-domain/equipment> .
+<http://www.purl.org/i4go/variant-domain/software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff7 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffa .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function"@en .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "The function type represents several action elements as task, process interfaces or business process activities."@en .
+<http://www.w3id.org/ecsel-dr-PMV#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "Application system type"@en .
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType> <http://www.w3.org/2000/01/rdf-schema#comment> "An application system type classifies individual application systems which have exactly the same technological properties. Process steps might be supported by application systems. Object describe IT systems (library for IT systems available)."@en .
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Software> .
+<http://www.w3id.org/ecsel-dr-PMV#ApplicationSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Software component"@en .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class used to represent a set of software units."@en .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffc .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Software> .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/dcmitype/Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
+<http://purl.org/dc/dcmitype/Software> <http://www.w3.org/2000/01/rdf-schema#comment> "assembly of programs, procedures, rules, documentation and data, pertaining to the operation of an information processing device or system. For example, firmware, operating system, application software."@en .
+<http://purl.org/dc/dcmitype/Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://purl.org/dc/dcmitype/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#intersectionOf> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffb .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Software unit"@en .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Generically dependent continuant and element that is (according to ISO26262) an atomic level softwarecomponent of the software architecture that can be subjected to stand-alone testing."@en .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff3 .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff4 .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Software> .
+<http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#unionOf> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff1 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/variant-domain/software/comprisedOf> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.purl.org/i4go/variant-domain/software/comprisedOf> <http://www.w3.org/2000/01/rdf-schema#label> "comprised of"@en .
+<http://www.purl.org/i4go/variant-domain/software/comprisedOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.purl.org/i4go/variant-domain/software/comprisedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff9 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/dcmitype/Software> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff0 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/dc/dcmitype/Software> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff5 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff8 .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/variant-domain/software/comprisedOf> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onClass> <http://www.purl.org/i4go/variant-domain/software/SoftwareUnit> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.purl.org/i4go/variant-domain/software/comprisedOf> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A7047dc3dX3aX17a619b52f8X3aXX2dX7ff6 .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/2000/01/rdf-schema#label> "executes"@en .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/dcmitype/Software> .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PMV#Function> .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-PMV#isExecutedBy> .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-PMV#executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

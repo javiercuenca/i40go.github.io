@@ -1,0 +1,230 @@
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#label> "has publisher"@en .
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The organization that published this Standard"@en .
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/i40/sto#hasPublisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Organizational unit"@en .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization such as a department or support unit which is part of some larger Organization and only has full recognition within the context of that Organization. In particular the unit would not be regarded as a legal entity in its own right."@en .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PROD#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+<http://www.w3id.org/ecsel-dr-PROD#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposed into hierarchical structures."@en .
+<http://www.w3id.org/ecsel-dr-PROD#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/2000/01/rdf-schema#label> "has stability date"@en .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stability date of a publication. Publications are valid for a certain period, i.e., the Stability Period. This property defines the end of the stability period."@en .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasStabilityDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#Technology> <http://www.w3.org/2000/01/rdf-schema#label> "Technology"@en .
+<https://w3id.org/i40/sto#Technology> <http://www.w3.org/2000/01/rdf-schema#comment> "A technology develiped by an organization."@en .
+<https://w3id.org/i40/sto#Technology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#Technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ANSI> <http://www.w3.org/2000/01/rdf-schema#label> "ANSI"@en .
+<http://www.w3id.org/ecsel-dr-AT#ANSI> <http://www.w3.org/2000/01/rdf-schema#comment> "The American National Standards Institute is a private non-profit organization that oversees the development of voluntary consensus standards for products, services, processes, systems, and personnel in the United States. The organization also coordinates U.S. standards with international standards so that American products can be used worldwide."@en .
+<http://www.w3id.org/ecsel-dr-AT#ANSI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#ANSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/organization> <http://purl.org/dc/elements/1.1/title> "Organization ontology"@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://purl.org/dc/terms/issued> "2021-05-14"@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Organization' ontology module data about organizations, their internal structure (i.e., departments and divisions that compound the organization) and the roles that their departments/units and individuals have."@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://purl.org/dc/terms/creator> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/common-domain/organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-AT#OMG> <http://www.w3.org/2000/01/rdf-schema#label> "OMG"@en .
+<http://www.w3id.org/ecsel-dr-AT#OMG> <http://www.w3.org/2000/01/rdf-schema#comment> "The Object Management Group (OMG) is a computer industry standards consortium. OMG Task Forces develop enterprise integration standards for a range of technologies."@en .
+<http://www.w3id.org/ecsel-dr-AT#OMG> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#OMG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#OASIS> <http://www.w3.org/2000/01/rdf-schema#label> "OASIS"@en .
+<http://www.w3id.org/ecsel-dr-AT#OASIS> <http://www.w3.org/2000/01/rdf-schema#comment> "The Organization for the Advancement of Structured Information Standards is a global nonprofit consortium that works on the development, convergence, and adoption of open standards for cybersecurity, blockchain, Internet of Things (IoT), emergency management, cloud computing, legal data exchange, energy, content technologies, and other areas."@en .
+<http://www.w3id.org/ecsel-dr-AT#OASIS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#OASIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Formation date" .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Formation date of the Organization" .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#formationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#hasClassification> <http://www.w3.org/2000/01/rdf-schema#label> "has classification"@en .
+<https://w3id.org/i40/sto#hasClassification> <http://www.w3.org/2000/01/rdf-schema#comment> "An Standard is isCategorizedBy a given Categorization Area which is connected to a specific Standarization Initiative"@en .
+<https://w3id.org/i40/sto#hasClassification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/i40/sto#hasClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/i40/sto#Publication> <http://www.w3.org/2000/01/rdf-schema#label> "Publication"@en .
+<https://w3id.org/i40/sto#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a Publication. E.g., International Standards,Technical Specifications,Publicly Available Specifications, Amendments Technical Corrigenda,Interpretation Sheets,Technical Reports,Guides."@en .
+<https://w3id.org/i40/sto#Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+<https://w3id.org/i40/sto#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ISO> <http://www.w3.org/2000/01/rdf-schema#label> "ISO"@en .
+<http://www.w3id.org/ecsel-dr-AT#ISO> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en .
+<http://www.w3id.org/ecsel-dr-AT#ISO> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#ISO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/i40/sto#TechnicalReport> <http://www.w3.org/2000/01/rdf-schema#label> "Technical report"@en .
+<https://w3id.org/i40/sto#TechnicalReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical Reports contain collected data of a kind different from that normally published as an International Standard, for example data obtained from a survey carried out among national committees, data of work in other international organizations or data on \"the state of the art\" in relation to standards of national committees on a particular subject.Technical Reports are entirely informative in nature and shall not contain matter implying that they are normative"@en .
+<https://w3id.org/i40/sto#TechnicalReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#TechnicalReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ProductLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3id.org/ecsel-dr-OOSMP#ProductLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#StandardClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Standard classification"@en .
+<https://w3id.org/i40/sto#StandardClassification> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes categorization areas that the different Standardizations Initiatives use to category Standards."@en .
+<https://w3id.org/i40/sto#StandardClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#W3C> <http://www.w3.org/2000/01/rdf-schema#label> "W3C"@en .
+<http://www.w3id.org/ecsel-dr-AT#W3C> <http://www.w3.org/2000/01/rdf-schema#comment> "W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs."@en .
+<http://www.w3id.org/ecsel-dr-AT#W3C> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#W3C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Division> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3id.org/ecsel-dr-OOSMP#Division> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#IIoTConsortium> <http://www.w3.org/2000/01/rdf-schema#comment> "The Internet of Things Consortium (IoTC) is the premier business development association for the Internet of Things (IoT) ecosystem."@en .
+<https://w3id.org/i40/sto#IIoTConsortium> <http://www.w3.org/2000/01/rdf-schema#comment> "IoT consortium"@en .
+<https://w3id.org/i40/sto#IIoTConsortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<https://w3id.org/i40/sto#IIoTConsortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#label> "has edition"@en .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the current Edition/Version number of the document."@en .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Document> .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/2000/01/rdf-schema#label> "has developer"@en .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the Standard Organization that developed the Publication with the specific type of publication, e.g., Standard, Technical Report"@en .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/i40/sto#hasDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://dbpedia.org/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/2000/01/rdf-schema#label> "has pages"@en .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the number of pages in the document."@en .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Document> .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasPages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard"@en .
+<https://w3id.org/i40/sto#Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "A document, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en .
+<https://w3id.org/i40/sto#Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A Standard Organization that belongs to the country"@en .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Country> .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/i40/sto#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has publication"@en .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Publication date of the Publication"@en .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasPublicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/2000/01/rdf-schema#label> "has open resource"@en .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the URLs of the resources(documents) openly available for the standard"@en .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasOpenResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/2000/01/rdf-schema#label> "has official resource"@en .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the URL of the official website from which published the document"@en .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasOfficialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#StandardPart> <http://www.w3.org/2000/01/rdf-schema#label> "Standard part"@en .
+<https://w3id.org/i40/sto#StandardPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Typically Standards are divided into parts. E.g., ISA 95 has part Part 1: Models and Terminology, Part 2: Object Model Attributes, etc."@en .
+<https://w3id.org/i40/sto#StandardPart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#StandardPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PRIMA#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to specify the role of people in an organization"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has ontology"@en .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Point to the URL of a recognized Ontology representation of the Standard"@en .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<http://www.w3id.org/ecsel-dr-AT#IEC> <http://www.w3.org/2000/01/rdf-schema#label> "IEC"@en .
+<http://www.w3id.org/ecsel-dr-AT#IEC> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Electrotechnical Commission (IEC; in French: Commission \u00E9lectrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies \u2013 collectively known as \"electrotechnology\". IEC standards cover a vast range of technologies from power generation, transmission and distribution to home appliances and office equipment, semiconductors, fibre optics, batteries, solar energy, nanotechnology and marine energy as well as many others. The IEC also manages four global conformity assessment systems that certify whether equipment, system or components conform to its international standards."@en .
+<http://www.w3id.org/ecsel-dr-AT#IEC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#IEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#TechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#label> "Technical committe"@en .
+<https://w3id.org/i40/sto#TechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the representitive code name of the Technical Committee that covers a Standard for e.g, TC 1, SC 3C. Many thousand experts carry out standardization work in the IEC in TCs (technical committees) and SCs (subcommittees), in hundreds of working groups, project and maintenance teams. They represent the national electrotechnical needs of IEC Member countries and of many Affiliates at the global level in the IEC. These technical experts are sent by industry, governments, test and research laboratories, academia and even consumer groups to work on the global, neutral and independent platform of the IEC. That's where they develop globally relevant, voluntary, consensus based IEC International Standards."@en .
+<https://w3id.org/i40/sto#TechnicalCommittee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<https://w3id.org/i40/sto#TechnicalCommittee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#hasMotivation> <http://www.w3.org/2000/01/rdf-schema#label> "has motivation"@en .
+<https://w3id.org/i40/sto#hasMotivation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/i40/sto#hasMotivation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasMotivation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasMotivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-AT#ISA> <http://www.w3.org/2000/01/rdf-schema#label> "ISA"@en .
+<http://www.w3id.org/ecsel-dr-AT#ISA> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en .
+<http://www.w3id.org/ecsel-dr-AT#ISA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#ISA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+<http://dbpedia.org/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember> <http://www.w3.org/2000/01/rdf-schema#label> "Project team member"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectTeamMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#MESA> <http://www.w3.org/2000/01/rdf-schema#label> "MESA"@en .
+<http://www.w3id.org/ecsel-dr-AT#MESA> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturing Enterprise Solutions Association International (MESA, also known as MESA International) is a worldwide not-for-profit community of manufacturing companies, information technology hardware and software suppliers, system integrators, consulting service providers, analysts, editors, academics, and students. MESA\u2019s goal is to help member companies improve business results and production operations through application and implementation of information technology and best management practices."@en .
+<http://www.w3id.org/ecsel-dr-AT#MESA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#MESA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/2000/01/rdf-schema#label> "Organization name"@en .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the Organization"@en .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#orgName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status"@en .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Publication status of the Standard, e.g., Valid, Revised, Published, under preparation, Released"@en .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation format"@en .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the name of the implementation or serialization format of the Publication, e.g., XML, Document, binary, batch"@en .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/i40/sto#hasImplementationFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/ecsel-dr-AT#IEEE> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE"@en .
+<http://www.w3id.org/ecsel-dr-AT#IEEE> <http://www.w3.org/2000/01/rdf-schema#comment> "The Institute of Electrical and Electronics Engineers (IEEE) is a professional association for electronic engineering and electrical engineering (and associated disciplines)."@en .
+<http://www.w3id.org/ecsel-dr-AT#IEEE> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#IEEE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#label> "unit of"@en .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/org#unitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-AT#IETF> <http://www.w3.org/2000/01/rdf-schema#label> "IETF"@en .
+<http://www.w3id.org/ecsel-dr-AT#IETF> <http://www.w3.org/2000/01/rdf-schema#comment> "The Internet Engineering Task Force (IETF) is an open standards organization, which develops and promotes voluntary Internet standards, in particular the standards that comprise the Internet protocol suite (TCP/IP). It has no formal membership roster or membership requirements. All participants and managers are volunteers, though their work is usually funded by their employers or sponsors."@en .
+<http://www.w3id.org/ecsel-dr-AT#IETF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<http://www.w3id.org/ecsel-dr-AT#IETF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/2000/01/rdf-schema#label> "has headquarter in"@en .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the countries in which the Headquarter of the organization who publishes the Standart"@en .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-AT#StandardisationOrganization> .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/i40/sto#hasHeadquaterIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine> <http://www.w3.org/2000/01/rdf-schema#label> "Business line"@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A business line is an organizational unit that can be assigned to a division and can have one or more product lines."@en .
+<http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3id.org/ecsel-dr-OOSMP#BusinessLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "The document class represents those things which are, broadly conceived, 'documents'."@en .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager> <http://www.w3.org/2000/01/rdf-schema#label> "Project manager"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/i40/sto#TechnicalSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Technical specification"@en .
+<https://w3id.org/i40/sto#TechnicalSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical Specifications are often published when the subject under question is still under development or when insufficient consensus for approval of an International Standard is available.Technical Specifications approach International Standards in terms of detail and completeness, but have not yet passed through all approval stages either because consensus has not been reached or because standardization is seen to be premature."@en .
+<https://w3id.org/i40/sto#TechnicalSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/i40/sto#Publication> .
+<https://w3id.org/i40/sto#TechnicalSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner> <http://www.w3.org/2000/01/rdf-schema#label> "Porject owner"@en .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-PRIMA#Role> .
+<http://www.w3id.org/ecsel-dr-PRIMA#ProjectOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate organizations with their organizational units."@en .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#OrganizationalUnit> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-PROD#Organization> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#unitOf> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3.org/ns/org#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

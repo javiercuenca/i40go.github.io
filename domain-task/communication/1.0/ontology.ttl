@@ -1,0 +1,79 @@
+@prefix :        <http://www.purl.org/i4go/common-domain/communication#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix ns:      <http://creativecommons.org/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3id.org/ecsel-dr-AT#WAP>
+      a       owl:Class ;
+      rdfs:comment "In computer networking, a wireless access point (WAP), or more generally just access point (AP), is a networking hardware device that allows other Wi-Fi devices to connect to a wired network. As a standalone device, the AP may have a wired connection to a router, but, in a wireless router, it can also be an integral component of the router itself. An AP is differentiated from a hotspot which is a physical location where Wi-Fi access is available."@en ;
+      rdfs:label "Wireless Access Point"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+<http://www.w3id.org/ecsel-dr-AT#Proxy>
+      a       owl:Class ;
+      rdfs:comment "In computer networking, a proxy server is a server application or appliance that acts as an intermediary for requests from clients seeking resources from servers that provide those resources. A proxy server thus functions on behalf of the client when requesting service, potentially masking the true origin of the request to the resource server."@en ;
+      rdfs:label "Proxy"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+<http://www.w3id.org/ecsel-dr-AT#Router>
+      a       owl:Class ;
+      rdfs:comment "A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. Data sent through the internet, such as a web page or email, is in the form of data packets. A packet is typically forwarded from one router to another router through the networks that constitute an internetwork (e.g. the Internet) until it reaches its destination node."@en ;
+      rdfs:label "Router"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#Hub>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+ns:license
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#Switch>
+      a       owl:Class ;
+      rdfs:comment "A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device."@en ;
+      rdfs:label "Switch"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+<http://www.w3id.org/ecsel-dr-AT#CommunicationDevice>
+      a       owl:Class ;
+      rdfs:comment "Devices used for information transfer according to agreed conventions."@en ;
+      rdfs:label "Communication device"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#Device> .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#Gateway>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+<http://www.purl.org/i4go/common-domain/communication>
+      a       owl:Ontology ;
+      rdfs:comment "The 'Communication' ontology module represents data about devices used for information transfer according to agreed conventions."@en ;
+      ns:license "https://creativecommons.org/licenses/by-nc/4.0/"@en ;
+      dc:title "Communication ontology"@en ;
+      terms:creator """Javier Cuenca <mailto:jcuenca@mondragon.edu>
+Felix Larrinaga <mailto:flarrinaga@mondragon.edu>"""@en ;
+      terms:issued "2021-05-06"@en ;
+      owl:imports <http://www.purl.org/i4go/common-domain/equipment> ;
+      owl:versionInfo "1.0"@en .
+
+<http://www.w3id.org/ecsel-dr-AT#Bridge>
+      a       owl:Class ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://www.w3id.org/ecsel-dr-AT#Repeater>
+      a       owl:Class ;
+      rdfs:comment "In telecommunications, a repeater is an electronic device that receives a signal and retransmits it. Repeaters are used to extend transmissions so that the signal can cover longer distances or be received on the other side of an obstruction. Some types of repeaters broadcast an identical signal, but alter its method of transmission, for example, on another frequency or baud rate."@en ;
+      rdfs:label "Repeater"@en ;
+      rdfs:subClassOf <http://www.w3id.org/ecsel-dr-AT#CommunicationDevice> .

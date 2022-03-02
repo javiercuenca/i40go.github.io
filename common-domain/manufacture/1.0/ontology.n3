@@ -1,0 +1,92 @@
+<http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturing concept"@en .
+<http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept that represents fabrication"@en .
+<http://www.purl.org/i4go/common-domain/manufacture/ManufacturingConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component> <http://www.w3.org/2000/01/rdf-schema#label> "Industry 4.0 component"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Globally uniquely identifiable participant with communication capability consisting of administration shell and asset within an I4.0 system."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#MESA-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "MESA standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#MESA-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturing Enterprise Solutions Association International (MESA, also known as MESA International) is a worldwide not-for-profit community of manufacturing companies, information technology hardware and software suppliers, system integrators, consulting service providers, analysts, editors, academics, and students. MESA\u2019s goal is to help member companies improve business results and production operations through application and implementation of information technology and best management practices."@en .
+<http://www.w3id.org/ecsel-dr-AT#MESA-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#MESA-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ANSI-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "ANSI standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#ANSI-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The American National Standards Institute is a private non-profit organization that oversees the development of voluntary consensus standards for products, services, processes, systems, and personnel in the United States. The organization also coordinates U.S. standards with international standards so that American products can be used worldwide."@en .
+<http://www.w3id.org/ecsel-dr-AT#ANSI-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#ANSI-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#IEEE-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#IEEE-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The Institute of Electrical and Electronics Engineers (IEEE) is a professional association for electronic engineering and electrical engineering (and associated disciplines)."@en .
+<http://www.w3id.org/ecsel-dr-AT#IEEE-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#IEEE-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to relate a standard with its versi\u00F3n."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://www.w3.org/2000/01/rdf-schema#comment> "The 'Manufacture' ontology module includes data about manufacture, that is, the production of products for use or sale, using labour and machines, tools, and chemical or biological processing or formulation. It also includes relevant concepts related with the Industry 4.0. The Fourth Industrial Revolution (or Industry 4.0) is the ongoing automation of traditional manufacturing and industrial practices, using modern smart technology. Large-scale machine-to-machine communication (M2M) and the internet of things (IoT) are integrated for increased automation, improved communication and self-monitoring, and production of smart machines that can analyze and diagnose issues without the need for human intervention."@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by-nc/4.0/"@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://purl.org/dc/terms/issued> "2021-05-13"@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://purl.org/dc/terms/created> "Javier Cuenca <mailto:jcuenca@mondragon.edu>\nFelix Larrinaga <mailto:flarrinaga@mondragon.edu>"@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://purl.org/dc/elements/1.1/title> "Manufacture ontology"@en .
+<http://www.purl.org/i4go/common-domain/manufacture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/ecsel-dr-AT#IEC-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "IEC standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#IEC-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Electrotechnical Commission (IEC; in French: Commission \u00E9lectrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies \u2013 collectively known as \"electrotechnology\". IEC standards cover a vast range of technologies from power generation, transmission and distribution to home appliances and office equipment, semiconductors, fibre optics, batteries, solar energy, nanotechnology and marine energy as well as many others. The IEC also manages four global conformity assessment systems that certify whether equipment, system or components conform to its international standards."@en .
+<http://www.w3id.org/ecsel-dr-AT#IEC-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#IEC-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "Standards are published documents created to ensure the reliability of the materials, products, methods, and/or services.  They establish requirements, specifications, guidelines, characteristics, and/or procedures designed. Typically, they are developed through a consensus process and approved by various national and international agencies, professional societies, or industry organizations. Standards are the minimally accepted professional practice and/or quality that must be observed."@en .
+<http://www.w3id.org/ecsel-dr-AT#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#W3C-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "W3C standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#W3C-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs."@en .
+<http://www.w3id.org/ecsel-dr-AT#W3C-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#W3C-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#standardOf> <http://www.w3.org/2000/01/rdf-schema#label> "standard of"@en .
+<http://www.w3id.org/ecsel-dr-AT#standardOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> .
+<http://www.w3id.org/ecsel-dr-AT#standardOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-AT#standardOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-AT#OASIS-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "OASIS Standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#OASIS-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The Organization for the Advancement of Structured Information Standards is a global nonprofit consortium that works on the development, convergence, and adoption of open standards for cybersecurity, blockchain, Internet of Things (IoT), emergency management, cloud computing, legal data exchange, energy, content technologies, and other areas."@en .
+<http://www.w3id.org/ecsel-dr-AT#OASIS-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#OASIS-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#OCF-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "OCF standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#OCF-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The Open Connectivity Foundation (OCF) is an industry organization having as its stated mission is to develop specification standards, promote a set of interoperability guidelines, and provide a certification program for devices involved in the Internet of Things (IoT). It has become one of the biggest industrial connectivity standards organizations for IoT, including in its membership Samsung Electronics, Intel, Microsoft, Qualcomm and Electrolux. Currently, there are more than 500 member companies."@en .
+<http://www.w3id.org/ecsel-dr-AT#OCF-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#OCF-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3id.org/ecsel-dr-AT#IETF-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "IETF standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#IETF-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The Internet Engineering Task Force (IETF) is an open standards organization, which develops and promotes voluntary Internet standards, in particular the standards that comprise the Internet protocol suite (TCP/IP). It has no formal membership roster or membership requirements. All participants and managers are volunteers, though their work is usually funded by their employers or sponsors."@en .
+<http://www.w3id.org/ecsel-dr-AT#IETF-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#IETF-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#OMG-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "OMG standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#OMG-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The Object Management Group (OMG) is a computer industry standards consortium. OMG Task Forces develop enterprise integration standards for a range of technologies."@en .
+<http://www.w3id.org/ecsel-dr-AT#OMG-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#OMG-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ISA-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "ISA standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#ISA-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en .
+<http://www.w3id.org/ecsel-dr-AT#ISA-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#ISA-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith> <http://www.w3.org/2000/01/rdf-schema#label> "is described with"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to relate the administration shell with the standard that describes it."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#isDescribedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.purl.org/i4go/common-domain/manufacture/AdminShell> <http://www.w3.org/2000/01/rdf-schema#label> "Administration Shell"@en .
+<http://www.purl.org/i4go/common-domain/manufacture/AdminShell> <http://www.w3.org/2000/01/rdf-schema#comment> "The Asset Administration Shell (AAS), a key concept of Industry 4.0, is used to describe an asset electronically in a standardized manner. Its purpose is to exchange asset-related data among industrial assets and between assets and production orchestration systems or engineering tools."@en .
+<http://www.purl.org/i4go/common-domain/manufacture/AdminShell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell> <http://www.w3.org/2000/01/rdf-schema#label> "contains Admin Shell"@en .
+<http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell> <http://www.w3.org/2000/01/rdf-schema#comment> "Points the I4.0 Component to the Administration Shell"@en .
+<http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/i4go/common-domain/manufacture/AdminShell> .
+<http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/ecsel-dr-RAMI40#I4.0Component> .
+<http://www.purl.org/i4go/common-domain/manufacture/containsAdminShell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#StandardVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Standard version"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#StandardVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to represent the version of a standard"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#StandardVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-AT#ISO-Standard> <http://www.w3.org/2000/01/rdf-schema#label> "ISO standard"@en .
+<http://www.w3id.org/ecsel-dr-AT#ISO-Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations."@en .
+<http://www.w3id.org/ecsel-dr-AT#ISO-Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-AT#ISO-Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/2000/01/rdf-schema#label> "uses standard"@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the standards describing the functions attached to the asset via the administration shell."@en .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/ecsel-dr-AT#Standard> .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/ecsel-dr-RAMI40#usesStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
