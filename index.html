@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>I40GO: Industry 4.0 Global Ontology</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="./resources/primer.css" media="screen" />
+ <link rel="stylesheet" href="./resources/rec.css" media="screen" />
+ <link rel="stylesheet" href="./resources/extra.css" media="screen" />
+ <link rel="stylesheet" href="./resources/owl.css" media="screen" />   
+ <link rel="stylesheet" href="./resources/style.css" media="screen" />
+</head> 
+
+<body>
+<div class="status">
+        <div>
+                <span>Ontology Specification Draft</span>
+        </div>
+</div>
+<header>
+        <h1>I40GO: Industry 4.0 Global Ontology</h1>
+		<b> Last Published:</b> 2021-06-08 | <b> Version: </b> 1.0 
+</header>
+
+<p>This is the I40GO ontology Home Page.</p>
+
+<p>I40GO was explicitly developed to be reused by process management applications in the context of the Indsutry 4.0. I40GO includes 29 modules classified into different abstraction layers.
+</p>
+
+<p>The ontology is licensed under the <a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons Attribution 4.0</a> <p>
+
+<b>Download</b>
+</br>
+<p>Current version: v1.0 <a href=https://innoweb.mondragon.edu/ontologies/i4go/I4GO_v1.0.rar>[I4GO_v1.0.rar]<a/> (Includes the .owl files of the ontology modules in each layer) </p>
+
+<b>Contact</b>
+</br>
+</br>
+	Javier Cuenca (jcuenca@mondragon.edu) at Mondragon University.</br>
+	Felix Larrinaga (flarrinaga@mondragon.edu) at Mondragon University.
+	
+<p><b>Documentation</b></p>
+
+<p>In the I40GO Home page the following aspects of I40GO are described:</p>
+
+	<ul>
+		<li> The knowledge represented by I40GO </li>
+		<li> The structure of I40GO </li>
+		<li> The list and specification of I40GO modules </li>
+	</ul>
+
+<section>
+	<article>
+		<h1>Introduction</h1>
+		<p>
+			I40GO is a global ontology that provides a common knowledge representation of the main ontologies used in the context of the Indsutry 4.0.
+			I40GO has been developed to be reused by different process management applications. In this way, I40GO provides interoperability between different process management applications..
+		
+		The I40GO ontology represents the following data domains:
+		<ul>
+			<li><b>System domain:</b> data about physical or abstract systems, mainly devices. This includes data about device types (i.e., sensors, actuators, communication devices), as well as software systems that provide different services. </li>
+			<li><b>Manufacturing domain:</b> data about the actors involved in manufacturing processes in Industry 4.0, i.e., organizations, customers or product suppliers. This domain also includes data about product suppliers/consumers and organizations, as well as the information about production plants and the products supplied to customers.</li>
+		</ul>
+	</article>
+</section>
+
+<section>
+	<article>
+	<h1>I40GO ontology structure</h1>
+
+	<p>
+	The knowledge of the represented domains is divided into ontology modules that represent the knowledge of a particular topic of the subdomain. 
+	Specifically, the current release of I40GO consists of 29 ontology modules in total. 
+	</p>
+	<p>
+	The ontology modules of I40GO are classified into three abstraction layers. These layers separate the common domain knowledge that is relevant to most of process management applications from the variant domain knowledge that is relevant to certain applications. With this structure, ontology developers can select
+	the knowledge of I40GO at the proper level of abstraction to develop application ontologies for energy management applications. 
+	</p>
+	<p>
+	Details about each layer and the ontologies they contain can be found below.
+	</p>
+	
+<section>
+        <article>
+                <h2>Common-domain Layer</h2>
+		<p>
+			The <i>common-domain layer</i> includes the common knowledge of each domain. Therefore, the ontology 
+			modules of this layer represent top-level domain concepts. The following are the ontology modules of the I40GO ontology in the common-domain layer:
+			<ul>
+				<li><a href="http://www.purl.org/i4go/common-domain/system">System ontology</a>: The 'System' ontology module represents data about systems. In the context of the Industry 4.0 Global Ontology a system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function.</li></br>
+				<li><a href="http://www.purl.org/i4go/common-domain/equipment">Equipment, devices and apparatus ontology</a>: The 'Equipment, devices and apparatus' ontology module represents data about systems. In the context of the Industry 4.0 Global Ontology a system is considered as a set of interrelated elements (i.e., technical systems, network systems) considered in a defined context as a whole and separated from their environment. A system is generally defined with the view of achieving a given objective, for example by performing a definite function.</li></br>
+				<li><a href="http://www.purl.org/i4go/common-domain/manufacture">Manufacture ontology</a>: The 'Manufacture' ontology module includes data about manufacture, that is, the production of products for use or sale, using labour and machines, tools, and chemical or biological processing or formulation. It also includes relevant concepts related with the Industry 4.0. The Fourth Industrial Revolution (or Industry 4.0) is the ongoing automation of traditional manufacturing and industrial practices, using modern smart technology. Large-scale machine-to-machine communication (M2M) and the internet of things (IoT) are integrated for increased automation, improved communication and self-monitoring, and production of smart machines that can analyze and diagnose issues without the need for human intervention.</li></br>
+				<li><a href="http://www.purl.org/i4go/common-domain/organization">Organization ontology</a>: The 'Organization' ontology module data about organizations, their internal structure (i.e., departments and divisions that compound the organization) and the roles that their departments/units and individuals have.</li></br>
+			</ul>
+		</article>
+</section>
+<section>
+<div style="float: left; width: 100%;">
+		<br>
+        <article>
+                <h2>Variant-domain Layer</h2>
+		<p>
+			The <i>variant-domain layer</i> includes the variant domain knowledge reused only in several applications. As the knowledge of this layer is 
+			relevant for fewer applications, the ontology modules include more specific knowledge. Thus, they extend and include the knowledge of the common-domain 
+			layer ontology modules. The following are the ontology modules of the I40GO ontology in the variant-domain layer:
+			<ul>
+				<li><a href="http://www.purl.org/i4go/variant-domain/operation">Operation ontology</a>: The 'Operation' ontology module represents information about operations: combination of activities necessary to permit an installation to function. The represented operations include switching, controlling, monitoring and maintenance as well as any work activities.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/sensor">Sensor ontology</a>: The 'Sensor' ontology module represents data about sensor devices.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/actuator">Actuator ontology</a>: The 'Actuator' ontology module represents data about sensor devices.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/software">Computer software ontology</a>: The 'Computer Software' ontology module represents the data about software applications.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/service">Service ontology</a>: The 'Service' ontology module represents the data about the functionalities provided by devices.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/manufacturingprocess">Manufacturing process ontology</a>: The 'Manufacturing Process' ontology module represents data related to business processes and the sub processes/activities they encompass. Includes the steps through which raw materials are transformed into a final product. Also called manufacturing engineering.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/product">Product process ontology</a>: The 'Product' ontology module represents data about the product supplied by the organization to the customer and their application areas. The result of a process; an artefact that is produced, is quantifiable, and can be either an end item in itself or a component item.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/cost">Cost ontology</a>: The 'Cost' ontology module represents data about the cost of manufacturing products.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/task">Task ontology</a>: The 'Task' ontology module represents data about required, recommended, or permissible actions intended to contribute to the achievement of one or more outcomes of a process.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/event">Event ontology</a>: The 'Event' ontology module represents data about events and the elements that generate them. A noteworthy occurrence that has a location in time and space, and does not have duration.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/manufacturingresource">Manufacturing Resource ontology</a>: The 'Manufacturing Resource' ontology module represents data about the resources (i.e., tools, human resources) used during the manufacturing process.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/asset">Asset ontology</a>: The 'Asset' ontology module represents data about assets. An asset is a physical entity or digital entity that has value to an individual, an organization or a government. This ontology module also provides a representation about the Asset Administration Shell and associated concepts. Includes the administration of the asset concept, the functionalities of the administration shell, assets and sub models that describe an asset.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/project">Project ontology</a>: The 'Project' ontology module represents data about a project (or program) is any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim.</li></br>
+				<li><a href="http://www.purl.org/i4go/variant-domain/productionplant">Production plant ontology</a>: The 'Production Plant' ontology module represents data related to plant topology, including the concrete equipment of an actual project – the instance data.</li></br>
+			</ul>
+		</p>
+</section>
+		<section>
+        </article>
+		<div style="float: left; width: 100%;">
+        <article>
+                <h2>Domain-task Layer</h2>
+				<p>
+				The <i>domain-task layer</i> includes the domain knowledge reused in specific applications.  The following are the ontology modules of the I40GO ontology in the domain-task layer:
+				<ul>
+					<li><a href="http://www.purl.org/i4go/domain-task/communication">Communication ontology</a>: The 'Communication' ontology module represents data about devices used for information transfer according to agreed conventions.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/osimodel">OSI model ontology</a>: The 'OSI model' ontology module represents data about the Open Systems Interconnection model (OSI model).</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/microcontroller">Microcontroller ontology</a>: The 'Microcontroller' ontology module represents data about microcontroller devices.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/arrowheadsystem">ArrowHead System ontology</a>: This ontology represents data about systems of the Arrowhead framework The Arrowhead Framework is addressing IoT based automation. The approach take is that IoT's are abstracted to services. This to enable IoT interoperability in-between almost any IoT's.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/soa">Service-Oriented Architecture ontology</a>: The 'Service-Oriented Architecture' ontology module represents data about Service-oriented architecture (SOA). In the conext of the ontology, SOA is a style of software design where services are provided to the other components by application components, through a communication protocol over a network.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/arrowheadservice">ArrowHead Service ontology</a>: The 'Arrowhead Service' ontology module represents data about services in the Arrowhead framework context.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/manufacturingoperation">Manufacturing Operation ontology</a>: The 'Manufacturing Operation' ontology module represents data about manufacturing operations, including machining operation as well as control or assembly.</li></br>
+					<li><a href="http://www.purl.org/i4go/domain-task/supplychain">Supply Chain Operation ontology</a>: The 'Supply Chain' ontology module represents the data about the supply chain of product plants.</li></br>
+				</ul>
+				</p>
+		</article>
+		</div>
+		Apart from the listed ontology modules, DABGEO includes a <a href="https://innoweb.mondragon.edu/ontologies/i4go/I4GO_Ontology_Mappings.owl">ontology mapping file</a> (in .owl format) that includes the equivalence relations between elements from existing energy ontologies. This file is used to provide interoperability between applications that use these ontologies.
+		</section>
+		<section>
+			<h2>Ontology Description Diagrams</h2>
+			The following diagrams resume the Industry 4.0 ontology structure and ontology module dependencies in each domain. 
+				<p>System domain:
+				<br>
+				<br>
+				<br>
+				<img class="crisp" src="figures/SystemDomainDesign.jpg" width="70%" height="70%">
+				<figcaption align="left">Figure 1: Representation of the system domain.</figcaption>
+			</p>
+			<p>Manufacturing domain:
+				<br>
+				<img class="crisp" src="figures/ManufacturingDomainDesign.jpg"width="70%" height="70%">
+				<figcaption align="left">Figure 2: Representation of the manufacturing domain.</figcaption>
+			</p>
+</section>	
+</html>
