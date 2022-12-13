@@ -11,7 +11,7 @@ AddType application/ld+json .json
 # Rewrite engine setup
 RewriteEngine On
 #Change the path to the folder here
-RewriteBase /ontologies/i4go/common-domain/system/1.0 
+RewriteBase /i40go.github.io/common-domain/system/1.0
 
 # Rewrite rule to serve HTML content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
